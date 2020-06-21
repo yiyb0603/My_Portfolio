@@ -17,7 +17,7 @@ const Main = ({ history } : MainProps) => {
                 <div className ="Main-Left-Aboutme">
                     <h1>ABOUT ME</h1>
                     <img src ={aboutme} alt ="about me" />
-                    <button>
+                    <button onClick ={() => history.push("/aboutme")}>
                         <span>Lookup About Me</span> 
                         <AiOutlineArrowRight />
                     </button>

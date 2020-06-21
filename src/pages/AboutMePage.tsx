@@ -1,16 +1,16 @@
 import React from 'react';
-import Projects from 'components/Projects';
+import AboutMe from 'components/AboutMe';
 import NavBar from 'components/common/NavBar';
 import Footer from 'components/common/Footer';
 
-const ProjectsPage = () => {
+const AboutMePage = () => {
     return (
         <>
             <NavBar />
-            <Projects />
+            <AboutMe />
             <Footer />
         </>
-    );
+    )
 }
 
-export default ProjectsPage;
+export default AboutMePage;

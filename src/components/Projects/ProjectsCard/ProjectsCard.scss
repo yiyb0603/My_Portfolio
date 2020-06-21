@@ -10,7 +10,7 @@
     word-break: break-all;
     white-space: pre-wrap;
     padding: 2rem 0;
-    transition: all 0.2s;
+    transition: all 1s;
     color: white;
     cursor: pointer;
     background: linear-gradient(to left, #6646D6, #498BF5);
@@ -25,7 +25,7 @@
     }
 
     &:hover {
-        background: black;
-        color: white;
+        background: white;
+        color: black;
     }
 }

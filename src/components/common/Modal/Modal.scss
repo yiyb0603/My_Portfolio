@@ -20,5 +20,17 @@
         width: 70%;
         height: 80%;
         background-color: white;
+
+        &-Close {
+            float: right;
+            font-size: 3rem;
+            cursor: pointer;
+            margin: 1rem;
+            color: #0090d5;
+        }
+
+        &-Contents {
+            margin: 5rem;
+        }
     }
 }

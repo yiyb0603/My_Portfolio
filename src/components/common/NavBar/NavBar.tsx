@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.scss';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { RouteComponentProps, withRouter, useLocation } from 'react-router-dom';
 import { History, LocationState } from "history";
 
 interface MainProps extends RouteComponentProps {
@@ -8,11 +8,13 @@ interface MainProps extends RouteComponentProps {
 }
 
 const NavBar = ({ history } : MainProps) => {
+    const { pathname } : { pathname: string; } = useLocation();
+    console.log(pathname);
     return (
         <ul className ="NavBar">
-            <li onClick ={() => history.push("/")}>home</li>
-            <li onClick ={() => history.push("/projects")}>about me</li>
-            <li onClick ={() => history.push("/projects")}>about my projects</li>
+            <li className ={pathname === "/" ? "NavBar-CurrentItem" : "NavBar-Item"} onClick ={() => history.push("/")}>home</li>
+            <li className ={pathname === "/aboutme" ? "NavBar-CurrentItem" : "NavBar-Item"} onClick ={() => history.push("/aboutme")}>about me</li>
+            <li className ={pathname === "/projects" ? "NavBar-CurrentItem" : "NavBar-Item"} onClick ={() => history.push("/projects")}>about my projects</li>
         </ul>
     );
 }

@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { inject, observer } from 'mobx-react';
+import { MdClose } from 'react-icons/md';
 import './Modal.scss';
 
 interface ModalProps {
@@ -17,7 +18,10 @@ const Modal = ({ store, children }: ModalProps) => {
             <div className ="Modal">
                 <div className ="Modal-Wrapper" onClick ={handleIsModal}></div>
                 <div className ="Modal-Box">
-                    {children}
+                    <MdClose className ="Modal-Box-Close" onClick ={handleIsModal} />
+                    <div className ="Modal-Box-Contents">
+                        {children}
+                    </div>
                 </div>
             </div>
         }

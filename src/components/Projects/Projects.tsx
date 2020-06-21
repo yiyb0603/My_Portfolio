@@ -19,12 +19,14 @@ const Projects = ({ store } : ProjectsProps) => {
         setProjectInfo(info);
     }, []);
 
-    const projectLists = projectList.map((project: { id: number; name: string; description: string; }) => {
-        const { id, name, description } = project;
+    const projectLists = projectList.map((project: { id: number; name: string; type: Array<string>; description: string; gallery: string; }) => {
+        const { id, name, description, gallery, type } = project;
         return (
             <ProjectsCard
                 key ={id}
                 name ={name}
+                gallery ={gallery}
+                type ={type}
                 description ={description}
                 handleClick ={() => {
                     findProject(id);

@@ -1,0 +1,92 @@
+@mixin sideBackground($background) {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: $background;
+}
+
+@mixin leftRightContentAlign() {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin mainImageStyle() {
+    width: 60%;
+    margin: 2rem 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+@mixin buttonStyle($background) {
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: none;
+    background-color: $background;
+    padding: 15px 30px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    transition: all 0.5s;
+
+    &:hover {
+        color: black;
+    }
+
+    &:active {
+        background-color: black;
+        color: $background;
+    }
+}
+
+.Main {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    
+    &-Left {
+        @include sideBackground(#498BF5);
+        &-Aboutme {
+            @include leftRightContentAlign();
+            & > img {
+                @include mainImageStyle();
+            }
+
+            & > h1 {
+                font-size: 3rem;
+            }
+
+            & > button {
+                @include buttonStyle(#4CD9AE);
+            }
+        }
+    }
+
+    &-Right {
+        @include sideBackground(#4CD9AE);
+        &-Project {
+            @include leftRightContentAlign(); 
+            & > img {
+                @include mainImageStyle();
+            }
+
+            & > h1 {
+                font-size: 3rem;
+            }
+
+            & > button {
+                @include buttonStyle(#498BF5);
+            }
+        }
+    }
+}

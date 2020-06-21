@@ -1,0 +1,18 @@
+.NavBar {
+    padding: 1.5rem 0;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+    color: white;
+
+    & > li {
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+        list-style: none;
+    }
+}

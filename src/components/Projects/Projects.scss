@@ -1,13 +1,16 @@
 .Projects {
     width: 100%;
     min-height: 100vh;
+    margin-top: 1rem;
     display: flex;
+    display: -webkit-flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
     &-Grid {
         display: grid;
-        gap: 3rem;
-        grid-template-columns: auto auto auto;
+        gap: 2rem;
+        grid-template-columns: repeat(3, calc(100% / 3));
     }
 }

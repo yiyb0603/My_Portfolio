@@ -1,3 +1,31 @@
 .ProjectsCard {
-    border: 2px solid blue;
+    width: 400px;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    white-space: pre-wrap;
+    padding: 2rem 0;
+    transition: all 0.2s;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(to left, #6646D6, #498BF5);
+
+    & > img {
+        margin: 1rem 0;
+        object-fit: fill;
+    }
+
+    &-Name {
+        font-size: 25px;
+    }
+
+    &:hover {
+        background: black;
+        color: white;
+    }
 }

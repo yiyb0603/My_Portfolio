@@ -1,31 +1,59 @@
-export const projectList: Array<{ id: number, name: string, description: string }> = [
+import bindLogo from 'assets/images/bindLogo.png';
+
+export const projectList: Array<{ id: number, name: string, type: Array<string>; description: string, gallery: string }> = [
     {
         id: 1,
         name: "도담도담",
-        description: "교내 스마트 스쿨 플랫폼"
+        type: ["Front End"],
+        description: "교내 스마트 스쿨 플랫폼",
+        gallery: bindLogo
     },
 
     {
         id: 2,
         name: "도담도담 어드민",
-        description: "교내 스마트 스쿨 플랫폼 관리자 페이지"
+        type: ["Front End"],
+        description: "교내 스마트 스쿨 플랫폼 관리자 페이지",
+        gallery: bindLogo
     },
 
     {
         id: 3,
         name: "여기 코로나",
-        description: "코로나 관련 사이트"
+        type: ["Front End"],
+        description: "코로나 관련 사이트",
+        gallery: bindLogo
     },
 
     {
         id: 4,
         name: "바인드 팀사이트",
-        description: "바인드팀 공식 사이트"
+        type: ["Front End"],
+        description: "바인드팀 공식 사이트",
+        gallery: bindLogo
     },
 
     {
         id: 5,
         name: "NFC Spot Counter",
-        description: "제주도를 부탁해 교내 대회 프로젝트"
+        type: ["Front End"],
+        description: "제주도를 부탁해 교내 대회 프로젝트",
+        gallery: bindLogo
+    },
+
+    {
+        id: 6,
+        name: "Moment Plan",
+        type: ["Front End"],
+        description: "모멘트 플랜",
+        gallery: bindLogo
+    },
+
+    {
+        id: 7,
+        name: "Moment Plan",
+        type: ["Front End"],
+        description: "모멘트 플랜",
+        gallery: bindLogo
     }
 ];

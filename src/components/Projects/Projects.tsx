@@ -19,7 +19,7 @@ const Projects = ({ store } : ProjectsProps) => {
         setProjectInfo(info);
     }, []);
 
-    const projectLists = projectList.map((project: { id: number; name: string; type: Array<string>; description: string; gallery: string; }) => {
+    const projectLists = projectList.map((project: { id: number; name: string; type: Array<string>; description: string; gallery: string[]; }) => {
         const { id, name, description, gallery, type } = project;
         return (
             <ProjectsCard
@@ -43,10 +43,7 @@ const Projects = ({ store } : ProjectsProps) => {
             </div>
             {
                 projectInfo.id &&
-                <Modal>
-                    <div>{projectInfo.name}</div>
-                    <div>{projectInfo.description}</div>
-                </Modal>
+                <Modal projectInfo ={projectInfo} />
             }
         </div>
     );

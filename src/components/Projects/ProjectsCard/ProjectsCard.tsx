@@ -5,7 +5,7 @@ interface ProjectsCardProps {
     key?: number;
     name: string;
     type: Array<string>;
-    gallery: string;
+    gallery: string[];
     description: string;
     handleClick: () => void;
 }
@@ -14,7 +14,7 @@ const ProjectsCard = ({ name, description, type, gallery, handleClick } : Projec
     return (
         <div className ="ProjectsCard" onClick ={handleClick}>
             <h2>{type.join(",")}</h2>
-            <img src ={gallery} alt ="gallery" />
+            <img src ={gallery[0]} alt ="gallery" />
             <div className ="ProjectsCard-Name">{name}</div>
         </div>
     );

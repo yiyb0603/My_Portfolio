@@ -9,7 +9,7 @@ interface MainProps extends RouteComponentProps {
 
 const NavBar = ({ history } : MainProps) => {
     const { pathname } : { pathname: string; } = useLocation();
-    console.log(pathname);
+    
     return (
         <ul className ="NavBar">
             <li className ={pathname === "/" ? "NavBar-CurrentItem" : "NavBar-Item"} onClick ={() => history.push("/")}>home</li>

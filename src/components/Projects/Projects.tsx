@@ -5,32 +5,31 @@ import { find } from 'lodash';
 import { projectList } from 'Data/ProjectList';
 import ProjectsCard from './ProjectsCard';
 import './Projects.scss';
+import { IProjectType } from 'interface/ProjectType';
 
-interface ProjectsProps {
-    store?: any;
-}
-
-const Projects = ({ store } : ProjectsProps) => {
-    const [projectInfo, setProjectInfo]: any = useState({});
-    const { handleIsModal }: { handleIsModal: () => void; } = store.ModalStore;
+const Projects = () => {
+    const [isModal, setIsModal] = useState<boolean>(false);
+    const [projectInfo, setProjectInfo] = useState<IProjectType>({});
 
     const findProject = useCallback((id: number) => {
-        const info = find([...projectList], { id });
-        setProjectInfo(info);
+        const info: IProjectType | undefined = find([...projectList], { id });
+        setProjectInfo(info!);
     }, []);
 
-    const projectLists = projectList.map((project: { id: number; name: string; type: Array<string>; description: string; gallery: string[]; }) => {
-        const { id, name, description, gallery, type } = project;
+    const projectLists = projectList.map((project: IProjectType) => {
+        const { id, name, description, gallery, type, stacks, period } = project;
         return (
             <ProjectsCard
                 key ={id}
-                name ={name}
-                gallery ={gallery}
-                type ={type}
-                description ={description}
+                name ={name!}
+                gallery ={gallery!}
+                type ={type!}
+                stacks={stacks!}
+                period={period!}
+                description ={description!}
                 handleClick ={() => {
-                    findProject(id);
-                    handleIsModal();
+                    setIsModal(true);
+                    findProject(id!);
                 }}
             />
         )
@@ -42,8 +41,8 @@ const Projects = ({ store } : ProjectsProps) => {
                 {projectLists}
             </div>
             {
-                projectInfo.id &&
-                <Modal projectInfo ={projectInfo} />
+                projectInfo.id && isModal ?
+                <Modal isModal={isModal} setIsModal={setIsModal} projectInfo ={projectInfo} /> : <></>
             }
         </div>
     );

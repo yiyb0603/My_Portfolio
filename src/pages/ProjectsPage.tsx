@@ -1,15 +1,12 @@
 import React from 'react';
 import Projects from 'components/Projects';
-import NavBar from 'components/common/NavBar';
-import Footer from 'components/common/Footer';
+import PageTemplate from 'components/common/Template/PageTemplate';
 
 const ProjectsPage = () => {
     return (
-        <>
-            <NavBar />
+        <PageTemplate>
             <Projects />
-            <Footer />
-        </>
+        </PageTemplate>
     );
 }
 

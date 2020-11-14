@@ -2,15 +2,16 @@ import React from 'react';
 import './ProjectsCard.scss';
 
 interface ProjectsCardProps {
-    key?: number;
     name: string;
     type: Array<string>;
+    stacks: string[];
+    period: string;
     gallery: string[];
     description: string;
     handleClick: () => void;
 }
 
-const ProjectsCard = ({ name, description, type, gallery, handleClick } : ProjectsCardProps) => {
+const ProjectsCard = ({ name, description, type, stacks, period, gallery, handleClick } : ProjectsCardProps) => {
     return (
         <div className ="ProjectsCard" onClick ={handleClick}>
             <h2>{type.join(",")}</h2>

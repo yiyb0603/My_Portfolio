@@ -1,20 +1,33 @@
+@import '../styles/Palette/Palette.scss';
+
 @font-face {
-    font-family: 'NanumSquareRound';
-    src: url('../assets/fonts/NanumSquareRoundB.ttf') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'NanumSquare';
+	src: url('../assets/fonts/NanumSquareRoundB.ttf')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'NanumSquareRound';
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'NanumSquare';
 }
 
-html, body, #root {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    overflow-x: hidden;
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background-color: $black;
+}
+
+body {
+	line-height: 1.34;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+td {
+	vertical-align: middle;
 }

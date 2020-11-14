@@ -8,7 +8,7 @@ interface MainProps extends RouteComponentProps {
 }
 
 const NavBar = ({ history } : MainProps) => {
-    const { pathname } : { pathname: string; } = useLocation();
+    const { pathname } = useLocation();
     
     return (
         <ul className ="NavBar">

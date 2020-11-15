@@ -1,13 +1,10 @@
 import React from 'react';
 import './NavBar.scss';
-import { RouteComponentProps, withRouter, useLocation } from 'react-router-dom';
-import { History, LocationState } from "history";
+import { withRouter, useLocation, useHistory } from 'react-router-dom';
+import { History } from "history";
 
-interface MainProps extends RouteComponentProps {
-    history: History<LocationState>;
-}
-
-const NavBar = ({ history } : MainProps) => {
+const NavBar = () => {
+    const history: History<History.PoorMansUnknown> = useHistory();
     const { pathname } = useLocation();
     
     return (
@@ -15,7 +12,7 @@ const NavBar = ({ history } : MainProps) => {
             <ul className ="NavBar-Contents">
                 <li className ={pathname === "/" ? "NavBar-Contents-CurrentItem" : "NavBar-Contents-Item"} onClick ={() => history.push("/")}>home</li>
                 <li className ={pathname === "/aboutme" ? "NavBar-Contents-CurrentItem" : "NavBar-Contents-Item"} onClick ={() => history.push("/aboutme")}>about me</li>
-                <li className ={pathname === "/projects" ? "NavBar-Contents-CurrentItem" : "NavBar-Contents-Item"} onClick ={() => history.push("/projects")}>about my projects</li>
+                <li className ={pathname === "/projects" ? "NavBar-Contents-CurrentItem" : "NavBar-Contents-Item"} onClick ={() => history.push("/projects")}>my projects</li>
             </ul>
         </div>
     );

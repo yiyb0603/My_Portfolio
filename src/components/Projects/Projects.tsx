@@ -1,11 +1,11 @@
 import React, { useState, useCallback } from 'react';
 import { inject, observer } from 'mobx-react';
-import Modal from 'components/common/Modal';
 import { find } from 'lodash';
 import { projectList } from 'Data/ProjectList';
 import ProjectsCard from './ProjectsCard';
 import './Projects.scss';
 import { IProjectType } from 'interface/ProjectType';
+import ProjectModal from './ProjectModal';
 
 const Projects = () => {
     const [isModal, setIsModal] = useState<boolean>(false);
@@ -17,7 +17,7 @@ const Projects = () => {
     }, []);
 
     const projectLists = projectList.map((project: IProjectType) => {
-        const { id, name, description, gallery, type, stacks, period } = project;
+        const { id, name, introduction, gallery, type, stacks, period } = project;
         return (
             <ProjectsCard
                 key ={id}
@@ -26,7 +26,7 @@ const Projects = () => {
                 type ={type!}
                 stacks={stacks!}
                 period={period!}
-                description ={description!}
+                introduction ={introduction!}
                 handleClick ={() => {
                     setIsModal(true);
                     findProject(id!);
@@ -42,7 +42,7 @@ const Projects = () => {
             </div>
             {
                 projectInfo.id && isModal ?
-                <Modal isModal={isModal} setIsModal={setIsModal} projectInfo ={projectInfo} /> : <></>
+                <ProjectModal isModal={isModal} setIsModal={setIsModal} projectInfo ={projectInfo} /> : <></>
             }
         </div>
     );

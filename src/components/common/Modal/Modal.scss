@@ -1,39 +1,80 @@
+@import 'styles/Palette/Palette.scss';
+@import 'styles/Fonts/FontScheme.scss';
+
 .Modal {
-    width: 100%;
-    height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  width: 50%;
+  height: 70%;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &-Wrapper {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &-Top {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 4px;
 
-    &-Wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background-color: rgba(0, 0, 0, 0.4);
+    &-TopWrapper {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+
+      &-TitleWrapper {
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+  
+        &-Period {
+          margin-left: 5px;
+          font-size: $font_14;
+        }
+    
+        &-Title {
+          font-size: $font_25;
+        }
+      }
+  
+      &-Close {
+        font-size: $font_30;
+        color: $primary;
+        cursor: pointer;
+      }
     }
 
-    &-Box {
-        width: 70%;
-        height: 80%;
-        background-color: white;
+    &-StackWrapper {
+      display: flex;
+      display: -webkit-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 5px 0;
 
-        &-Close {
-            float: right;
-            font-size: 3rem;
-            cursor: pointer;
-            margin: 1rem;
-            color: #0090d5;
-        }
-
-        &-Contents {
-
-        }
+      &-Stack {
+        margin-right: 10px;
+        border: 1px solid $gray;
+        border-radius: 25px;
+        padding: 3px 10px;
+        vertical-align: middle;
+      }
     }
+  }
+
+  &-Contents {
+    margin-top: 10px;
+  }
 }

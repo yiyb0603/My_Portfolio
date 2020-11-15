@@ -9,16 +9,28 @@
     background-color: darken(#3a3b50, 10%);
     color: white;
 
-    &-Item, & li {
-        font-size: 25px;
-        font-weight: bold;
-        cursor: pointer;
-        text-transform: uppercase;
+    &-Contents {
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: space-between;
+        align-items: center;
         list-style: none;
-        padding: 1rem 0;
-    }
+        padding: 0 20px;
 
-    &-CurrentItem {
-        border-bottom: 5px solid #0090d5;
+        &-CurrentItem {
+            border-bottom: 5px solid #0090d5;
+            font-size: 25px;
+        }
+
+        & > * {
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            list-style: none;
+            padding: 1rem 0;
+        }    
     }
 }

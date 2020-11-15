@@ -3,20 +3,27 @@ import './ProjectsCard.scss';
 
 interface ProjectsCardProps {
     name: string;
-    type: Array<string>;
+    type: string[];
     stacks: string[];
     period: string;
     gallery: string[];
-    description: string;
+    introduction: string;
     handleClick: () => void;
 }
 
-const ProjectsCard = ({ name, description, type, stacks, period, gallery, handleClick } : ProjectsCardProps) => {
+const ProjectsCard = ({ name, introduction, type, stacks, period, gallery, handleClick } : ProjectsCardProps) => {
     return (
         <div className ="ProjectsCard" onClick ={handleClick}>
-            <h2>{type.join(",")}</h2>
-            <img src ={gallery[0]} alt ="gallery" />
-            <div className ="ProjectsCard-Name">{name}</div>
+            <div className ="ProjectsCard-Types">{type.join(", ")}</div>
+            <img className ="ProjectsCard-Thumbnail" src ={gallery[0]} alt ="gallery" />
+            
+            <div className ="ProjectsCard-NamePeriod">
+                <div className ="ProjectsCard-NamePeriod-Name">{name}</div>
+                <div className ="ProjectsCard-NamePeriod-Period">{period}</div>
+            </div>
+
+            <div className ="ProjectsCard-Stacks">{stacks.join(", ")}</div>
+            <div className ="ProjectsCard-Introduction">{introduction}</div>
         </div>
     );
 }

@@ -1,31 +1,63 @@
+@import 'styles/Palette/Palette.scss';
+@import 'styles/Fonts/FontScheme.scss';
+
 .ProjectsCard {
-    width: 400px;
+    width: 425px;
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
     overflow-y: auto;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     word-break: break-all;
     white-space: pre-wrap;
-    padding: 2rem 0;
-    transition: all 1s;
-    color: white;
+    padding: 1rem 1.7rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 3px 3px 7px $gray, -3px -3px 7px $lighterGray;
+    transition: all 0.2s;
+    color: $white;
+    border-radius: 25px;
     cursor: pointer;
-    background: linear-gradient(to left, #6646D6, #498BF5);
-
-    & > img {
-        margin: 1rem 0;
-        object-fit: fill;
-    }
-
-    &-Name {
-        font-size: 25px;
-    }
 
     &:hover {
-        background: white;
-        color: black;
+        margin-top: -10px;
+    }
+
+    &-Types {
+        font-size: $font_20;
+    }
+
+    &-Thumbnail {
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
+        padding: 1rem 0;
+        margin: 5px 0;
+        object-fit: scale-down;
+    }
+
+    &-NamePeriod {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+
+        &-Name {
+            font-size: $font_20;
+        }
+
+        &-Period {
+            color: $lighterGreen;
+            font-size: $font_12;
+        }
+    }
+
+    &-Stacks {
+        color: $gray;
+        font-size: $font_12;
+        border-bottom: 1px solid $lighterGray;
+        margin-bottom: 5px;
+        padding-bottom: 2px;
     }
 }

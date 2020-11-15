@@ -11,11 +11,13 @@ const NavBar = ({ history } : MainProps) => {
     const { pathname } = useLocation();
     
     return (
-        <ul className ="NavBar">
-            <li className ={pathname === "/" ? "NavBar-CurrentItem" : "NavBar-Item"} onClick ={() => history.push("/")}>home</li>
-            <li className ={pathname === "/aboutme" ? "NavBar-CurrentItem" : "NavBar-Item"} onClick ={() => history.push("/aboutme")}>about me</li>
-            <li className ={pathname === "/projects" ? "NavBar-CurrentItem" : "NavBar-Item"} onClick ={() => history.push("/projects")}>about my projects</li>
-        </ul>
+        <div className ="NavBar">
+            <ul className ="NavBar-Contents">
+                <li className ={pathname === "/" ? "NavBar-Contents-CurrentItem" : "NavBar-Contents-Item"} onClick ={() => history.push("/")}>home</li>
+                <li className ={pathname === "/aboutme" ? "NavBar-Contents-CurrentItem" : "NavBar-Contents-Item"} onClick ={() => history.push("/aboutme")}>about me</li>
+                <li className ={pathname === "/projects" ? "NavBar-Contents-CurrentItem" : "NavBar-Contents-Item"} onClick ={() => history.push("/projects")}>about my projects</li>
+            </ul>
+        </div>
     );
 }
 

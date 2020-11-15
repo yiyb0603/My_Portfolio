@@ -4,6 +4,7 @@ export interface IProjectType {
   type?: string[];
   stacks?: string[];
   period?: string;
+  introduction?: string;
   description?: string;
   gallery?: string[];
 }

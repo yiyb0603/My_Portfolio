@@ -70,6 +70,14 @@
 			&-Sass {
 				@include iconStyle($pink);
 			}
+
+			&-Vue {
+				@include iconStyle($green);
+			}
+
+			&-Express {
+				@include iconStyle($green);
+			}
 		}
 
 		&-ProgressWrapper {
@@ -102,8 +110,34 @@
 				@include progressBarStyle(90%, $primary);
 			}
 
+			&-MobXBar {
+				@include progressBarStyle(85%, $orange);
+			}
+
+			&-VueBar {
+				@include progressBarStyle(20%, $green);
+			}
+
 			&-SassBar {
 				@include progressBarStyle(90%, $pink);
+			}
+
+			&-NextBar {
+				@include progressBarStyle(
+					70%,
+					linear-gradient(to bottom, $green, $white)
+				);
+			}
+
+			&-ExpressBar {
+				@include progressBarStyle(
+					65%,
+					linear-gradient(to bottom, $green, $yellow)
+				);
+			}
+
+			&-TypeORMBar {
+				@include progressBarStyle(65%, $blue);
 			}
 		}
 	}

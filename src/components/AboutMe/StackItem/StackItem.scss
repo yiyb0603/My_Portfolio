@@ -1,0 +1,110 @@
+@import 'styles/Palette/Palette.scss';
+@import 'styles/Fonts/FontScheme.scss';
+
+@mixin flexStyle() {
+	display: flex;
+	display: -webkit-flex;
+}
+
+@mixin iconWrapperStyle() {
+	width: 100px;
+	@include flexStyle();
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin iconStyle($color) {
+	color: $color;
+	font-size: 40px;
+}
+
+@mixin progressWrapperStyle() {
+	width: 90%;
+	height: 30px;
+	background-color: $gray;
+}
+
+@mixin progressBarStyle($width, $background) {
+	width: $width;
+	height: 30px;
+	background: $background;
+}
+
+.StackItem {
+	color: $white;
+
+	&-Wrapper {
+		@include flexStyle();
+		align-items: center;
+		margin: 10px 0;
+
+		&-Icon {
+			@include iconWrapperStyle();
+
+			&-Java {
+				@include iconStyle($red);
+			}
+
+			&-HTML {
+				@include iconStyle($orange);
+			}
+
+			&-CSS {
+				@include iconStyle($skyBlue);
+			}
+
+			&-JavaScript {
+				@include iconStyle($yellow);
+			}
+
+			&-TypeScript {
+				@include iconStyle($white);
+				background-color: $primary;
+				border-radius: 5px;
+			}
+
+			&-React {
+				@include iconStyle($skyBlue);
+			}
+
+			&-Sass {
+				@include iconStyle($pink);
+			}
+		}
+
+		&-ProgressWrapper {
+			@include progressWrapperStyle();
+
+			&-CBar {
+				@include progressBarStyle(60%, $primary);
+			}
+
+			&-JavaBar {
+				@include progressBarStyle(70%, $red);
+			}
+
+			&-HTMLBar {
+				@include progressBarStyle(
+					90%,
+					linear-gradient(to top, $orange, $skyBlue)
+				);
+			}
+
+			&-JavaScriptBar {
+				@include progressBarStyle(90%, $yellow);
+			}
+
+			&-TypeScriptBar {
+				@include progressBarStyle(90%, $primary);
+			}
+
+			&-ReactBar {
+				@include progressBarStyle(90%, $primary);
+			}
+
+			&-SassBar {
+				@include progressBarStyle(90%, $pink);
+			}
+		}
+	}
+}

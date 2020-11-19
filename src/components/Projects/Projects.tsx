@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react';
-import { inject, observer } from 'mobx-react';
 import { find } from 'lodash';
 import { projectList } from 'Data/ProjectList';
 import ProjectsCard from './ProjectsCard';
@@ -48,4 +47,4 @@ const Projects = () => {
     );
 }
 
-export default inject('store')(observer(Projects));
+export default Projects;

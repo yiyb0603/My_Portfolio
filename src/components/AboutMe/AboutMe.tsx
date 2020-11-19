@@ -20,6 +20,7 @@ const AboutMe = () => {
         width: 50,
         height: 50,
         borderRadius: 5,
+        objectFit: 'cover',
     };
 
     return (

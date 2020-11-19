@@ -22,12 +22,14 @@
 	width: 90%;
 	height: 30px;
 	background-color: $gray;
+	border-radius: 5px;
 }
 
 @mixin progressBarStyle($width, $background) {
 	width: $width;
 	height: 30px;
 	background: $background;
+	border-radius: 5px;
 }
 
 .StackItem {
@@ -84,7 +86,7 @@
 			@include progressWrapperStyle();
 
 			&-CBar {
-				@include progressBarStyle(60%, $primary);
+				@include progressBarStyle(55%, $primary);
 			}
 
 			&-JavaBar {

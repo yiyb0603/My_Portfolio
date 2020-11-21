@@ -1,28 +1,34 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import ProjectsPage from 'pages/ProjectsPage';
-import MainPage from 'pages/MainPage';
-import AboutMePage from 'pages/AboutMePage';
+import * as Pages from 'pages';
 
-function App() {
+const App = () => {
+  const { Main, Project, AboutMe, History } = Pages;
+
   return (
     <Switch>
       <Route
         path ="/"
         exact
-        render ={() => <MainPage />}
+        render ={() => <Main />}
       />
 
       <Route
         path ="/projects"
         exact
-        render ={() => <ProjectsPage />}
+        render ={() => <Project />}
       />
 
       <Route
         path ="/aboutme"
         exact
-        render ={() => <AboutMePage />}
+        render ={() => <AboutMe />}
+      />
+
+      <Route
+        path ="/history"
+        exact
+        render={() => <History />}
       />
     </Switch>
   );

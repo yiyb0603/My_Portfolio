@@ -31,7 +31,8 @@ const Modal = ({ isModal, setIsModal, title, period, stacks, children }: ModalPr
               <div className={cx('Modal-Top-TopWrapper-TitleWrapper-Title')}>{title}</div>
               <div className={cx('Modal-Top-TopWrapper-TitleWrapper-Period')}>{period}</div>
             </div>
-            <AiOutlineClose className={cx('Modal-Top-TopWrapper-Close')} />
+            
+            <AiOutlineClose className={cx('Modal-Top-TopWrapper-Close')} onClick={handleCloseModal} />
           </div>
 
           <div className={cx('Modal-Top-StackWrapper')}>

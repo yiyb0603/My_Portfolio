@@ -2,7 +2,7 @@
 @import 'styles/Fonts/FontScheme.scss';
 
 .ProjectsCard {
-    width: 425px;
+    width: 430px;
     display: flex;
     display: -webkit-flex;
     flex-wrap: wrap;
@@ -29,11 +29,14 @@
     }
 
     &-Thumbnail {
+        width: 100%;
+        height: 250px;
+        max-height: 250px;
         border-top: 1px solid $gray;
         border-bottom: 1px solid $gray;
-        padding: 1rem 0;
+        padding: 10px 0;
         margin: 5px 0;
-        object-fit: scale-down;
+        object-fit: cover;
     }
 
     &-NamePeriod {

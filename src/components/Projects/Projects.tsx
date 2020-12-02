@@ -16,7 +16,7 @@ const Projects = () => {
     }, []);
 
     const projectLists = projectList.map((project: IProjectType) => {
-        const { id, name, introduction, gallery, type, stacks, period } = project;
+        const { id, name, introduction, gallery, type, stacks, period, thumbnail } = project;
         return (
             <ProjectsCard
                 key ={id}
@@ -25,6 +25,7 @@ const Projects = () => {
                 type ={type!}
                 stacks={stacks!}
                 period={period!}
+                thumbnail={thumbnail!}
                 introduction ={introduction!}
                 handleClick ={() => {
                     setIsModal(true);

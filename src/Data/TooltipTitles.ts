@@ -63,4 +63,9 @@ export const tooltipTitles: ITooltipTitleTypes[] = [
     progressName: 'TypeORM',
     title: '백엔드 프로그래밍을 할때 DB와 통신을 주고받는것이 편리해서 자주쓰는 ORM 도구입니다.',
   },
+
+  {
+    progressName: 'Nest',
+    title: '현재 공부하고 있는 Express.js 프레임워크 입니다.',
+  }
 ];

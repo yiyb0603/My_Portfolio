@@ -6,5 +6,6 @@ export interface IProjectType {
   period?: string;
   introduction?: string;
   description?: string;
+  thumbnail?: string;
   gallery?: string[];
 }

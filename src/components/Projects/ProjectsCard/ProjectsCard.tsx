@@ -8,14 +8,15 @@ interface ProjectsCardProps {
     period: string;
     gallery: string[];
     introduction: string;
+    thumbnail: string;
     handleClick: () => void;
 }
 
-const ProjectsCard = ({ name, introduction, type, stacks, period, gallery, handleClick } : ProjectsCardProps) => {
+const ProjectsCard = ({ name, introduction, type, stacks, period, gallery, thumbnail, handleClick } : ProjectsCardProps) => {
     return (
         <div className ="ProjectsCard" onClick ={handleClick}>
             <div className ="ProjectsCard-Types">{type.join(", ")}</div>
-            <img className ="ProjectsCard-Thumbnail" src ={gallery[0]} alt ="gallery" />
+            <img className ="ProjectsCard-Thumbnail" src ={thumbnail || gallery[0]} alt ="gallery" />
             
             <div className ="ProjectsCard-NamePeriod">
                 <div className ="ProjectsCard-NamePeriod-Name">{name}</div>

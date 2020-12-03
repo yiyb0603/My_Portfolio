@@ -2,8 +2,7 @@
 
 @font-face {
 	font-family: 'NanumSquare';
-	src: url('../assets/fonts/NanumSquareRoundB.ttf')
-		format('woff');
+	src: url('../assets/fonts/NanumSquareRoundB.ttf') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -31,7 +30,7 @@ body {
 	}
 
 	&::-webkit-scrollbar-track {
-		background-color:#f1f1f1;
+		background-color: #f1f1f1;
 	}
 
 	&::-webkit-scrollbar-thumb {
@@ -45,6 +44,12 @@ body {
 		height: 14px;
 		background-color: $primary;
 	}
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: inherit;
 }
 
 td {

@@ -8,4 +8,7 @@ export interface IProjectType {
   description?: string;
   thumbnail?: string;
   gallery?: string[];
+  role?: string;
+  feel?: string;
+  link?: string;
 }

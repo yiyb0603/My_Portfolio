@@ -4,6 +4,8 @@ import { ClassNamesFn } from "classnames/types";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import Modal from "components/common/Modal";
 import { IProjectType } from "interface/ProjectType";
+import { ProjectEnums } from "enum/ProjectEnum";
+import { FaDove } from "react-icons/fa";
 
 const style = require("./ProjectModal.scss");
 const cx: ClassNamesFn = classNames.bind(style);
@@ -16,7 +18,11 @@ interface ProjectModalProps {
 
 const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) => {
   const [index, setIndex] = useState<number>(0);
-  const { name, description, gallery, period, stacks } = projectInfo;
+  const [topic, setTopic] = useState<ProjectEnums>(0);
+
+  const { name, description, gallery, period, stacks, feel, link, role } = projectInfo;
+  const topics: string[] | Element[] = [description!, role!, feel!, link!];
+  const topicNames: string[] = ['프로젝트 의도', '맡은 역할', '느낀점', '관련 링크'];
 
   const handlePrevClick = useCallback(() => {
     if (index <= 0) {
@@ -50,13 +56,18 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) =
       </div>
 
       <div className={cx('ProjectModal-Select')}>
-        <div>프로젝트 의도</div>
-        <div>맡은 역할</div>
-        <div>느낀점</div>
-        <div>관련 링크</div>
+        {
+          topicNames.map((name: string, index: number) => {
+            return (
+              <div className={cx({
+                'ProjectModal-Select-Selected': topic === index
+              })} key={index} onClick={() => setTopic(index)}>{name}</div>
+            );
+          })
+        }
       </div>
       <div className={cx('ProjectModal-Contents')}>
-        <div>{description}</div>
+        <div dangerouslySetInnerHTML={{ __html: topics[topic] }}></div>
       </div>
     </Modal>
   );

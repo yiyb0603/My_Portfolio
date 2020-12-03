@@ -16,7 +16,7 @@ const Projects = () => {
     }, []);
 
     const projectLists = projectList.map((project: IProjectType) => {
-        const { id, name, introduction, gallery, type, stacks, period, thumbnail } = project;
+        const { id, name, introduction, gallery, type, stacks, period, thumbnail, feel, role, link } = project;
         return (
             <ProjectsCard
                 key ={id}
@@ -25,6 +25,9 @@ const Projects = () => {
                 type ={type!}
                 stacks={stacks!}
                 period={period!}
+                feel={feel!}
+                role={role!}
+                link={link!}
                 thumbnail={thumbnail!}
                 introduction ={introduction!}
                 handleClick ={() => {

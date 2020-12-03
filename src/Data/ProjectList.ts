@@ -39,6 +39,10 @@ export const projectList: IProjectType[] = [
         이러한 불편함과 문제점들을 개선해 나가고 편하게 학교생활을 하자는 의미에서 도담도담 시스템이 나오게 되었습니다.`,
         thumbnail: WebMain,
         gallery: [WebMain, WebMainDark, WebLocation, WebSchedule, WebWakeSong],
+        feel: `ㅁㄴㅇㄻㄴㄹㅇㄴㅁㄻㄴㅇㄹ`,
+        role: '회원 알림탭, 분실물, 상담 쪽의 프론트엔드 유지보수를 맡았습니다.',
+        link: `<a style ="color: #1b60ff" href="http://dodam.b1nd.com" target="_blank" rel ="noopener noreferrer">
+        http://dodam.b1nd.com (학교 내부망 네트워크만 접속이 됩니다.)</a>`,
     },
 
     {
@@ -48,9 +52,14 @@ export const projectList: IProjectType[] = [
         stacks: ["JavaScript", "React.js", "MobX", "SASS"],
         period: "2020.03.15 ~ 05.18 (서비스 중)",
         introduction: "교내 스마트 스쿨 플랫폼 관리자 페이지",
-        description: "교내 스마트 스쿨 플랫폼 관리자 페이지",
+        description: `1번 프로젝트인 "도담도담"의 관리자용 페이지이며, 도담도담을 이루는 요소들을 전반적으로 관리합니다.<br />
+        학생들이 위치신청을 하는 위치 장소 관리, 장소 및 회원가입 관리를 위한 교실 관리 등의 전반적인 베이스 데이터들을 관리합니다.`,
         thumbnail: bindLogo,
         gallery: [],
+        feel: 'feelfeell',
+        role: '시간표 관리, 교실관리, 장소 관리 페이지를 담당하여 개발 및 유지보수를 하였습니다.',
+        link: `<a style ="color: #1b60ff" href="http://admin.dodam.b1nd.com" target="_blank" rel ="noopener noreferrer">
+        http://admin.dodam.b1nd.com (학교 내부망 네트워크만 접속이 됩니다.)</a>`,
     },
 
     {
@@ -63,6 +72,10 @@ export const projectList: IProjectType[] = [
         description: "교내 스마트 스쿨 플랫폼 선생님 페이지",
         thumbnail: WebTeacher,
         gallery: [WebTeacherMain, WebTeacherSecond, WebTeacherMobile, WebTeacher],
+        feel: 'feelfeell',
+        role: '프론트엔드',
+        link: `<a style ="color: #1b60ff" href="http://teacher.dodam.b1nd.com" target="_blank" rel ="noopener noreferrer">
+        http://teacher.dodam.b1nd.com (학교 내부망 네트워크만 접속이 됩니다.)</a>`,
     },
 
     {
@@ -75,6 +88,9 @@ export const projectList: IProjectType[] = [
         description: "교내 바인드팀 팀사이트",
         thumbnail: bindLogo,
         gallery: [CoronaDesktop, CoronaMobile],
+        feel: 'feelfeell',
+        role: '프론트엔드',
+        link: `<a style ="color: #1b60ff" href="http://b1nd.com" target="_blank" rel ="noopener noreferrer">http://b1nd.com</a>`,
     },
 
     {
@@ -87,6 +103,9 @@ export const projectList: IProjectType[] = [
         description: "코로나 정보 웹사이트",
         thumbnail: CoronaDesktop,
         gallery: [CoronaDesktop, CoronaMobile],
+        feel: 'feelfeell',
+        role: '프론트엔드',
+        link: '서비스가 종료되었습니다.',
     },
 
     {
@@ -99,6 +118,9 @@ export const projectList: IProjectType[] = [
         description: "제주도 관광 도우미 서비스",
         thumbnail: bindLogo,
         gallery: [],
+        feel: 'feelfeell',
+        role: '프론트엔드',
+        link: '서비스가 종료되었습니다.',
     },
     
     {
@@ -111,6 +133,9 @@ export const projectList: IProjectType[] = [
         description: "개인 블로그 사이트",
         thumbnail: bindLogo,
         gallery: [],
+        feel: 'feelfeell',
+        role: '프론트엔드',
+        link: 'httpsfasdfdsafsdf://',
     },
 
     {
@@ -123,6 +148,9 @@ export const projectList: IProjectType[] = [
         description: "학교를 검색하여 급식, 일정을 볼수 있는 웹",
         thumbnail: bindLogo,
         gallery: [],
+        feel: 'feelfeell',
+        role: '프론트엔드',
+        link: 'httpsfasdfdsafsdf://',
     },
 
     {
@@ -135,6 +163,9 @@ export const projectList: IProjectType[] = [
         description: "포트폴리오 구매 사이트 \n줄바꿈 테스트",
         thumbnail: bindLogo,
         gallery: [],
+        feel: 'feelfeell',
+        role: '프론트엔드',
+        link: 'httpsfasdfdsafsdf://',
     },
 
     {
@@ -147,6 +178,9 @@ export const projectList: IProjectType[] = [
         description: "교내 커뮤니티 사이트",
         thumbnail: bindLogo,
         gallery: [],
+        feel: 'feelfeell',
+        role: '프론트엔드',
+        link: 'httpsfasdfdsafsdf://',
     },
 
     {
@@ -159,5 +193,8 @@ export const projectList: IProjectType[] = [
         description: "3개 마이스터고 학생들의 도서관 웹사이트",
         thumbnail: LivroSearch,
         gallery: [LivroMain, LivroCheck, LivroNotice, LivroSearch, LivroMyInfo],
+        feel: 'feelfeell',
+        role: '프론트엔드',
+        link: 'httpsfasdfdsafsdf://',
     },
 ];

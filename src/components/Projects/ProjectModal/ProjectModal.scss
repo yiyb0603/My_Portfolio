@@ -2,80 +2,84 @@
 @import 'styles/Fonts/FontScheme.scss';
 
 @mixin arrowStyle() {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: $black;
-  color: $white;
-  font-size: $font_20;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-  padding: 10px;
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.15s ease-in-out;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: $black;
+	color: $white;
+	font-size: $font_20;
+	font-weight: bold;
+	border: none;
+	outline: none;
+	border-radius: 50%;
+	padding: 10px;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.15s ease-in-out;
 
-  &:hover {
-    opacity: 0.8;
-  }
+	&:hover {
+		opacity: 0.8;
+	}
 }
 
 .ProjectModal {
-  position: relative;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
+	position: relative;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
 
-  &-LeftArrow {
-    @include arrowStyle();
-    left: 0;
-  }
+	&-LeftArrow {
+		@include arrowStyle();
+		left: 0;
+	}
 
-  &-RightArrow {
-    @include arrowStyle();
-    right: 0;
-  }
+	&-RightArrow {
+		@include arrowStyle();
+		right: 0;
+	}
 
-  &-Image {
-    max-width: 100%;
-    height: 400px;
-    display: block;
-    margin: 0 auto;
-    object-fit: fill;
-    padding: 10px 0;
-  }
+	&-Image {
+		max-width: 100%;
+		height: 400px;
+		display: block;
+		margin: 0 auto;
+		object-fit: fill;
+		padding: 10px 0;
+	}
 
-  &-Select {
-    display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    margin-left: 5px;
+	&-Select {
+		display: flex;
+		display: -webkit-flex;
+		align-items: center;
+		margin-left: 5px;
 
-    & > div:last-child {
-      border: none;
-    }
+		&-Selected {
+			color: $primary;
+		}
 
-    & > * {
-      border-right: 1px solid $primary;
-      padding: 0 6px;
-      margin: 2px 0;
-      cursor: pointer;
+		& > div:last-child {
+			border: none;
+		}
 
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
+		& > * {
+			border-right: 1px solid $primary;
+			padding: 0 6px;
+			margin: 2px 0;
+			cursor: pointer;
 
-  &-Contents {
-    word-break: break-all;
-    border-top: 1px solid $gray;
-    line-height: 25px;
-    padding: 3px 10px;
-  }
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	&-Contents {
+		word-break: break-all;
+		border-top: 1px solid $gray;
+		line-height: 25px;
+		padding: 3px 10px;
+	}
 }

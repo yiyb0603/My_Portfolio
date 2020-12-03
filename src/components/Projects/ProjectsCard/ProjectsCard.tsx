@@ -9,10 +9,13 @@ interface ProjectsCardProps {
     gallery: string[];
     introduction: string;
     thumbnail: string;
+    feel: string;
+    link: string;
+    role: string;
     handleClick: () => void;
-}
+};
 
-const ProjectsCard = ({ name, introduction, type, stacks, period, gallery, thumbnail, handleClick } : ProjectsCardProps) => {
+const ProjectsCard = ({ name, introduction, type, stacks, period, gallery, feel, link, role, thumbnail, handleClick } : ProjectsCardProps) => {
     return (
         <div className ="ProjectsCard" onClick ={handleClick}>
             <div className ="ProjectsCard-Types">{type.join(", ")}</div>

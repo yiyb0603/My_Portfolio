@@ -2,12 +2,12 @@
 @import 'styles/Fonts/FontScheme.scss';
 
 .Projects {
-    width: 100%;
-    max-width: 1400px;
-    &-Grid {
-        flex: 1;
-        display: flex;
-        display: -webkit-flex;
-        flex-wrap: wrap;
-    }
+	width: 100%;
+	max-width: 1400px;
+	&-Grid {
+		flex: 1;
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+	}
 }

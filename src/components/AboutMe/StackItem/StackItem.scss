@@ -141,6 +141,10 @@
 			&-TypeORMBar {
 				@include progressBarStyle(65%, $blue);
 			}
+
+			&-NestBar {
+				@include progressBarStyle(40%, $pink);
+			}
 		}
 	}
 }

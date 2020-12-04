@@ -3,4 +3,10 @@ export enum ProjectEnums {
   'ROLE',
   'FEEL',
   'LINK',
-}
+};
+
+export enum ProjectTypes {
+  'ALL',
+  'FRONTEND',
+  'BACKEND',
+};

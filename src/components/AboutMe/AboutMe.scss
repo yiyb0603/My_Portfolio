@@ -3,4 +3,60 @@
 
 .AboutMe {
 	color: white;
+	max-width: 1400px;
+	border-bottom: 3px solid $blue;
+	margin-bottom: 1rem;
+
+	&-Wrapper {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1rem;
+
+		& > * {
+			margin-bottom: 10px;
+		}
+
+		&-Image {
+			height: 450px;
+			max-height: 450px;
+		}
+
+		&-SubTitle {
+			line-height: 2.5rem;
+			font-size: $font_20;
+		}
+
+		&-Introduction {
+			margin-bottom: 10px;
+			font-size: $font_25;
+			color: $mint;
+		}
+
+		&-ContentsWrapper {
+			&-Contents {
+				font-size: 4rem;
+			}
+
+			&-Github {
+				display: flex;
+				display: -webkit-flex;
+				justify-content: space-around;
+				outline: none;
+				border: 1px solid $white;
+				padding: 8px 10px;
+				background-color: $black;
+				color: $white;
+				font-size: $font_25;
+				cursor: pointer;
+				transition: 0.2s ease;
+
+				&:hover {
+					background-color: $white;
+					color: $black;
+				}
+			}
+		}
+	}
 }

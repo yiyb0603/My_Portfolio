@@ -85,11 +85,16 @@ export const projectList: IProjectType[] = [
         stacks: ["JavaScript", "React.js", "SASS"],
         period: "2020.04.08 ~ 05.10 (서비스 중)",
         introduction: "교내 바인드팀 팀사이트", 
-        description: "교내 바인드팀 팀사이트",
+        description: `제가 소속되어 있는 교내 스마트 스쿨 플랫폼 개발팀 바인드 팀의 웹페이지 입니다.
+        현재까지 바인드팀이 걸어왔던 길 및 팀원 소개 등의 바인드팀 소개 위주로 이루어져 있습니다.
+        바인드팀에 대한 궁금한 점이 있다면 둘러보세요.`,
         thumbnail: bindLogo,
         gallery: [CoronaDesktop, CoronaMobile],
-        feel: 'feelfeell',
-        role: '프론트엔드',
+        feel: `처음으로 바인드팀과 관한 웹페이지를 만들어보는 일이었고, 그만큼 중요했던 프로젝트 였기에
+        내용 및 디자인 하나하나 섬세하게 생각하면서 제작을 하였습니다. 사실 제작 당시에는 UI 디자인 초안이
+         없었지만, PM 선생님 및 팀원들의 도움 덕분에 무사히 제작할 수 있었습니다.
+         네이버 및 카카오 공식 홈페이지를 많이 참고했습니다.`,
+        role: '프론트엔드 에서 여러 페이지들을 번번히 만져가면서 제작 서비스 및 유지보수 하였습니다.',
         link: `<a style ="color: #1b60ff" href="http://b1nd.com" target="_blank" rel ="noopener noreferrer">http://b1nd.com</a>`,
     },
 

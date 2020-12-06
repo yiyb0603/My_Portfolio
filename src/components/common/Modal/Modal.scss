@@ -7,11 +7,19 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-color: $white;
-	width: 40%;
+	width: 800px;
 	height: 70%;
 	padding: 10px;
 	overflow-x: hidden;
 	overflow-y: auto;
+
+	@media screen and (max-width: 880px) {
+		width: 500px;
+	}
+
+	@media screen and (max-width: 550px) {
+		width: 350px;
+	}
 
 	&-Wrapper {
 		position: fixed;

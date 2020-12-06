@@ -7,6 +7,7 @@ import { IProjectType } from 'interface/ProjectType';
 import ProjectModal from './ProjectModal';
 import { ClassNamesFn } from 'classnames/types';
 import { ProjectTypes } from 'enum/ProjectEnum';
+import FadeIn from 'react-fade-in';
 
 const style = require('./Projects.scss');
 const cx: ClassNamesFn = classNames.bind(style);
@@ -64,25 +65,27 @@ const Projects = () => {
     });
 
   return (
-    <div className ={cx("Projects")}>
-      <div className={cx("Projects-Top")}>
-      {
-        topics.map((top: string, idx: number) => {
-          return (
-            <div className={cx({
-              'Projects-Top-Current': topic === idx
-            })} onClick={() => setTopic(idx)}>{top}</div>
-          );
-        })
-      }
-      </div>
+    <FadeIn>
+      <div className ={cx("Projects")}>
+        <div className={cx("Projects-Top")}>
+        {
+          topics.map((top: string, idx: number) => {
+            return (
+              <div key={idx} className={cx({
+                'Projects-Top-Current': topic === idx
+              })} onClick={() => setTopic(idx)}>{top}</div>
+            );
+          })
+        }
+        </div>
 
-      <div className ={cx("Projects-Grid")}>{projectLists}</div>
-      {
-        projectInfo.id && isModal ?
-          <ProjectModal isModal={isModal} setIsModal={setIsModal} projectInfo ={projectInfo} /> : <></>
-      }
-    </div>
+        <div className ={cx("Projects-Grid")}>{projectLists}</div>
+        {
+          projectInfo.id && isModal ?
+            <ProjectModal isModal={isModal} setIsModal={setIsModal} projectInfo ={projectInfo} /> : <></>
+        }
+      </div>
+    </FadeIn>
   );
 }
 

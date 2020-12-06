@@ -11,6 +11,7 @@ const cx: ClassNamesFn = classNames.bind(style);
 
 const History = () => {
   const { primary, white } = Palette;
+  const topics: string[] = ['전체', '수상', '활동', '대회', '컨퍼런스'];
   const [selectButton, setSelectButton] = useState<number>(-1);
 
   const onClickButton = useCallback((e: MouseEvent<HTMLButtonElement>): void => {
@@ -24,22 +25,19 @@ const History = () => {
   return (
     <div className={cx('History')}>
       <div className={cx('History-SelectZone')}>
-        <button id="-1" onClick={onClickButton}
-          className={cx({
-            'History-SelectZone-Selected': selectButton === -1
-        })}>전체</button>
-
-        <button id="0" onClick={onClickButton} className={cx({
-            'History-SelectZone-Selected': selectButton === 0
-        })}>수상</button>
-
-        <button id="1" onClick={onClickButton} className={cx({
-            'History-SelectZone-Selected': selectButton === 1
-        })}>활동</button>
-
-        <button id="2" onClick={onClickButton} className={cx({
-            'History-SelectZone-Selected': selectButton === 2
-        })}>전공 활동</button>
+        {
+          topics.map((topic: string, idx: number) => {
+            console.log(idx - 1);
+            return (
+              <button
+                id={(idx - 1).toString()}
+                key={idx}
+                onClick={onClickButton}
+                className={cx({ 'History-SelectZone-Selected': selectButton === (idx - 1) })}
+              >{topic}</button>
+            );
+          })
+        }
       </div>
 
       <VerticalTimeline>

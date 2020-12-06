@@ -2,7 +2,7 @@
 @import 'styles/Fonts/FontScheme.scss';
 
 .AboutMe {
-	color: white;
+	color: $white;
 	max-width: 1400px;
 	border-bottom: 3px solid $blue;
 	margin-bottom: 1rem;
@@ -12,15 +12,14 @@
 		display: -webkit-flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 1rem;
 
 		& > * {
 			margin-bottom: 10px;
 		}
 
 		&-Image {
-			height: 450px;
-			max-height: 450px;
+			height: 420px;
+			max-height: 420px;
 		}
 
 		&-SubTitle {
@@ -45,6 +44,7 @@
 				justify-content: space-around;
 				outline: none;
 				border: 1px solid $white;
+				border-radius: 5px;
 				padding: 8px 10px;
 				background-color: $black;
 				color: $white;

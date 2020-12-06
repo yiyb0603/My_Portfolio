@@ -19,10 +19,11 @@ interface ProjectModalProps {
 const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) => {
   const [index, setIndex] = useState<number>(0);
   const [topic, setTopic] = useState<ProjectEnums>(0);
+  const [mouseEnter, setMouseEnter] = useState<boolean>(false);
 
   const { name, description, gallery, period, stacks, feel, link, role } = projectInfo;
   const topics: string[] | Element[] = [description!, role!, feel!, link!];
-  const topicNames: string[] = ['프로젝트 의도', '맡은 역할', '느낀점', '관련 링크'];
+  const topicNames: string[] = ['프로젝트 설명', '맡은 역할', '느낀점', '관련 링크'];
 
   const handlePrevClick = useCallback(() => {
     if (index <= 0) {
@@ -44,14 +45,19 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) =
 
   return (
     <Modal isModal={isModal} setIsModal={setIsModal} title ={name!} period={period!} stacks={stacks!}>
-      <div className={cx('ProjectModal')}>
-        <div className={cx('ProjectModal-LeftArrow')} onClick={handlePrevClick}>
-          <AiOutlineArrowLeft />
-        </div>
+      <div className={cx('ProjectModal')} onMouseEnter={() => setMouseEnter(true)} onMouseLeave={() => setMouseEnter(false)}>
+        {
+          mouseEnter &&
+          <>
+            <div className={cx('ProjectModal-LeftArrow')} onClick={handlePrevClick}>
+              <AiOutlineArrowLeft />
+            </div>
 
-        <div className={cx('ProjectModal-RightArrow')} onClick={handleNextClick}>
-          <AiOutlineArrowRight />
-        </div>
+            <div className={cx('ProjectModal-RightArrow')} onClick={handleNextClick}>
+              <AiOutlineArrowRight />
+            </div>
+          </>
+        }
         <img className={cx('ProjectModal-Image')} src ={gallery![index]} alt ="gallerys" />
       </div>
 

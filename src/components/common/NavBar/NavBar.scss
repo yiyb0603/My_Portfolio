@@ -1,3 +1,6 @@
+@import 'styles/Palette/Palette.scss';
+@import 'styles/Fonts/FontScheme.scss';
+
 .NavBar {
     width: 100%;
     padding: 1rem 0;
@@ -6,8 +9,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    background-color: darken(#3a3b50, 10%);
-    color: white;
+    background-color: darken($navbar, 10%);
+    color: $white;
 
     &-Contents {
         width: 100%;
@@ -17,10 +20,10 @@
         justify-content: space-between;
         align-items: center;
         list-style: none;
-        padding: 0 20px;
 
         &-CurrentItem {
-            border-bottom: 5px solid #0090d5;
+            border-bottom: 5px solid $blue;
+            border-radius: 5px;
             font-size: 25px;
         }
 
@@ -30,7 +33,7 @@
             cursor: pointer;
             text-transform: uppercase;
             list-style: none;
-            padding: 1rem 0;
+            padding: 10px 0;
         }    
     }
 }

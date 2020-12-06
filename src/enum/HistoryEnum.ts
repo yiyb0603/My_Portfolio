@@ -1,5 +1,6 @@
 export enum HistoryEnums {
   'AWARDS',
   'ACTIVITY',
-  'COMPETITION'
+  'COMPETITION',
+  'CONFERENCE',
 }

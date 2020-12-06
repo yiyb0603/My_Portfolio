@@ -5,11 +5,15 @@ import { AiOutlineGithub } from 'react-icons/ai';
 import Stacks from './Stacks';
 import HomeImage from 'assets/images/Home.svg';
 import FadeIn from 'react-fade-in';
+import Constants from 'util/Constants';
+import Contact from './Contact';
 
 const style = require("./AboutMe.scss");
 const cx: ClassNamesFn = classNames.bind(style);
 
 const AboutMe = () => {
+  const { GITHUB_ADDRESS } = Constants;
+
   return (
     <FadeIn>
       <div className ={cx("AboutMe")}>
@@ -29,7 +33,7 @@ const AboutMe = () => {
               안녕하세요 깨끗한 세상을 지향하는<br />개발자 권용빈 입니다.
             </div>
 
-            <button onClick={() => window.open("http://github.com/yiyb0603")} className={cx('AboutMe-Wrapper-ContentsWrapper-Github')}>
+            <button onClick={() => window.open(GITHUB_ADDRESS)} className={cx('AboutMe-Wrapper-ContentsWrapper-Github')}>
               <AiOutlineGithub style ={{ marginRight: 5 }} />
               <div>Github 바로가기</div>
             </button>
@@ -38,7 +42,8 @@ const AboutMe = () => {
           <img src={HomeImage} alt ="homeimage" className={cx('AboutMe-Wrapper-Image')} />
         </div>
       </div>
-
+      
+      <Contact />
       <Stacks />
     </FadeIn>
   );

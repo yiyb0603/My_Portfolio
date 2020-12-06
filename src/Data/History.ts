@@ -1,14 +1,15 @@
-import { FaMedal, FaMountain, FaWater, FaAward, FaSchool, FaMicrophone, FaLaptopCode } from 'react-icons/fa';
-import { GiElectric, GiForestCamp, GiNothingToSay, GiBlood, GiPineTree, GiConvict } from 'react-icons/gi';
-import { RiSlideshow3Line, RiCalendarEventLine, RiPrinterCloudLine } from 'react-icons/ri';
+import { FaMedal, FaMountain, FaWater, FaAward, FaSchool, FaMicrophone, FaLaptopCode, FaElementor, FaReact, FaJava, FaPersonBooth } from 'react-icons/fa';
+import { GiElectric, GiForestCamp, GiNothingToSay, GiBlood, GiPineTree, GiConvict, GiTalk } from 'react-icons/gi';
+import { RiSlideshow3Line, RiCalendarEventLine, RiPrinterCloudLine, RiSmartphoneLine } from 'react-icons/ri';
 import { IoMdBaseball } from 'react-icons/io';
 import { AiFillHtml5 } from 'react-icons/ai';
-import { FcNightLandscape, FcConferenceCall } from 'react-icons/fc';
+import { FcNightLandscape, FcConferenceCall, FcDocument } from 'react-icons/fc';
 import { IconType } from 'react-icons/lib';
+import { GrGraphQl, GrTestDesktop } from 'react-icons/gr';
 import { HistoryEnums } from "enum/HistoryEnum";
 
 export interface IHistoryType {
-  // 0 = 수상, 1 = 활동, 2 = 전공관련,
+  // 0 = 수상, 1 = 활동, 2 = 대회, 3 = 컨퍼런스
   type: HistoryEnums,
   name: string;
   date: string;
@@ -17,7 +18,7 @@ export interface IHistoryType {
 
 export const myHistory: IHistoryType[] = [
   {
-    type: 2,
+    type: 1,
     name: '교내 기초전자교육',
     date: '2019.03.22 ~ 07.13',
     icon: GiElectric,
@@ -143,7 +144,7 @@ export const myHistory: IHistoryType[] = [
   },
 
   {
-    type: 2,
+    type: 1,
     name: '대구 SW고 1기 졸업생 진로 특강 및 인터뷰',
     date: '2019.10.08',
     icon: GiNothingToSay,
@@ -178,14 +179,28 @@ export const myHistory: IHistoryType[] = [
   },
 
   {
-    type: 2,
+    type: 1,
+    name: '교내 스마트 스쿨 개발팀 B1ND팀 가입',
+    date: '2019.11.19',
+    icon: FaLaptopCode,
+  },
+
+  {
+    type: 1,
     name: '교내 전공역량 강화 교육 참여 (HTML, CSS)',
     date: '2019.12.17 ~ 12.20',
     icon: AiFillHtml5,
   },
 
   {
-    type: 2,
+    type: 0,
+    name: `교내 메이커톤 "제주도를 부탁해" 대상`,
+    date: '2019.12.18',
+    icon: FaMedal,
+  },
+
+  {
+    type: 3,
     name: '교내 제2회 DEXT 컨퍼런스 참관',
     date: '2019.12.23',
     icon: FcConferenceCall,
@@ -203,5 +218,110 @@ export const myHistory: IHistoryType[] = [
     name: '교내 취업역량 강화 특강',
     date: '2020.01.06 ~ 01.09',
     icon: GiNothingToSay,
+  },
+
+  {
+    type: 2,
+    name: '2020 스마틴 앱 챌린지 참가',
+    date: '2020.04',
+    icon: RiSmartphoneLine,
+  },
+
+  {
+    type: 1,
+    name: '포트폴리오 온라인 특강',
+    date: '2020.04.13 ~ 2020.04.14 (40분씩)',
+    icon: FcDocument,
+  },
+
+  {
+    type: 1,
+    name: '여동엽 선배님의 온라인 기획 특강',
+    date: '2020.04.24',
+    icon: RiCalendarEventLine,
+  },
+
+  {
+    type: 1,
+    name: '교내 1학년 대상 튜티튜터 멘토링 활동',
+    date: '2020.06 ~ 09',
+    icon: FaElementor,
+  },
+
+  {
+    type: 0,
+    name: '학급 부반장 임명장',
+    date: '2020.06.09',
+    icon: FaAward,
+  },
+
+  {
+    type: 3,
+    name: '온라인 GraphQL korea meetup 관람',
+    date: '2020.06.13',
+    icon: GrGraphQl,
+  },
+
+  {
+    type: 1,
+    name: '교내 OCJP 자격증 특강수업 참여',
+    date: '2020.07.10',
+    icon: FaJava,
+  },
+
+  {
+    type: 1,
+    name: '2020 교내 전공 역량 강화 교육참가 (React Native)',
+    date: '2020.07.23 ~ 07.27',
+    icon: FaReact,
+  },
+
+  {
+    type: 1,
+    name: 'TTA 아카데미 소프트웨어 테스트 전문가 (CSTS) 교육 이수',
+    date: '2020.08.10 ~ 08.12',
+    icon: GrTestDesktop,
+  },
+
+  {
+    type: 0,
+    name: '교내 양성평등 삼행시짓기 최우수상',
+    date: '2020.08.28',
+    icon: FaMedal,
+  },
+
+  {
+    type: 1,
+    name: '3개 SW마이스터고 온라인 웨비나 톡톡톡 행사 참가',
+    date: '2020.09.23',
+    icon: GiTalk,
+  },
+
+  {
+    type: 1,
+    name: '교내 3학년 취업생 토크 콘서트',
+    date: '2020.10.12',
+    icon: FaMicrophone,
+  },
+
+  {
+    type: 3,
+    name: '2020 온라인 KCD 컨퍼런스 관람',
+    date: '2020.11.07',
+    icon: FcConferenceCall,
+  },
+
+  {
+    type: 2,
+    name: '2020 대한민국 ICT 융합엑스포 부스 운영',
+    date: '2020.11.19 ~ 11.20',
+    icon: FaPersonBooth,
+  },
+
+  {
+    type: 2,
+    name: '3개 마이스터고 연합 해커톤 참가',
+    date: '2020.11.23 ~ 11.25',
+    icon: FaLaptopCode,
   },
 ];

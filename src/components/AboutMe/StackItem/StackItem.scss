@@ -28,9 +28,17 @@
 @mixin progressBarStyle($width, $background) {
 	width: $width;
 	height: 30px;
-	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%,
-    rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-	
+	background-image: linear-gradient(
+		50deg,
+		rgba(255, 255, 255, 0.15) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.15) 50%,
+		rgba(255, 255, 255, 0.15) 75%,
+		transparent 75%,
+		transparent
+	);
+
 	background-color: $background;
 	border-radius: 3px;
 }
@@ -41,6 +49,7 @@
 	&-Wrapper {
 		@include flexStyle();
 		align-items: center;
+		padding-right: 1rem;
 		margin: 15px 0;
 
 		&-Icon {
@@ -101,11 +110,11 @@
 			}
 
 			&-JavaScriptBar {
-				@include progressBarStyle(90%, $yellow);
+				@include progressBarStyle(95%, $yellow);
 			}
 
 			&-TypeScriptBar {
-				@include progressBarStyle(90%, $primary);
+				@include progressBarStyle(95%, $primary);
 			}
 
 			&-ReactBar {

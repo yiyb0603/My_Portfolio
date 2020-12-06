@@ -2,75 +2,79 @@
 @import 'styles/Fonts/FontScheme.scss';
 
 @mixin buttonStyle($background, $color) {
-  background-color: $background;
-  color: $color;
-  transition: 0.2s ease-in-out;
-  -webkit-transition: 0.2s ease-in-out;
+	background-color: $background;
+	color: $color;
+	transition: 0.2s ease-in-out;
+	-webkit-transition: 0.2s ease-in-out;
 
-  &:hover {
-    opacity: 0.65;
-  }
+	&:hover {
+		opacity: 0.65;
+	}
 }
 
 .Contact {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  display: -wekbit-flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 3px solid $blue;
-  margin-bottom: 5rem;
-  padding-bottom: 1rem;
-  color: $white;
-  padding-left: 2px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	display: -wekbit-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 3px solid $blue;
+	margin-bottom: 5rem;
+	padding-bottom: 1rem;
+	color: $white;
+	padding: 1rem 0;
 
-  &-Title {
-    width: 300px;
-    font-size: $font_25;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid $white;
-  }
+	@media screen and (max-width: 930px) {
+		padding-left: 1rem;
+	}
 
-  &-Contents {
-    color: $gray;
-    font-weight: bold;
-    font-size: $font_20;
-    line-height: 30px;
-  }
+	&-Title {
+		width: 300px;
+		font-size: $font_25;
+		margin-bottom: 12px;
+		padding-bottom: 8px;
+		border-bottom: 1px solid $white;
+	}
 
-  &-Buttons {
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
+	&-Contents {
+		color: $gray;
+		font-weight: bold;
+		font-size: $font_20;
+		line-height: 30px;
+	}
 
-    & > * {
-      width: 220px;
-      height: 100%;
-      border: none;
-      border-radius: 5px;
-      display: flex;
-      display: -webkit-flex;
-      justify-content: center;
-      padding: 12px 0;
-      font-size: $font_25;
-      margin-left: 10px;
-      margin-top: 10px;
-      cursor: pointer;
-    }
+	&-Buttons {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
 
-    &-Facebook {
-      @include buttonStyle($primary, $white);
-    }
+		& > * {
+			width: 220px;
+			height: 100%;
+			border: none;
+			border-radius: 5px;
+			display: flex;
+			display: -webkit-flex;
+			justify-content: center;
+			padding: 12px 0;
+			font-size: $font_25;
+			margin-left: 10px;
+			margin-top: 10px;
+			cursor: pointer;
+		}
 
-    &-Gmail {
-      @include buttonStyle($red, $white);
-    }
+		&-Facebook {
+			@include buttonStyle($primary, $white);
+		}
 
-    &-RocketPunch {
-      @include buttonStyle($blue, $white);
-    }
-  }
+		&-Gmail {
+			@include buttonStyle($red, $white);
+		}
+
+		&-RocketPunch {
+			@include buttonStyle($blue, $white);
+		}
+	}
 }

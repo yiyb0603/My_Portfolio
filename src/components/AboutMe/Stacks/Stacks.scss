@@ -3,4 +3,8 @@
 
 .Stacks {
 	color: $white;
+
+	& > h2 {
+		margin-left: 10px;
+	}
 }

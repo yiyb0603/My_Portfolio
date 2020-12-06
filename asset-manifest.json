@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/my_portfolio/static/css/main.0c736aaf.chunk.css",
-    "main.js": "/my_portfolio/static/js/main.19e7a57b.chunk.js",
-    "main.js.map": "/my_portfolio/static/js/main.19e7a57b.chunk.js.map",
+    "main.css": "/my_portfolio/static/css/main.66396bcb.chunk.css",
+    "main.js": "/my_portfolio/static/js/main.bb695ccc.chunk.js",
+    "main.js.map": "/my_portfolio/static/js/main.bb695ccc.chunk.js.map",
     "runtime-main.js": "/my_portfolio/static/js/runtime-main.77f2245f.js",
     "runtime-main.js.map": "/my_portfolio/static/js/runtime-main.77f2245f.js.map",
     "static/css/2.22ca87da.chunk.css": "/my_portfolio/static/css/2.22ca87da.chunk.css",
-    "static/js/2.e5b3ad15.chunk.js": "/my_portfolio/static/js/2.e5b3ad15.chunk.js",
-    "static/js/2.e5b3ad15.chunk.js.map": "/my_portfolio/static/js/2.e5b3ad15.chunk.js.map",
+    "static/js/2.6298e907.chunk.js": "/my_portfolio/static/js/2.6298e907.chunk.js",
+    "static/js/2.6298e907.chunk.js.map": "/my_portfolio/static/js/2.6298e907.chunk.js.map",
     "index.html": "/my_portfolio/index.html",
-    "precache-manifest.055fb10f6545e64a6b5e2ab909e87654.js": "/my_portfolio/precache-manifest.055fb10f6545e64a6b5e2ab909e87654.js",
+    "precache-manifest.dd3000a621be2f14312cb1892575d7d6.js": "/my_portfolio/precache-manifest.dd3000a621be2f14312cb1892575d7d6.js",
     "service-worker.js": "/my_portfolio/service-worker.js",
     "static/css/2.22ca87da.chunk.css.map": "/my_portfolio/static/css/2.22ca87da.chunk.css.map",
-    "static/css/main.0c736aaf.chunk.css.map": "/my_portfolio/static/css/main.0c736aaf.chunk.css.map",
-    "static/js/2.e5b3ad15.chunk.js.LICENSE.txt": "/my_portfolio/static/js/2.e5b3ad15.chunk.js.LICENSE.txt",
+    "static/css/main.66396bcb.chunk.css.map": "/my_portfolio/static/css/main.66396bcb.chunk.css.map",
+    "static/js/2.6298e907.chunk.js.LICENSE.txt": "/my_portfolio/static/js/2.6298e907.chunk.js.LICENSE.txt",
     "static/media/AdminAllow.png": "/my_portfolio/static/media/AdminAllow.5b21c1d5.png",
     "static/media/AdminAuthority.png": "/my_portfolio/static/media/AdminAuthority.7be2396f.png",
     "static/media/AdminClass.png": "/my_portfolio/static/media/AdminClass.7216a11c.png",
@@ -21,6 +21,7 @@
     "static/media/AdminPlace.png": "/my_portfolio/static/media/AdminPlace.c9b8af82.png",
     "static/media/AdminSign.png": "/my_portfolio/static/media/AdminSign.335f7906.png",
     "static/media/AdminTime.png": "/my_portfolio/static/media/AdminTime.49880118.png",
+    "static/media/CLogo.svg": "/my_portfolio/static/media/CLogo.1df85772.svg",
     "static/media/Check.png": "/my_portfolio/static/media/Check.ab6d0cbb.png",
     "static/media/CoCode_Community.jpg": "/my_portfolio/static/media/CoCode_Community.d3e4de56.jpg",
     "static/media/CoCode_MealCom.jpg": "/my_portfolio/static/media/CoCode_MealCom.8ed1faa0.jpg",
@@ -55,8 +56,8 @@
   "entrypoints": [
     "static/js/runtime-main.77f2245f.js",
     "static/css/2.22ca87da.chunk.css",
-    "static/js/2.e5b3ad15.chunk.js",
-    "static/css/main.0c736aaf.chunk.css",
-    "static/js/main.19e7a57b.chunk.js"
+    "static/js/2.6298e907.chunk.js",
+    "static/css/main.66396bcb.chunk.css",
+    "static/js/main.bb695ccc.chunk.js"
   ]
 }

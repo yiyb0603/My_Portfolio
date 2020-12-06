@@ -38,7 +38,7 @@
 	&-Wrapper {
 		@include flexStyle();
 		align-items: center;
-		margin: 10px 0;
+		margin: 15px 0;
 
 		&-Icon {
 			@include iconWrapperStyle();
@@ -96,7 +96,7 @@
 			&-HTMLBar {
 				@include progressBarStyle(
 					90%,
-					linear-gradient(to top, $orange, $skyBlue)
+					linear-gradient(to right, $orange, $skyBlue)
 				);
 			}
 
@@ -127,14 +127,14 @@
 			&-NextBar {
 				@include progressBarStyle(
 					70%,
-					linear-gradient(to bottom, $green, $white)
+					linear-gradient(to right, $green, $lighterGray)
 				);
 			}
 
 			&-ExpressBar {
 				@include progressBarStyle(
 					65%,
-					linear-gradient(to bottom, $green, $yellow)
+					linear-gradient(to right, $green, $yellow)
 				);
 			}
 

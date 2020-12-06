@@ -57,7 +57,7 @@
 		margin-left: 5px;
 
 		&-Selected {
-			color: $primary;
+			color: $blue;
 		}
 
 		& > div:last-child {
@@ -65,7 +65,7 @@
 		}
 
 		& > * {
-			border-right: 1px solid $primary;
+			border-right: 1px solid $blue;
 			padding: 0 6px;
 			margin: 2px 0;
 			cursor: pointer;
@@ -79,7 +79,9 @@
 	&-Contents {
 		word-break: break-all;
 		border-top: 1px solid $gray;
-		line-height: 25px;
+		line-height: 30px;
 		padding: 3px 10px;
+		margin-top: 3px;
+		padding-top: 5px;
 	}
 }

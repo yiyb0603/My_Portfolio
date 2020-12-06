@@ -1,4 +1,4 @@
-import bindLogo from 'assets/images/bindLogo.png';
+import { Palette } from 'styles/Palette/Palette';
 import { IProjectType } from 'interface/ProjectType';
 
 import WebLocation from 'assets/images/mockup/WebStudent/LocationApply.png';
@@ -6,6 +6,19 @@ import WebWakeSong from 'assets/images/mockup/WebStudent/WakeSong.png';
 import WebSchedule from 'assets/images/mockup/WebStudent/Web_Schedule.png';
 import WebMain from 'assets/images/mockup/WebStudent/Web_Cap_Main.png';
 import WebMainDark from 'assets/images/mockup/WebStudent/Web_Main_Dark.png';
+
+import AdminAllow from 'assets/images/mockup/WebAdmin/AdminAllow.png';
+import AdminAuthority from 'assets/images/mockup/WebAdmin/AdminAuthority.png';
+import AdminClass from 'assets/images/mockup/WebAdmin/AdminClass.png';
+import AdminPhone from 'assets/images/mockup/WebAdmin/AdminPhone.png';
+import AdminPlace from 'assets/images/mockup/WebAdmin/AdminPlace.png';
+import AdminSign from 'assets/images/mockup/WebAdmin/AdminSign.png';
+import AdminTime from 'assets/images/mockup/WebAdmin/AdminTime.png';
+
+import TeamMain from 'assets/images/mockup/TeamSite/TeamMain.png';
+import TeamIntroduce from 'assets/images/mockup/TeamSite/TeamIntroduce.png';
+import TeamService1 from 'assets/images/mockup/TeamSite/TeamService1.png';
+import TeamService2 from 'assets/images/mockup/TeamSite/TeamService2.png';
 
 import WebTeacherMain from 'assets/images/mockup/WebTeacher/Teacher_FirstPage.png';
 import WebTeacherSecond from 'assets/images/mockup/WebTeacher/Teacher_SecondPage.png';
@@ -40,13 +53,15 @@ const YLogSignUp: string = "https://user-images.githubusercontent.com/50941453/9
 const YLogWrite: string = "https://user-images.githubusercontent.com/50941453/97800203-c0206800-1c76-11eb-8ad3-8b15aefef1fc.PNG";
 const YLogAdmin: string = "https://user-images.githubusercontent.com/50941453/97800275-4177fa80-1c77-11eb-9aac-70678d714f39.PNG";
 
+const { blue } = Palette;
+
 export const projectList: IProjectType[] = [
     {
         id: 1,
         name: "도담도담 V2 유지보수",
         type: ["Front End"],
         stacks: ["JavaScript", "React.js", "MobX", "SASS"],
-        period: "2020.07.31 ~ (서비스중)",
+        period: "2020.06.19 (인수인계) ~ (서비스중)",
         introduction: "교내 스마트 스쿨 플랫폼",
         description: `기숙학교를 지내는 학생들은 교과시간이 끝난 이후에는 학교 안에서 자유롭게 자습을 할 수 있습니다.
         하지만 학교에서는 학생 관리를 위해 종이로 된 장부에 필수로 자신의 위치를 적어야 합니다. 그리고 선생님들 또한 직접 
@@ -60,7 +75,7 @@ export const projectList: IProjectType[] = [
         gallery: [WebMain, WebMainDark, WebLocation, WebSchedule, WebWakeSong],
         feel: `ㅁㄴㅇㄻㄴㄹㅇㄴㅁㄻㄴㅇㄹ`,
         role: '회원 알림탭, 분실물, 상담 쪽의 프론트엔드 유지보수를 맡았습니다.',
-        link: `<a style ="color: #1b60ff" href="http://dodam.b1nd.com" target="_blank" rel ="noopener noreferrer">
+        link: `<a style ="color: ${blue}" href="http://dodam.b1nd.com" target="_blank" rel ="noopener noreferrer">
         http://dodam.b1nd.com (학교 내부망 네트워크만 접속이 됩니다.)</a>`,
     },
 
@@ -73,8 +88,8 @@ export const projectList: IProjectType[] = [
         introduction: "교내 스마트 스쿨 플랫폼 관리자 페이지",
         description: `1번 프로젝트인 "도담도담"의 관리자용 페이지이며, 도담도담을 이루는 요소들을 전반적으로 관리합니다.<br />
         학생들이 위치신청을 하는 위치 장소 관리, 장소 및 회원가입 관리를 위한 교실 관리 등의 전반적인 베이스 데이터들을 관리합니다.`,
-        thumbnail: bindLogo,
-        gallery: [],
+        thumbnail: AdminAllow,
+        gallery: [AdminAllow, AdminAuthority, AdminClass, AdminPhone, AdminPlace, AdminTime, AdminSign],
         feel: `
         먼저, 이번 프로젝트를 통해서 제가 엄청나게 달라졌던것 같습니다. <br/>
         처음에 팀원들과 코드와 디자인을 통일하지 않아서 프로젝트를 진행하는데 많은 힘겨움 때문에 엄청 힘들었던 것 같습니다.<br/>
@@ -85,7 +100,7 @@ export const projectList: IProjectType[] = [
         Toast UI 캘린더를 이용하여 일정 시각화 및 드래그 수정 및 추가 기능 과정에서 많은 삽질을 통한 노력이 중요하다는 것을 알았습니다.
         `,
         role: '시간표 관리, 교실관리, 장소 관리 페이지를 담당하여 개발 및 유지보수를 하였습니다.',
-        link: `<a style ="color: #1b60ff" href="http://admin.dodam.b1nd.com" target="_blank" rel ="noopener noreferrer">
+        link: `<a style ="color: ${blue}" href="http://admin.dodam.b1nd.com" target="_blank" rel ="noopener noreferrer">
         http://admin.dodam.b1nd.com (학교 내부망 네트워크만 접속이 됩니다.)</a>`,
     },
 
@@ -106,7 +121,7 @@ export const projectList: IProjectType[] = [
         기존에 타입스크립트를 적응하였고, 그 덕분에 타입스크립트도 막힘없이 빠르게 저의 작업을 끝낼 수 있었습니다.
         `,
         role: '선생님 로그인/회원가입, 퇴사주 버스 관리, 학사일정 및 시정표 관리, 휴일 복귀 기능을 맡아서 제작하였습니다.',
-        link: `<a style ="color: #1b60ff" href="http://teacher.dodam.b1nd.com" target="_blank" rel ="noopener noreferrer">
+        link: `<a style ="color: ${blue}" href="http://teacher.dodam.b1nd.com" target="_blank" rel ="noopener noreferrer">
         http://teacher.dodam.b1nd.com (학교 내부망 네트워크만 접속이 됩니다.)</a>`,
     },
 
@@ -120,14 +135,14 @@ export const projectList: IProjectType[] = [
         description: `제가 소속되어 있는 교내 스마트 스쿨 플랫폼 개발팀 바인드 팀의 웹페이지 입니다.
         현재까지 바인드팀이 걸어왔던 길 및 팀원 소개 등의 바인드팀 소개 위주로 이루어져 있습니다.
         바인드팀에 대한 궁금한 점이 있다면 둘러보세요.`,
-        thumbnail: bindLogo,
-        gallery: [CoronaDesktop, CoronaMobile],
+        thumbnail: TeamService1,
+        gallery: [TeamService1, TeamService2, TeamMain, TeamIntroduce],
         feel: `처음으로 바인드팀과 관한 웹페이지를 만들어보는 일이었고, 그만큼 중요했던 프로젝트 였기에
         내용 및 디자인 하나하나 섬세하게 생각하면서 제작을 하였습니다. 사실 제작 당시에는 UI 디자인 초안이
          없었지만, PM 선생님 및 팀원들의 도움 덕분에 무사히 제작할 수 있었습니다.
          네이버 및 카카오 공식 홈페이지를 많이 참고했습니다.`,
         role: '프론트엔드 에서 여러 페이지들을 번번히 만져가면서 제작 서비스 및 유지보수 하였습니다.',
-        link: `<a style ="color: #1b60ff" href="http://b1nd.com" target="_blank" rel ="noopener noreferrer">http://b1nd.com</a>`,
+        link: `<a style ="color: ${blue}" href="http://b1nd.com" target="_blank" rel ="noopener noreferrer">http://b1nd.com</a>`,
     },
 
     {
@@ -154,7 +169,7 @@ export const projectList: IProjectType[] = [
         role: '지역 공유 게시판 및 자영업자 장터 제작을 맡았습니다.',
         link: `
         서비스가 종료되었습니다.<br />
-        깃허브: <a style ="color: #1b60ff" href="https://github.com/yiyb0603/Here-Corona" target="_blank" rel ="noopener noreferrer">
+        깃허브: <a style ="color: ${blue}" href="https://github.com/yiyb0603/Here-Corona" target="_blank" rel ="noopener noreferrer">
         https://github.com/yiyb0603/Here-Corona</a>
         `,
     },
@@ -182,9 +197,9 @@ export const projectList: IProjectType[] = [
         프론트엔드, 백엔드를 혼자서 제작하였습니다.<br/>
         `,
         link: `
-        프론트엔드 깃허브: <a style ="color: #1b60ff" href="https://github.com/yiyb0603/YLog_Web" target="_blank" rel ="noopener noreferrer">
+        프론트엔드 깃허브: <a style ="color: ${blue}" href="https://github.com/yiyb0603/YLog_Web" target="_blank" rel ="noopener noreferrer">
         https://github.com/yiyb0603/YLog_Web</a><br/>
-        백엔드 깃허브: <a style ="color: #1b60ff" href="https://github.com/yiyb0603/YLog_Server" target="_blank" rel ="noopener noreferrer">
+        백엔드 깃허브: <a style ="color: ${blue}" href="https://github.com/yiyb0603/YLog_Server" target="_blank" rel ="noopener noreferrer">
         https://github.com/yiyb0603/YLog_Server</a>
         `,
     },
@@ -210,7 +225,7 @@ export const projectList: IProjectType[] = [
         role: '프론트엔드, 백엔드를 혼자서 제작하였습니다.',
         link: `
         서비스가 종료되었습니다.<br />
-        깃허브: <a style ="color: #1b60ff" href="https://github.com/yiyb0603/SchoolMeals_TS" target="_blank" rel ="noopener noreferrer">
+        깃허브: <a style ="color: ${blue}" href="https://github.com/yiyb0603/SchoolMeals_TS" target="_blank" rel ="noopener noreferrer">
         https://github.com/yiyb0603/SchoolMeals_TS</a>
         `,
     },
@@ -236,7 +251,7 @@ export const projectList: IProjectType[] = [
         `,
         role: '프론트엔드 웹 전체를 맡아서 제작하였습니다.',
         link: `
-        깃허브: <a style ="color: #1b60ff" href="https://github.com/yiyb0603/CoCode_Web" target="_blank" rel ="noopener noreferrer">
+        깃허브: <a style ="color: ${blue}" href="https://github.com/yiyb0603/CoCode_Web" target="_blank" rel ="noopener noreferrer">
         https://github.com/yiyb0603/CoCode_Web</a>
         `,
     },
@@ -253,8 +268,8 @@ export const projectList: IProjectType[] = [
         Livro는 "책" 이라는 뜻의 포르투갈 언어의 뜻을 가지고, 3개 마이스터고 학생들의 도서관을 쉽게 관리하기 위해서 <br/>
         만들어진 웹사이트 입니다.
         `,
-        thumbnail: LivroSearch,
-        gallery: [LivroMain, LivroCheck, LivroNotice, LivroSearch, LivroMyInfo],
+        thumbnail: LivroMain,
+        gallery: [LivroMain, LivroSearch, LivroNotice, LivroCheck, LivroMyInfo],
         feel: `
         이번에 처음으로 3개 마이스터고 연합 해커톤에 참가하게 되었는데, 서로서로 작업 했던 환경과 스택이 달라서<br/>
         스택을 맞추는데 살짝 고민했지만 서로서로 배려하고, 의견을 통해 개발스택을 맞출 수 있었습니다.<br/>
@@ -265,7 +280,7 @@ export const projectList: IProjectType[] = [
         `,
         role: '프론트엔드에서 메인화면, 도서 검색, 대출 기능을 맡아서 작업하였습니다.',
         link: `
-        깃허브: <a style ="color: #1b60ff" href="https://github.com/yiyb0603/Livro-Front-end" target="_blank" rel ="noopener noreferrer">
+        깃허브: <a style ="color: ${blue}" href="https://github.com/yiyb0603/Livro-Front-end" target="_blank" rel ="noopener noreferrer">
         https://github.com/yiyb0603/Livro-Front-end</a>
         `,
     },

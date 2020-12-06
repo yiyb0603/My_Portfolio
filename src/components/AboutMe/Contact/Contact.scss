@@ -20,16 +20,16 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px solid $blue;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
+  padding-bottom: 1rem;
   color: $white;
-  padding-bottom: 10px;
   padding-left: 2px;
 
   &-Title {
     width: 300px;
     font-size: $font_25;
-    margin-bottom: 5px;
-    padding-bottom: 3px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
     border-bottom: 1px solid $white;
   }
 
@@ -37,6 +37,7 @@
     color: $gray;
     font-weight: bold;
     font-size: $font_20;
+    line-height: 30px;
   }
 
   &-Buttons {
@@ -54,7 +55,7 @@
       justify-content: center;
       padding: 12px 0;
       font-size: $font_25;
-      margin-left: 5px;
+      margin-left: 10px;
       cursor: pointer;
     }
 

@@ -10,7 +10,7 @@ const style = require("./History.scss");
 const cx: ClassNamesFn = classNames.bind(style);
 
 const History = () => {
-  const { primary, white } = Palette;
+  const { blue, white } = Palette;
   const topics: string[] = ['전체', '수상', '활동', '대회', '컨퍼런스'];
   const [selectButton, setSelectButton] = useState<number>(-1);
 
@@ -48,10 +48,10 @@ const History = () => {
             return (
               <VerticalTimelineElement
                 key={index}
-                contentStyle={{ background: primary, color: white }}
+                contentStyle={{ backgroundColor: blue, color: white }}
                 className="vertical-timeline-element--education"
                 date={date}
-                iconStyle={{ background: primary }}
+                iconStyle={{ backgroundColor: blue }}
                 icon={icon({ color: white })}
               >
                 <h3 className="vertical-timeline-element-title">{date}</h3>

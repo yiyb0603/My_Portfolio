@@ -7,19 +7,19 @@ import { GrNode } from 'react-icons/gr';
 import StackItem from '../StackItem';
 import NextLogo from 'assets/images/Next.png';
 import NestLogo from 'assets/images/nest.jpg';
+import CLogo from 'assets/images/CLogo.svg';
 
 const style = require("./Stacks.scss");
 const cx: ClassNamesFn = classNames.bind(style);
 
 const Stacks = () => {
-    const C_LOGO: string = "https://vo.la/7hyjC";
     const TS_LOGO: string = "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg";
     const MOBX_LOGO: string = "https://miro.medium.com/max/400/1*nvHO6KuxX5B6FVXZ_hqTZw.png";
     const TYPE_ORM_LOGO: string = "https://avatars2.githubusercontent.com/u/20165699?s=400&v=4";
 
     const imageStyle: CSSProperties = {
-        width: 50,
-        height: 50,
+        width: 60,
+        height: 60,
         borderRadius: 5,
         objectFit: 'cover',
     };
@@ -29,7 +29,7 @@ const Stacks = () => {
             <h2>My Stack Trace</h2>
             <div className ="Stacks-Stack">
                 <StackItem progressName="C">
-                    <img src={C_LOGO} style ={imageStyle} alt ="C language" />
+                    <img src={CLogo} style ={imageStyle} alt ="C language" />
                 </StackItem>
 
                 <StackItem progressName="Java">

@@ -28,8 +28,11 @@
 @mixin progressBarStyle($width, $background) {
 	width: $width;
 	height: 30px;
-	background: $background;
-	border-radius: 5px;
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	
+	background-color: $background;
+	border-radius: 3px;
 }
 
 .StackItem {
@@ -94,10 +97,7 @@
 			}
 
 			&-HTMLBar {
-				@include progressBarStyle(
-					95%,
-					linear-gradient(to right, $orange, $skyBlue)
-				);
+				@include progressBarStyle(95%, $orange);
 			}
 
 			&-JavaScriptBar {
@@ -125,21 +125,15 @@
 			}
 
 			&-NextBar {
-				@include progressBarStyle(
-					70%,
-					linear-gradient(to right, $green, $lighterGray)
-				);
+				@include progressBarStyle(75%, $blue);
 			}
 
 			&-ExpressBar {
-				@include progressBarStyle(
-					65%,
-					linear-gradient(to right, $green, $yellow)
-				);
+				@include progressBarStyle(70%, $green);
 			}
 
 			&-TypeORMBar {
-				@include progressBarStyle(65%, $blue);
+				@include progressBarStyle(70%, $blue);
 			}
 
 			&-NestBar {

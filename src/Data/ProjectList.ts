@@ -61,7 +61,7 @@ export const projectList: IProjectType[] = [
         name: "도담도담 V2 유지보수",
         type: ["Front End"],
         stacks: ["JavaScript", "React.js", "MobX", "SASS"],
-        period: "2020.06.19 (인수인계) ~ (서비스중)",
+        period: "2020.06.19 ~ (서비스중)",
         introduction: "교내 스마트 스쿨 플랫폼",
         description: `기숙학교를 지내는 학생들은 교과시간이 끝난 이후에는 학교 안에서 자유롭게 자습을 할 수 있습니다.
         하지만 학교에서는 학생 관리를 위해 종이로 된 장부에 필수로 자신의 위치를 적어야 합니다. 그리고 선생님들 또한 직접 

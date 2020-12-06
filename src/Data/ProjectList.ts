@@ -73,7 +73,12 @@ export const projectList: IProjectType[] = [
         이러한 불편함과 문제점들을 개선해 나가고 편하게 학교생활을 하자는 의미에서 도담도담 시스템이 나오게 되었습니다.`,
         thumbnail: WebMain,
         gallery: [WebMain, WebMainDark, WebLocation, WebSchedule, WebWakeSong],
-        feel: `ㅁㄴㅇㄻㄴㄹㅇㄴㅁㄻㄴㅇㄹ`,
+        feel: `
+        바인드 팀의 대표적인 프로젝트 도담도담 입니다.<br/>
+        도담도담 페이지의 기본이 되는 요소들은 3기 선배님들께서 만들어주시고, 2020년 6월 중반부터 유지보수를 맡았습니다.<br/>
+        처음에 도담도담 코드를 봤었을 때는 무슨 코드인지 잘 읽히지 않았지만, 많은 프로젝트 경험 덕분에 천천히 코드를 읽을 수 있었습니다.<br/>
+        현재는 도담도담에 버그가 생기거나 기능 상향이 되어야 할때는 유지보수를 맡은 4기를 중심으로 개발하고 있으며, 유지보수의 중요성을 알게 된 경험이었습니다.
+        `,
         role: '회원 알림탭, 분실물, 상담 쪽의 프론트엔드 유지보수를 맡았습니다.',
         link: `<a style ="color: ${blue}" href="http://dodam.b1nd.com" target="_blank" rel ="noopener noreferrer">
         http://dodam.b1nd.com (학교 내부망 네트워크만 접속이 됩니다.)</a>`,

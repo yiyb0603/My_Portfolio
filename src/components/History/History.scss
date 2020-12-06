@@ -28,6 +28,7 @@
       border: none;
       outline: none;
       transition: 0.15s ease-in;
+      -webkit-transition: 0.15s ease-in;
       cursor: pointer;
 
       &:hover {

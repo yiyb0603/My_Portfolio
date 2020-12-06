@@ -36,7 +36,7 @@
 		flex-direction: column;
 		-ms-flex-direction: column;
 		border-bottom: 1px solid $gray;
-		padding-bottom: 4px;
+		padding-bottom: 2px;
 
 		&-TopWrapper {
 			display: flex;
@@ -46,16 +46,17 @@
 			&-TitleWrapper {
 				display: flex;
 				display: -webkit-flex;
+				flex-wrap: wrap;
 				align-items: flex-end;
 
 				&-Period {
-					margin-left: 8px;
 					margin-bottom: 4px;
 					font-size: $font_14;
 				}
 
 				&-Title {
 					font-size: $font_25;
+					margin-right: 8px;
 				}
 			}
 
@@ -78,6 +79,7 @@
 				border: 1px solid $gray;
 				border-radius: 25px;
 				padding: 3px 10px;
+				margin: 2px;
 				vertical-align: middle;
 			}
 		}

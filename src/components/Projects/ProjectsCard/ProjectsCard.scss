@@ -12,10 +12,11 @@
     word-break: break-all;
     white-space: pre-wrap;
     padding: 1rem 1.7rem;
-    margin-left: 2rem;
+    margin: 0 10px;
     margin-bottom: 2rem;
     box-shadow: 5px 5px 10px rgba($rgbaLighterGray, 0.2), -8px -8px 10px rgba($rgbaLighterGray, 0.2);
     transition: all 0.2s;
+    -webkit-transition: all 0.2s;
     color: $white;
     border-radius: 25px;
     cursor: pointer;

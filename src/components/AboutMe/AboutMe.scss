@@ -11,6 +11,7 @@
 	&-Wrapper {
 		display: flex;
 		display: -webkit-flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
 
@@ -35,6 +36,8 @@
 		}
 
 		&-ContentsWrapper {
+			padding-left: 10px;
+
 			&-Contents {
 				font-size: 4rem;
 			}
@@ -52,6 +55,7 @@
 				font-size: $font_25;
 				cursor: pointer;
 				transition: 0.2s ease;
+				-webkit-transition: 0.2s ease;
 
 				&:hover {
 					background-color: $white;

@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import './styles/AllStyles.scss';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/my_portfolio">
     <App />
   </BrowserRouter>,
   document.getElementById('root')

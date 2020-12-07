@@ -5,7 +5,6 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import Modal from "components/common/Modal";
 import { IProjectType } from "interface/ProjectType";
 import { ProjectEnums } from "enum/ProjectEnum";
-import { FaDove } from "react-icons/fa";
 
 const style = require("./ProjectModal.scss");
 const cx: ClassNamesFn = classNames.bind(style);
@@ -66,7 +65,7 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) =
     <Modal isModal={isModal} setIsModal={setIsModal} title ={name!} period={period!} stacks={stacks!}>
       <div className={cx('ProjectModal')} onMouseEnter={() => setMouseEnter(true)} onMouseLeave={() => setMouseEnter(false)}>
         {
-          mouseEnter &&
+          mouseEnter && gallery!.length > 1 ?
           <>
             <div className={cx('ProjectModal-LeftArrow')} onClick={handlePrevClick}>
               <AiOutlineArrowLeft />
@@ -75,7 +74,7 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) =
             <div className={cx('ProjectModal-RightArrow')} onClick={handleNextClick}>
               <AiOutlineArrowRight />
             </div>
-          </>
+          </> : <></>
         }
 
         <div className={cx('ProjectModal-DotWrapper')}>{imageDots}</div>  

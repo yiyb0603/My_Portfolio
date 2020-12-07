@@ -27,6 +27,8 @@ import WebTeacherReason from 'assets/images/mockup/WebTeacher/Teacher_Reason.png
 import CoronaDesktop from 'assets/images/mockup/Corona/Desktop.png';
 import CoronaMobile from 'assets/images/mockup/Corona/Mobile.png';
 
+import NFC from 'assets/images/mockup/NFC/NFC.png';
+
 import YLogMain from 'assets/images/mockup/YLog/YLog_Home.png';
 import YLogPost from 'assets/images/mockup/YLog/YLog_Post.png';
 import YLogWrite from 'assets/images/mockup/YLog/YLog_Write.png';
@@ -173,13 +175,41 @@ export const projectList: IProjectType[] = [
         https://github.com/yiyb0603/Here-Corona</a>
         `,
     },
-    
+
     {
         id: 6,
+        name: 'NFC Spot Counter',
+        type: ["Front End"],
+        stacks: ["Arduino (Embeded)", "Java", "PHP", "HTML", "CSS"],
+        period: '2019.08.27 ~ 09.09',
+        introduction: '제주도 관광 도움 애플리케이션',
+        thumbnail: NFC,
+        gallery: [NFC],
+        description: `
+        2019년 9월, 교내에서 진행했던 "제주도를 부탁해" 에서 대상을 받은 작품입니다.<br/>
+        제주도에서 관광 여행을 할때 관광객들의 불편했던 의견들을 모아서 프로젝트를 기획하였으며,<br/>
+        누구나 스마트폰에 탑재되어 있고, 사용하기 쉬운 NFC를 이용하여 제주도 관광앱을 만들기로 하였습니다.
+        NFC 리더기를 처리하는 임베디드, 인식 받은 값을 띄워주고 그에 따른 화면을 보여주는 안드로이드,<br/>
+        그리고 앱에서 추천 관광지를 눌렀을때 관광지 정보를 보여주는 웹 총 3가지의 플랫폼을 친구들과 작업하였습니다.
+        `,
+        feel: `
+        저의 웹 첫 프로젝트였으며, 퍼블리싱 위주의 작업을 하면서 기초적인 퍼블리싱을 많이 쌓을 수 있었던 것 같습니다.<br/>
+        또한 2019년 11월 ICT 융합대전 부스를 운영하게 되면서 팀원 모두가 열심히 하여 완성했고, <br/>
+        그 노력들 덕분에 12월, "제주도를 부탁해" 메이커톤 대상을 받게 되었던 것 같습니다.
+        `,
+        role: '프론트엔드, 관광지 추천 웹사이트를 제작했습니다.',
+        link: `
+        깃허브: <a style ="color: ${blue}" href="https://github.com/yiyb0603/2019_ICT" target="_blank" rel ="noopener noreferrer">
+        https://github.com/yiyb0603/2019_ICT</a>
+        `
+    },
+    
+    {
+        id: 7,
         name: "YLog 개인 블로그",
         type: ["Front End", "Back End"],
         stacks: ["TypeScript", "Next.js", "SASS", "MobX", "Express.js", "TypeORM", "MySQL", "FCM"],
-        period: "2020 09.16 ~ 2020.11",
+        period: "2020.09.16 ~ 11",
         introduction: "개인 블로그 사이트",
         description: `
         2학년 2학기 프로젝트 실습 과목에서 진행했던 프로젝트 입니다.<br/>
@@ -205,11 +235,11 @@ export const projectList: IProjectType[] = [
     },
 
     {
-        id: 7,
+        id: 8,
         name: "School Meals",
         type: ["Front End", "Back End"],
         stacks: ["TypeScript", "JavaScript", "React.js", "SASS", "MobX", "Express.js"],
-        period: "2020 04 ~ 2020.05",
+        period: "2020.04 ~ 2020.05",
         introduction: "학교를 검색하여 급식, 일정을 볼 수 있는 웹",
         description: `
         전국에 있는 학교를 검색하여 급식 및 일정을 볼 수 있는 웹페이지를 제작했습니다.<br/>
@@ -231,37 +261,11 @@ export const projectList: IProjectType[] = [
     },
 
     {
-        id: 8,
-        name: "CoCode",
-        type: ["Front End"],
-        stacks: ["TypeScript", "Next.js", "SASS", "MobX"],
-        period: "2020 09.08 ~ 09.09 (해커톤)",
-        introduction: "교내 커뮤니티 사이트",
-        description: `
-        2020년 대구SW고 해커톤때 만들었던 교내 커뮤니티 사이트 프로젝트 입니다.<br/>
-        학생들끼리 소통할 수 있는 커뮤니티 게시판, 학생과 선생님이 소통할 수 있는 급식건의 게시판을 만들어 소통 공간을 만들었습니다.<br/>
-        플랫폼은 3개로 서버, 웹, 안드로이드로 제작하였습니다.
-        `,
-        thumbnail: CoCodeCommunity,
-        gallery: [CoCodeCommunity, CoCodeMealCom, CoCodeMeals, CoCodeSign],
-        feel: `
-        기존에 React.js만 쓰던 저는 처음으로 Next.js를 도입해본 프로젝트 였습니다.<br/>
-        Next.js를 처음 써봤던 저는 환경설정 부분에서 많은 시간이 걸려서 아쉬움이 있었지만<br/>
-        그래도 기능은 모두 구현되어서 좋은 경험이었고, 앞으로의 Next.js 사용에 어려움이 없었습니다.<br/>
-        `,
-        role: '프론트엔드 웹 전체를 맡아서 제작하였습니다.',
-        link: `
-        깃허브: <a style ="color: ${blue}" href="https://github.com/yiyb0603/CoCode_Web" target="_blank" rel ="noopener noreferrer">
-        https://github.com/yiyb0603/CoCode_Web</a>
-        `,
-    },
-
-    {
         id: 9,
         name: "LIVRO-S",
         type: ["Front End"],
         stacks: ["JavaScript", "React.js", "SASS", "MobX", "Styled-Components"],
-        period: "2020 11.23 ~ 11.24 (3개 마이스터고 연합 해커톤)",
+        period: "2020.11.23 ~ 11.24 (3개 마이스터고 연합 해커톤)",
         introduction: "3개 마이스터고 학생들의 도서관 웹사이트",
         description: `
         2020년 3개 마이스터고 연합 해커톤때 진행했던 프로젝트 입니다.<br/>
@@ -282,6 +286,32 @@ export const projectList: IProjectType[] = [
         link: `
         깃허브: <a style ="color: ${blue}" href="https://github.com/yiyb0603/Livro-Front-end" target="_blank" rel ="noopener noreferrer">
         https://github.com/yiyb0603/Livro-Front-end</a>
+        `,
+    },
+
+    {
+        id: 10,
+        name: "CoCode",
+        type: ["Front End"],
+        stacks: ["TypeScript", "Next.js", "SASS", "MobX"],
+        period: "2020.09.08 ~ 09.09 (해커톤)",
+        introduction: "교내 커뮤니티 사이트",
+        description: `
+        2020년 대구SW고 해커톤때 만들었던 교내 커뮤니티 사이트 프로젝트 입니다.<br/>
+        학생들끼리 소통할 수 있는 커뮤니티 게시판, 학생과 선생님이 소통할 수 있는 급식건의 게시판을 만들어 소통 공간을 만들었습니다.<br/>
+        플랫폼은 3개로 서버, 웹, 안드로이드로 제작하였습니다.
+        `,
+        thumbnail: CoCodeCommunity,
+        gallery: [CoCodeCommunity, CoCodeMealCom, CoCodeMeals, CoCodeSign],
+        feel: `
+        기존에 React.js만 쓰던 저는 처음으로 Next.js를 도입해본 프로젝트 였습니다.<br/>
+        Next.js를 처음 써봤던 저는 환경설정 부분에서 많은 시간이 걸려서 아쉬움이 있었지만<br/>
+        그래도 기능은 모두 구현되어서 좋은 경험이었고, 앞으로의 Next.js 사용에 어려움이 없었습니다.<br/>
+        `,
+        role: '프론트엔드 웹 전체를 맡아서 제작하였습니다.',
+        link: `
+        깃허브: <a style ="color: ${blue}" href="https://github.com/yiyb0603/CoCode_Web" target="_blank" rel ="noopener noreferrer">
+        https://github.com/yiyb0603/CoCode_Web</a>
         `,
     },
 ];

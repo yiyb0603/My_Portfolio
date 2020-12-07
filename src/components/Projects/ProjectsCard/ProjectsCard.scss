@@ -2,66 +2,67 @@
 @import 'styles/Fonts/FontScheme.scss';
 
 .ProjectsCard {
-    width: 430px;
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    overflow-y: auto;
-    flex-direction: column;
-    justify-content: center;
-    word-break: break-all;
-    white-space: pre-wrap;
-    padding: 1rem 1.7rem;
-    margin: 5px 1rem;
-    margin-bottom: 2rem;
-    box-shadow: 5px 5px 10px rgba($rgbaLighterGray, 0.2), -8px -8px 10px rgba($rgbaLighterGray, 0.2);
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    color: $white;
-    border-radius: 25px;
-    cursor: pointer;
+	width: 430px;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	overflow-y: auto;
+	flex-direction: column;
+	justify-content: center;
+	word-break: break-all;
+	white-space: pre-wrap;
+	padding: 1rem 1.7rem;
+	margin: 5px 1rem;
+	margin-bottom: 2rem;
+	box-shadow: 5px 5px 10px rgba($rgbaLighterGray, 0.2),
+		-8px -8px 10px rgba($rgbaLighterGray, 0.2);
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	color: $white;
+	border-radius: 25px;
+	cursor: pointer;
 
-    &:hover {
-        margin-top: -10px;
-    }
+	&:hover {
+		margin-top: -10px;
+	}
 
-    &-Types {
-        font-size: $font_20;
-    }
+	&-Types {
+		font-size: $font_20;
+	}
 
-    &-Thumbnail {
-        width: 100%;
-        height: 250px;
-        max-height: 250px;
-        border-top: 1px solid $gray;
-        border-bottom: 1px solid $gray;
-        padding: 10px 0;
-        margin: 5px 0;
-        object-fit: cover;
-    }
+	&-Thumbnail {
+		width: 100%;
+		height: 250px;
+		max-height: 250px;
+		border-top: 1px solid $gray;
+		border-bottom: 1px solid $gray;
+		padding: 10px 0;
+		margin: 5px 0;
+		object-fit: scale-down;
+	}
 
-    &-NamePeriod {
-        display: flex;
-        display: -webkit-flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 5px 0;
+	&-NamePeriod {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 5px 0;
 
-        &-Name {
-            font-size: $font_20;
-        }
+		&-Name {
+			font-size: $font_20;
+		}
 
-        &-Period {
-            color: $lighterGreen;
-            font-size: $font_12;
-        }
-    }
+		&-Period {
+			color: $lighterGreen;
+			font-size: $font_12;
+		}
+	}
 
-    &-Stacks {
-        color: $gray;
-        font-size: $font_12;
-        border-bottom: 1px solid $lighterGray;
-        margin-bottom: 8px;
-        padding-bottom: 8px;
-    }
+	&-Stacks {
+		color: $gray;
+		font-size: $font_12;
+		border-bottom: 1px solid $lighterGray;
+		margin-bottom: 8px;
+		padding-bottom: 8px;
+	}
 }

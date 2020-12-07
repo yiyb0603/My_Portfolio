@@ -1,7 +1,6 @@
 import { Palette } from 'styles/Palette/Palette';
 import { IProjectType } from 'interface/ProjectType';
 
-import WebLocation from 'assets/images/mockup/WebStudent/LocationApply.png';
 import WebWakeSong from 'assets/images/mockup/WebStudent/WakeSong.png';
 import WebSchedule from 'assets/images/mockup/WebStudent/Web_Schedule.png';
 import WebMain from 'assets/images/mockup/WebStudent/Web_Cap_Main.png';
@@ -11,14 +10,13 @@ import AdminAllow from 'assets/images/mockup/WebAdmin/AdminAllow.png';
 import AdminAuthority from 'assets/images/mockup/WebAdmin/AdminAuthority.png';
 import AdminClass from 'assets/images/mockup/WebAdmin/AdminClass.png';
 import AdminPhone from 'assets/images/mockup/WebAdmin/AdminPhone.png';
-import AdminPlace from 'assets/images/mockup/WebAdmin/AdminPlace.png';
 import AdminSign from 'assets/images/mockup/WebAdmin/AdminSign.png';
-import AdminTime from 'assets/images/mockup/WebAdmin/AdminTime.png';
 
 import TeamMain from 'assets/images/mockup/TeamSite/TeamMain.png';
 import TeamIntroduce from 'assets/images/mockup/TeamSite/TeamIntroduce.png';
 import TeamService1 from 'assets/images/mockup/TeamSite/TeamService1.png';
 import TeamService2 from 'assets/images/mockup/TeamSite/TeamService2.png';
+import TeacherSign from 'assets/images/mockup/WebTeacher/TeacherSign.png';
 
 import WebTeacherMain from 'assets/images/mockup/WebTeacher/Teacher_FirstPage.png';
 import WebTeacherSecond from 'assets/images/mockup/WebTeacher/Teacher_SecondPage.png';
@@ -29,6 +27,13 @@ import WebTeacherReason from 'assets/images/mockup/WebTeacher/Teacher_Reason.png
 import CoronaDesktop from 'assets/images/mockup/Corona/Desktop.png';
 import CoronaMobile from 'assets/images/mockup/Corona/Mobile.png';
 
+import YLogMain from 'assets/images/mockup/YLog/YLog_Home.png';
+import YLogPost from 'assets/images/mockup/YLog/YLog_Post.png';
+import YLogWrite from 'assets/images/mockup/YLog/YLog_Write.png';
+import YLogSign from 'assets/images/mockup/YLog/YLog_Sign.png';
+import YLogProfile from 'assets/images/mockup/YLog/YLog_Profile.png';
+import YLogAdmin from 'assets/images/mockup/YLog/YLog_Admin.png';
+
 import SchoolMain from 'assets/images/mockup/SchoolMeals/Main.png';
 import SchoolMeal from 'assets/images/mockup/SchoolMeals/Meal.png';
 import SchoolSchedule from 'assets/images/mockup/SchoolMeals/Schedule.png';
@@ -36,22 +41,12 @@ import SchoolSchedule from 'assets/images/mockup/SchoolMeals/Schedule.png';
 import LivroMain from 'assets/images/mockup/Livro/Main.png';
 import LivroCheck from 'assets/images/mockup/Livro/Check.png';
 import LivroMyInfo from 'assets/images/mockup/Livro/Myinfo.png';
-import LivroNotice from 'assets/images/mockup/Livro/Notice.png';
 import LivroSearch from 'assets/images/mockup/Livro/Search.png';
 
-import CoCodeCommunity from 'assets/images/mockup/CoCode/CoCode_Community.jpg';
-import CoCodeMealCom from 'assets/images/mockup/CoCode/CoCode_MealCom.jpg';
-import CoCodeMeals from 'assets/images/mockup/CoCode/CoCode_Meals.jpg';
-import CoCodeSign from 'assets/images/mockup/CoCode/CoCode_Sign.jpg';
-import CoCodeSignup from 'assets/images/mockup/CoCode/CoCode_Signup.jpg';
-
-const YLogPost: string = "https://user-images.githubusercontent.com/50941453/101271875-4544f280-37ca-11eb-978b-ad066abadcf2.PNG";
-const YLogHome: string = "https://user-images.githubusercontent.com/50941453/101271739-f21e7000-37c8-11eb-92a4-49ff90e120e3.PNG";
-const YLogProfile: string = "https://user-images.githubusercontent.com/50941453/97800187-936c5080-1c76-11eb-936e-b2d62baf13c7.PNG";
-const YLogSign: string = "https://user-images.githubusercontent.com/50941453/97800093-c82bd800-1c75-11eb-925a-ab6a2cc1f92b.PNG";
-const YLogSignUp: string = "https://user-images.githubusercontent.com/50941453/97800113-f7dae000-1c75-11eb-968e-cc070a8ba7d9.PNG";
-const YLogWrite: string = "https://user-images.githubusercontent.com/50941453/97800203-c0206800-1c76-11eb-8ad3-8b15aefef1fc.PNG";
-const YLogAdmin: string = "https://user-images.githubusercontent.com/50941453/97800275-4177fa80-1c77-11eb-9aac-70678d714f39.PNG";
+import CoCodeCommunity from 'assets/images/mockup/CoCode/CoCode_Community.png';
+import CoCodeMealCom from 'assets/images/mockup/CoCode/CoCode_MealCom.png';
+import CoCodeMeals from 'assets/images/mockup/CoCode/CoCode_Meals.png';
+import CoCodeSign from 'assets/images/mockup/CoCode/CoCode_Sign.png';
 
 const { blue } = Palette;
 
@@ -72,7 +67,7 @@ export const projectList: IProjectType[] = [
         이러한 불편하고 힘들게 기숙사학교에서 학생들이 생활하고 선생님들이 관리하고 계십니다.
         이러한 불편함과 문제점들을 개선해 나가고 편하게 학교생활을 하자는 의미에서 도담도담 시스템이 나오게 되었습니다.`,
         thumbnail: WebMain,
-        gallery: [WebMain, WebMainDark, WebLocation, WebSchedule, WebWakeSong],
+        gallery: [WebMain, WebMainDark, WebSchedule, WebWakeSong],
         feel: `
         바인드 팀의 대표적인 프로젝트 도담도담 입니다.<br/>
         도담도담 페이지의 기본이 되는 요소들은 3기 선배님들께서 만들어주시고, 2020년 6월 중반부터 유지보수를 맡았습니다.<br/>
@@ -94,7 +89,7 @@ export const projectList: IProjectType[] = [
         description: `1번 프로젝트인 "도담도담"의 관리자용 페이지이며, 도담도담을 이루는 요소들을 전반적으로 관리합니다.<br />
         학생들이 위치신청을 하는 위치 장소 관리, 장소 및 회원가입 관리를 위한 교실 관리 등의 전반적인 베이스 데이터들을 관리합니다.`,
         thumbnail: AdminAllow,
-        gallery: [AdminAllow, AdminAuthority, AdminClass, AdminPhone, AdminPlace, AdminTime, AdminSign],
+        gallery: [AdminAllow, AdminAuthority, AdminClass, AdminPhone, AdminSign],
         feel: `
         먼저, 이번 프로젝트를 통해서 제가 엄청나게 달라졌던것 같습니다. <br/>
         처음에 팀원들과 코드와 디자인을 통일하지 않아서 프로젝트를 진행하는데 많은 힘겨움 때문에 엄청 힘들었던 것 같습니다.<br/>
@@ -119,7 +114,7 @@ export const projectList: IProjectType[] = [
         description: `1번 프로젝트인 "도담도담"의 선생님용 페이지이며, 학생이 선생님의 승인 등이 필요한 요소 또는<br />
         학생들이 보는 학사일정, 상벌점 내역, 그리고 SMS발송 등의 기능들을 선생님들이 쓰기 쉽도록 선생님용 페이지에서 사용 가능합니다.`,
         thumbnail: WebTeacherMain,
-        gallery: [WebTeacherMain, WebTeacherReason, WebTeacherSecond, WebTeacherMobile, WebTeacher],
+        gallery: [WebTeacherMain, WebTeacherReason, WebTeacherSecond, WebTeacherMobile, WebTeacher, TeacherSign],
         feel: `
         바인드 팀 웹에서 처음으로 타입스크립트를 이용한 프로젝트 였습니다.<br/>
         기존에 자바스크립트를 이용하여 웹을 제작했던 저는, TS 파일럿 프로젝트를 통해서<br/>
@@ -192,8 +187,8 @@ export const projectList: IProjectType[] = [
         또한 기존의 Naver, Tistory 등의 흔한 블로그보다 직접 저만의 블로그를 만들고, 관리해보고 싶었기에 블로그를 주제로 선택했습니다.<br/>
         그리고 처음으로 FCM을 도입해봄으로써 알림기능의 신기함을 느꼈습니다.<br/>
         `,
-        thumbnail: YLogPost,
-        gallery: [YLogPost, YLogHome, YLogProfile, YLogWrite, YLogSign, YLogSignUp, YLogAdmin],
+        thumbnail: YLogMain,
+        gallery: [YLogMain, YLogPost, YLogProfile, YLogWrite, YLogSign, YLogAdmin],
         feel: `
         예전 해커톤의 경험으로 Next.js를 사용하는데 설정 등을 어렵지 않게 해놓을 수 있었고, 서버 사이드 렌더링의 원리를 알게된 프로젝트 였습니다.<br/>
         백엔드를 프로그래밍 할때 ORM 도구를 이용하여 데이터베이스와 소통하는 것이 쉬워서 어렵지 않게 제작할 수 있었습니다.
@@ -248,7 +243,7 @@ export const projectList: IProjectType[] = [
         플랫폼은 3개로 서버, 웹, 안드로이드로 제작하였습니다.
         `,
         thumbnail: CoCodeCommunity,
-        gallery: [CoCodeCommunity, CoCodeMealCom, CoCodeSign, CoCodeSignup, CoCodeMeals],
+        gallery: [CoCodeCommunity, CoCodeMealCom, CoCodeMeals, CoCodeSign],
         feel: `
         기존에 React.js만 쓰던 저는 처음으로 Next.js를 도입해본 프로젝트 였습니다.<br/>
         Next.js를 처음 써봤던 저는 환경설정 부분에서 많은 시간이 걸려서 아쉬움이 있었지만<br/>
@@ -274,7 +269,7 @@ export const projectList: IProjectType[] = [
         만들어진 웹사이트 입니다.
         `,
         thumbnail: LivroMain,
-        gallery: [LivroMain, LivroSearch, LivroNotice, LivroCheck, LivroMyInfo],
+        gallery: [LivroMain, LivroSearch, LivroCheck, LivroMyInfo],
         feel: `
         이번에 처음으로 3개 마이스터고 연합 해커톤에 참가하게 되었는데, 서로서로 작업 했던 환경과 스택이 달라서<br/>
         스택을 맞추는데 살짝 고민했지만 서로서로 배려하고, 의견을 통해 개발스택을 맞출 수 있었습니다.<br/>

@@ -50,8 +50,13 @@ import CoCodeMealCom from 'assets/images/mockup/CoCode/CoCode_MealCom.png';
 import CoCodeMeals from 'assets/images/mockup/CoCode/CoCode_Meals.png';
 import CoCodeSign from 'assets/images/mockup/CoCode/CoCode_Sign.png';
 
-const { blue } = Palette;
+import PortfolioHistory from 'assets/images/mockup/Portfolio/Portfolio_History.png';
+import PortfolioHome from 'assets/images/mockup/Portfolio/Portfolio_Home.png';
+import PortfolioModal from 'assets/images/mockup/Portfolio/Portfolio_Modal.png';
+import PortfolioProject from 'assets/images/mockup/Portfolio/Portfolio_Project.png';
+import PortfolioStack from 'assets/images/mockup/Portfolio/Portfolio_Stack.png';
 
+const { blue } = Palette;
 export const projectList: IProjectType[] = [
     {
         id: 1,
@@ -314,4 +319,29 @@ export const projectList: IProjectType[] = [
         https://github.com/yiyb0603/CoCode_Web</a>
         `,
     },
+
+    {
+        id: 11,
+        name: '개인 포트폴리오 페이지',
+        type: ["Front End"],
+        stacks: ['TypeScript', 'React.js', 'Sass', 'JSON Array'],
+        period: '2020.11 ~ 12',
+        introduction: '개인 포트폴리오 웹 페이지',
+        thumbnail: PortfolioStack,
+        gallery: [PortfolioStack, PortfolioHome, PortfolioProject, PortfolioModal, PortfolioHistory],
+        description: `
+        최근에 포트폴리오 관리에 중요성이 생겨서 포트폴리오를 관리할 방법을 생각하다가 제가 프론트엔드 개발자라는 특성을 살려서<br/>
+        개인 포트폴리오 웹 페이지를 만들기로 결심했고, 지금까지의 제가 활동 기록등을 바탕으로 내용을 모두 작성하여 완성했습니다.
+        `,
+        role: `전체적인 모든 부분을 작업 하였습니다.`,
+        feel: `
+        프로젝트를 구상할때, 수많은 저의 각종 데이터들을 어떻게 하면 효율적으로 관리할 수 있을지 생각을 하다가<br/>
+        기존 TypeScript 배열 객체 형식을 이용하여 모든 데이터들을 각각 관리하고 사용하여 좀 더 편리하게 데이터를 관리할 수 있었습니다.<br/>
+        또한 이번기회에 제대로 저의 활동들 및 수상 기록 등의 정보를 기록해놓을 수 있어서 포트폴리오 관리에 많은 도움이 되었습니다.
+        `,
+        link: `
+        깃허브: <a style="color: ${blue}" href="https://github.com/yiyb0603/my_portfolio" target="_blank" rel ="noopener noreferrer">
+            https://github.com/yiyb0603/my_portfolio</a>
+        `,
+    }
 ];

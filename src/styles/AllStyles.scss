@@ -18,12 +18,11 @@
 	}
 
 	&::-webkit-scrollbar-track {
-		background-color: #f1f1f1;
+		background-color: $white;
 	}
 
 	&::-webkit-scrollbar-thumb {
 		background-color: $blue;
-		border-radius: 5px;
 	}
 
 	&::-webkit-scrollbar-button:start:decrement,

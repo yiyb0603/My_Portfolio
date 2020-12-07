@@ -21,11 +21,13 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) =
   const [topic, setTopic] = useState<ProjectEnums>(0);
   const [mouseEnter, setMouseEnter] = useState<boolean>(false);
 
+  const [imageDots, setImageDots] = useState<JSX.Element[]>([]);
+
   const { name, description, gallery, period, stacks, feel, link, role } = projectInfo;
   const topics: string[] | Element[] = [description!, role!, feel!, link!];
   const topicNames: string[] = ['프로젝트 설명', '맡은 역할', '느낀점', '관련 링크'];
 
-  const handlePrevClick = useCallback(() => {
+  const handlePrevClick = useCallback((): void => {
     if (index <= 0) {
       setIndex(gallery!.length - 1);
       return;
@@ -34,7 +36,7 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) =
     setIndex(index - 1);
   }, [gallery, index]);
 
-  const handleNextClick = useCallback(() => {
+  const handleNextClick = useCallback((): void => {
     if (index + 1 === gallery!.length) {
       setIndex(0);
       return;
@@ -42,6 +44,23 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) =
 
     setIndex(index + 1);
   }, [gallery, index]);
+
+  const handleDotClick = useCallback((galleryIdx: number): void => {
+    if (galleryIdx !== index) {
+      setIndex(galleryIdx);
+      setImageDots([]);
+    }
+  }, [index]);
+
+  useEffect(() => {
+    setImageDots(gallery!.map((_, galleryIdx: number) => {
+      return (
+        <div key={galleryIdx} className={cx('ProjectModal-DotWrapper-Dot', {
+          'ProjectModal-DotWrapper-Dot-Current': galleryIdx === index
+        })} onClick={() => handleDotClick(galleryIdx)}></div>
+      );
+    }));
+  }, [gallery, handleDotClick, index]);
 
   return (
     <Modal isModal={isModal} setIsModal={setIsModal} title ={name!} period={period!} stacks={stacks!}>
@@ -58,6 +77,8 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) =
             </div>
           </>
         }
+
+        <div className={cx('ProjectModal-DotWrapper')}>{imageDots}</div>  
         <img className={cx('ProjectModal-Image')} src ={gallery![index]} alt ="gallerys" />
       </div>
 

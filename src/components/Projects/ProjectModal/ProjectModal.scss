@@ -42,6 +42,30 @@
 		right: 0;
 	}
 
+	&-DotWrapper {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		display: flex;
+		display: -webkit-flex;
+
+		&-Dot {
+			width: 15px;
+			height: 15px;
+			border: none;
+			outline: none;
+			background-color: $gray;
+			border-radius: 50%;
+			margin-right: 10px;
+			cursor: pointer;
+
+			&-Current {
+				background-color: $blue;
+			}
+		}
+	}
+
 	&-Image {
 		max-width: 100%;
 		max-height: 450px;

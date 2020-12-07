@@ -30,14 +30,14 @@ const Projects = () => {
       case 0:
         return project;
               
-    case 1:
-      return type!.includes("Front End");
+      case 1:
+        return type!.includes("Front End");
 
-    case 2:
-      return type!.includes("Back End");
+      case 2:
+        return type!.includes("Back End");
 
-    default:
-      return null;
+      default:
+        return null;
     };
   });
 

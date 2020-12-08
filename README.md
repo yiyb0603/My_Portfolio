@@ -1,44 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 개인 포트폴리오 웹 페이지
 
-## Available Scripts
+## 링크
+- 원본 URL: [https://yiyb0603.github.io/my_portfolio/projects](https://yiyb0603.github.io/my_portfolio/projects)
+- 단축 URL: [https://vo.la/vTuA6](https://vo.la/vTuA6)
 
-In the project directory, you can run:
+## 만들게 된 계기
+- 최근에 포트폴리오 관리에 중요성이 생겨서 포트폴리오를 관리할 방법을 생각하다가 제가 프론트엔드 개발자라는 특성을 살려서
+개인 포트폴리오 웹 페이지를 만들기로 하였습니다.
 
-### `yarn start`
+## 어떤 내용들이 있나요?
+- 저의 정보를 포함하여 제가 주로 학교 생활을 하면서 수상 및 활동 기록, 그리고 진행해왔던 프로젝트 내용들이 작성되어 있습니다.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Languages
+- TypeScript, React.js, Sass, JSON Array
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 이미지
+![Portfolio_Stack](https://user-images.githubusercontent.com/50941453/101420014-adafe300-3934-11eb-9bdb-351d042f49ac.png)
+![Portfolio_Home](https://user-images.githubusercontent.com/50941453/101420008-ac7eb600-3934-11eb-9705-e53d255b12a5.png)
+![Portfolio_Project](https://user-images.githubusercontent.com/50941453/101420013-ad174c80-3934-11eb-9b90-ed8c7f08dd92.png)
+![Portfolio_Modal](https://user-images.githubusercontent.com/50941453/101420011-ad174c80-3934-11eb-9f60-e96aba1516f4.png)
+![Portfolio_History](https://user-images.githubusercontent.com/50941453/101420005-ab4d8900-3934-11eb-9255-1016059d9f03.png)

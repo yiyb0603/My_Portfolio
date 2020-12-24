@@ -324,4 +324,11 @@ export const myHistory: IHistoryType[] = [
     date: '2020.11.23 ~ 11.25',
     icon: FaLaptopCode,
   },
+  
+  {
+    type: 1,
+    name: '대구 SW고 전공역량강화 프로그램 - 알고리즘 교육 참여',
+    date: '2020.12.18 ~ 12.23',
+    icon: FaLaptopCode,
+  },
 ];

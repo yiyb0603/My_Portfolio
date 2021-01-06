@@ -15,7 +15,7 @@ interface ModalProps {
   children?: ReactNode;
 };
 
-const Modal = ({ isModal, setIsModal, title, period, stacks, children }: ModalProps) => {
+const Modal = ({ isModal, setIsModal, title, period, stacks, children }: ModalProps): JSX.Element => {
   const handleCloseModal = useCallback((): void => {
     setIsModal(!isModal);
   }, [isModal, setIsModal]);

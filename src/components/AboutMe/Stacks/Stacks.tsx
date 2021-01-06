@@ -12,7 +12,7 @@ import CLogo from 'assets/images/CLogo.svg';
 const style = require("./Stacks.scss");
 const cx: ClassNamesFn = classNames.bind(style);
 
-const Stacks = () => {
+const Stacks = (): JSX.Element => {
     const TS_LOGO: string = "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg";
     const MOBX_LOGO: string = "https://miro.medium.com/max/400/1*nvHO6KuxX5B6FVXZ_hqTZw.png";
     const TYPE_ORM_LOGO: string = "https://avatars2.githubusercontent.com/u/20165699?s=400&v=4";

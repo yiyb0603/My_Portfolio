@@ -25,6 +25,12 @@
 		background-color: $blue;
 	}
 
+	&::-webkit-scrollbar-button {
+		background-color: $gray;
+		width: 20px;
+		height: 15px;
+	}
+
 	&::-webkit-scrollbar-button:start:decrement,
 	&:-webkit-scrollbar-button:end:increment {
 		width: 14px;

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { ClassNamesFn } from "classnames/types";
 import { withStyles, Theme } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
-import { ITooltipTitleTypes, tooltipTitles } from "Data/TooltipTitles";
+import { ITooltipTitleTypes, tooltipTitles } from "data/TooltipTitles";
 import Typography from '@material-ui/core/Typography';
 
 const style = require("./StackItem.scss");
@@ -24,8 +24,10 @@ const HtmlTooltip = withStyles((theme: Theme) => ({
   },
 }))(Tooltip);
 
-const StackItem = ({ progressName, children }: StackItemProps) => {
-  const tooltipTitle: ITooltipTitleTypes | undefined = tooltipTitles.find((tooltip: ITooltipTitleTypes) => tooltip.progressName === progressName);
+const StackItem = ({ progressName, children }: StackItemProps): JSX.Element => {
+  const tooltipTitle: ITooltipTitleTypes | undefined = tooltipTitles.find((tooltip: ITooltipTitleTypes) => {
+    return tooltip.progressName === progressName;
+  });
 
   return (
     <HtmlTooltip

@@ -1,12 +1,12 @@
 export enum ProjectEnums {
-  'INTENTIONS',
-  'ROLE',
-  'FEEL',
-  'LINK',
+  INTENTIONS,
+  ROLE,
+  FEEL,
+  LINK,
 };
 
 export enum ProjectTypes {
-  'ALL',
-  'FRONTEND',
-  'BACKEND',
+  ALL,
+  FRONTEND,
+  BACKEND,
 };

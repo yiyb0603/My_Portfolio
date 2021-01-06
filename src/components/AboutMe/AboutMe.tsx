@@ -11,7 +11,7 @@ import Contact from './Contact';
 const style = require("./AboutMe.scss");
 const cx: ClassNamesFn = classNames.bind(style);
 
-const AboutMe = () => {
+const AboutMe = (): JSX.Element => {
   const { GITHUB_ADDRESS } = Constants;
 
   return (

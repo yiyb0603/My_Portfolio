@@ -7,7 +7,7 @@ import { AiFillFacebook, AiFillMail, AiFillRocket } from 'react-icons/ai';
 const style = require("./Contact.scss");
 const cx: ClassNamesFn = classNames.bind(style);
 
-const Contact = () => {
+const Contact = (): JSX.Element => {
   const { PHONE_NUMBER, EMAIL_ADDRESS, FACEBOOK_ADDRESS, ROCKET_ADDRESS } = Constants;
 
   const iconStyle: CSSProperties = {

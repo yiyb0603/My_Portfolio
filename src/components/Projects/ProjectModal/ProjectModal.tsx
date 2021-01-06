@@ -2,7 +2,7 @@ import React, { Dispatch, SetStateAction, useCallback, useEffect, useState } fro
 import classNames from 'classnames';
 import { ClassNamesFn } from "classnames/types";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
-import Modal from "components/common/Modal";
+import Modal from "components/Common/Modal";
 import { IProjectType } from "interface/ProjectType";
 import { ProjectEnums } from "enum/ProjectEnum";
 
@@ -15,7 +15,7 @@ interface ProjectModalProps {
   projectInfo: IProjectType,
 };
 
-const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) => {
+const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps): JSX.Element => {
   const [index, setIndex] = useState<number>(0);
   const [topic, setTopic] = useState<ProjectEnums>(0);
   const [mouseEnter, setMouseEnter] = useState<boolean>(false);
@@ -47,7 +47,6 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps) =
   const handleDotClick = useCallback((galleryIdx: number): void => {
     if (galleryIdx !== index) {
       setIndex(galleryIdx);
-      setImageDots([]);
     }
   }, [index]);
 

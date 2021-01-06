@@ -1,6 +1,6 @@
 import React from 'react';
 import Projects from 'components/Projects';
-import PageTemplate from 'components/common/Template/PageTemplate';
+import PageTemplate from 'components/Common/Template/PageTemplate';
 
 const ProjectsPage = () => {
     return (

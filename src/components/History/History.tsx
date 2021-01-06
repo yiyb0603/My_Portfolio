@@ -3,13 +3,13 @@ import classNames from 'classnames';
 import { ClassNamesFn } from "classnames/types";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { IHistoryType, myHistory } from "Data/History";
-import { Palette } from "styles/Palette/Palette";
+import { IHistoryType, myHistory } from 'data/History';
+import { Palette } from 'styles/Palette/Palette';
 
 const style = require("./History.scss");
 const cx: ClassNamesFn = classNames.bind(style);
 
-const History = () => {
+const History = (): JSX.Element => {
   const { blue, white } = Palette;
   const topics: string[] = ['전체', '수상', '활동', '대회', '컨퍼런스'];
   const [selectButton, setSelectButton] = useState<number>(-1);

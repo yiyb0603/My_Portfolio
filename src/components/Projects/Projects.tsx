@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { find } from 'lodash';
 import classNames from 'classnames';
-import { projectList } from 'Data/ProjectList';
+import { projectList } from 'data/ProjectList';
 import ProjectsCard from './ProjectsCard';
 import { IProjectType } from 'interface/ProjectType';
 import ProjectModal from './ProjectModal';
@@ -12,32 +12,34 @@ import FadeIn from 'react-fade-in';
 const style = require('./Projects.scss');
 const cx: ClassNamesFn = classNames.bind(style);
 
-const Projects = () => {
+const Projects = (): JSX.Element => {
   const [topic, setTopic] = useState<ProjectTypes>(0);
   const [isModal, setIsModal] = useState<boolean>(false);
   const [projectInfo, setProjectInfo] = useState<IProjectType>({});
 
   const topics: string[] = ['전체', 'Web', 'Server'];
 
-  const findProject = useCallback((id: number) => {
-    const info: IProjectType | undefined = find([...projectList], { id });
+  const findProject = useCallback((id: number): void => {
+    const info: IProjectType | undefined = projectList.find((project: IProjectType) => project.id === id);
     setProjectInfo(info!);
   }, []);
+
+  const { ALL, FRONTEND, BACKEND } = ProjectTypes;
 
   const filterProjects: IProjectType[] = projectList.filter((project: IProjectType) => {
     const { type } = project!;
     switch (topic) {
-      case 0:
+      case ALL:
         return project;
               
-      case 1:
+      case FRONTEND:
         return type!.includes("Front End");
 
-      case 2:
+      case BACKEND:
         return type!.includes("Back End");
 
       default:
-        return null;
+        return project;
     };
   });
 

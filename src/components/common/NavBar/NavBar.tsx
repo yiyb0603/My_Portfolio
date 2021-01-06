@@ -1,10 +1,10 @@
 import React from 'react';
 import './NavBar.scss';
-import { withRouter, useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import { History } from "history";
 import { IRoutesTypes, routes } from 'util/Route';
 
-const NavBar = () => {
+const NavBar = (): JSX.Element => {
   const history: History<History.PoorMansUnknown> = useHistory();
   const { pathname } = useLocation();
   
@@ -29,4 +29,4 @@ const NavBar = () => {
   );
 }
 
-export default withRouter(NavBar);
+export default NavBar;

@@ -1,9 +1,13 @@
 import React from 'react';
-import './Footer.scss';
+import classNames from 'classnames';
+import { ClassNamesFn } from 'classnames/types';
 
-const Footer = () => {
+const style = require('./Footer.scss');
+const cx: ClassNamesFn = classNames.bind(style);
+
+const Footer = (): JSX.Element => {
     return (
-        <div className ="Footer">@Copyright yiyb0603. All rights reserved. Since 2020</div>
+        <div className ={cx("Footer")}>@Copyright yiyb0603. All rights reserved. Since 2020</div>
     );
 }
 

@@ -341,4 +341,11 @@ export const myHistory: IHistoryType[] = [
     date: '2021.01.06 ~ 01.08',
     icon: BsPencil,
   },
+
+  {
+    type: ACTIVITY,
+    name: 'OCAJP 국제 자격증 취득',
+    date: '2021.01.08',
+    icon: FaJava,
+  },
 ];

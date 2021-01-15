@@ -2,13 +2,14 @@ import React, { CSSProperties } from "react";
 import classNames from 'classnames';
 import { ClassNamesFn } from "classnames/types";
 import Constants from "util/Constants";
+import { FaBlog } from 'react-icons/fa';
 import { AiFillFacebook, AiFillMail, AiFillRocket } from 'react-icons/ai';
 
 const style = require("./Contact.scss");
 const cx: ClassNamesFn = classNames.bind(style);
 
 const Contact = (): JSX.Element => {
-  const { PHONE_NUMBER, EMAIL_ADDRESS, FACEBOOK_ADDRESS, ROCKET_ADDRESS } = Constants;
+  const { PHONE_NUMBER, EMAIL_ADDRESS, FACEBOOK_ADDRESS, BLOG_ADDRESS, ROCKET_ADDRESS } = Constants;
 
   const iconStyle: CSSProperties = {
     fontSize: 25,
@@ -36,6 +37,11 @@ const Contact = (): JSX.Element => {
         <a className={cx('Contact-Buttons-Gmail')} href={"mailto:" + EMAIL_ADDRESS} target="_blank" rel="noopener noreferrer">
           <AiFillMail style={iconStyle} />
           <div>Gmail</div>
+        </a>
+        
+        <a className={cx('Contact-Buttons-Blog')} href={BLOG_ADDRESS} target="_blank" rel="noopener noreferrer">
+          <FaBlog style={iconStyle} />
+          <div>Velog</div>
         </a>
 
         <a className={cx('Contact-Buttons-RocketPunch')} href={ROCKET_ADDRESS} target="_blank" rel="noopener noreferrer">

@@ -125,8 +125,12 @@
 				@include progressBarStyle(85%, $orange);
 			}
 
+			&-ReduxBar {
+				@include progressBarStyle(68%, $purple);
+			}
+
 			&-VueBar {
-				@include progressBarStyle(20%, $green);
+				@include progressBarStyle(35%, $green);
 			}
 
 			&-SassBar {

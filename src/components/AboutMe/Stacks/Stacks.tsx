@@ -6,6 +6,7 @@ import { IoLogoJavascript } from 'react-icons/io';
 import { GrNode } from 'react-icons/gr';
 import StackItem from '../StackItem';
 import NextLogo from 'assets/images/Next.png';
+import ReduxLogo from 'assets/images/redux.svg';
 import NestLogo from 'assets/images/nest.jpg';
 import CLogo from 'assets/images/CLogo.svg';
 
@@ -55,6 +56,10 @@ const Stacks = (): JSX.Element => {
 
                 <StackItem progressName="MobX">
                     <img src ={MOBX_LOGO} alt ="mobx" style={imageStyle} />
+                </StackItem>
+
+                <StackItem progressName="Redux">
+                    <img src={ReduxLogo} alt ="redux" style={imageStyle} />
                 </StackItem>
 
                 <StackItem progressName="Sass">

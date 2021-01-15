@@ -40,6 +40,11 @@ export const tooltipTitles: ITooltipTitleTypes[] = [
   },
 
   {
+    progressName: 'Redux',
+    title: 'dispatch, action의 원리와 action type을 이용하여 axios와 활용을 할 수 있습니다. (React Native에서 많이 사용합니다.)',
+  },
+
+  {
     progressName: 'Sass',
     title: '변수 및 클래스 치환을 사용하는 등 Sass의 이점을 이용해서 스타일링을 합니다.',
   },

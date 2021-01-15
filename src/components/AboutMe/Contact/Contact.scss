@@ -8,7 +8,7 @@
 	-webkit-transition: 0.2s ease-in-out;
 
 	&:hover {
-		opacity: 0.65;
+		opacity: 0.85;
 	}
 }
 
@@ -71,6 +71,10 @@
 
 		&-Gmail {
 			@include buttonStyle($red, $white);
+		}
+
+		&-Blog {
+			@include buttonStyle($green, $white);
 		}
 
 		&-RocketPunch {

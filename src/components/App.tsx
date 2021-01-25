@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { IRoutesTypes, routes } from 'util/Route';
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <Switch>
       {

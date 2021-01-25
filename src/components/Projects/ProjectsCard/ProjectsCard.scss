@@ -1,11 +1,18 @@
 @import 'styles/Palette/Palette.scss';
 @import 'styles/Fonts/FontScheme.scss';
 
+@mixin textEllipsis() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .ProjectsCard {
 	width: 430px;
 	display: flex;
 	display: -webkit-flex;
 	flex-wrap: wrap;
+	overflow-x: hidden;
 	overflow-y: auto;
 	flex-direction: column;
 	justify-content: center;
@@ -49,7 +56,9 @@
 		margin: 5px 0;
 
 		&-Name {
+			max-width: 100%;
 			font-size: $font_20;
+			@include textEllipsis();
 		}
 
 		&-Period {
@@ -59,10 +68,12 @@
 	}
 
 	&-Stacks {
+		max-width: 100%;
 		color: $blue;
 		font-size: $font_12;
 		border-bottom: 1px solid $lighterGray;
 		margin-bottom: 8px;
 		padding-bottom: 8px;
+		@include textEllipsis();
 	}
 }

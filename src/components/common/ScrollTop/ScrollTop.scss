@@ -2,15 +2,15 @@
 @import 'styles/Palette/Palette.scss';
 
 .ScrollTop {
-	width: 70px;
-	height: 70px;
+	width: 65px;
+	height: 65px;
 	position: fixed;
 	bottom: 2rem;
 	right: 2rem;
 	background-color: $blue;
 	border: none;
 	outline: none;
-	border-radius: 25px;
+	border-radius: 15px;
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: column;

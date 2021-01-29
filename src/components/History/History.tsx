@@ -27,7 +27,6 @@ const History = (): JSX.Element => {
       <div className={cx('History-SelectZone')}>
         {
           topics.map((topic: string, idx: number) => {
-            console.log(idx - 1);
             return (
               <button
                 id={(idx - 1).toString()}

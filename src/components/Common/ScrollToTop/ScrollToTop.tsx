@@ -3,10 +3,10 @@ import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
 import { BsBoxArrowInUp } from 'react-icons/bs';
 
-const style = require('./ScrollTop.scss');
+const style = require('./ScrollToTop.scss');
 const cx: ClassNamesFn = classNames.bind(style);
 
-const ScrollTop = (): JSX.Element => {
+const ScrollToTop = (): JSX.Element => {
 	const [isTop, setIsTop] = useState<boolean>(true);
 
 	const detectingScroll = useCallback((): void => {
@@ -32,12 +32,12 @@ const ScrollTop = (): JSX.Element => {
 	return (
 		<>
 			{!isTop && (
-				<div className={cx('ScrollTop')} onClick={scrollToTop}>
-					<BsBoxArrowInUp className={cx('ScrollTop-Icon')} />
+				<div className={cx('ScrollToTop')} onClick={scrollToTop}>
+					<BsBoxArrowInUp className={cx('ScrollToTop-Icon')} />
 				</div>
 			)}
 		</>
 	);
 };
 
-export default ScrollTop;
+export default ScrollToTop;

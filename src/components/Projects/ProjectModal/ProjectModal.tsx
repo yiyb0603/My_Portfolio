@@ -61,8 +61,18 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps): 
   }, [gallery, handleDotClick, index]);
 
   return (
-    <Modal isModal={isModal} setIsModal={setIsModal} title ={name!} period={period!} stacks={stacks!}>
-      <div className={cx('ProjectModal')} onMouseEnter={() => setMouseEnter(true)} onMouseLeave={() => setMouseEnter(false)}>
+    <Modal
+      isModal={isModal}
+      setIsModal={setIsModal}
+      title ={name!}
+      period={period!}
+      stacks={stacks!}
+    >
+      <div
+        className={cx('ProjectModal')}
+        onMouseEnter={() => setMouseEnter(true)}
+        onMouseLeave={() => setMouseEnter(false)}
+      >
         {
           mouseEnter && gallery!.length > 1 ?
           <>
@@ -77,7 +87,12 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps): 
         }
 
         <div className={cx('ProjectModal-DotWrapper')}>{imageDots}</div>  
-        <img className={cx('ProjectModal-Image')} src ={gallery![index]} alt ="gallerys" />
+        <img
+          className={cx('ProjectModal-Image')}
+          onClick={() => window.open(gallery![index], 'image', 'width = 800, heigh= 600, left = 400, top = 400, resizable = yes')}
+          src ={gallery![index]}
+          alt ="gallerys"
+        />
       </div>
 
       <div className={cx('ProjectModal-Select')}>

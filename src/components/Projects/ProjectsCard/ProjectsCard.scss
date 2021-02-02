@@ -21,8 +21,8 @@
 	padding: 1rem 1.7rem;
 	margin: 5px 1rem;
 	margin-bottom: 2rem;
-	box-shadow: 5px 5px 10px rgba($rgbaLighterGray, 0.2),
-		-8px -8px 10px rgba($rgbaLighterGray, 0.2);
+	box-shadow: 4px 4px 8px rgba($rgbaNavbar, 0.4),
+		-6px -6px 8px rgba($rgbaNavbar, 0.4);
 	transition: all 0.2s;
 	-webkit-transition: all 0.2s;
 	color: $white;
@@ -34,7 +34,7 @@
 	}
 
 	&-Types {
-		font-size: $font_20;
+		font-size: $font_22;
 	}
 
 	&-Thumbnail {
@@ -51,6 +51,7 @@
 	&-NamePeriod {
 		display: flex;
 		display: -webkit-flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
 		margin: 5px 0;
@@ -58,7 +59,6 @@
 		&-Name {
 			max-width: 100%;
 			font-size: $font_20;
-			@include textEllipsis();
 		}
 
 		&-Period {
@@ -70,7 +70,7 @@
 	&-Stacks {
 		max-width: 100%;
 		color: $blue;
-		font-size: $font_12;
+		font-size: $font_14;
 		border-bottom: 1px solid $lighterGray;
 		margin-bottom: 8px;
 		padding-bottom: 8px;

@@ -11,7 +11,7 @@ export const tooltipTitles: ITooltipTitleTypes[] = [
 
   {
     progressName: 'Java',
-    title: '제가 가장 처음 접했던 객체지향 프로그래밍 언어였으며, 기초적인 객체지향 능력을 키웠습니다.'
+    title: '제가 가장 처음 접했던 객체지향 프로그래밍 언어이고, 기초적인 객체지향 능력을 키웠으며, 알고리즘 문제를 해결할때 많이 사용합니다.'
   },
 
   {

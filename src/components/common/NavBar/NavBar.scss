@@ -23,7 +23,7 @@
 		padding: 0 1rem;
 
 		&-CurrentItem {
-			border-bottom: 5px solid $blue;
+			border-bottom: 4px solid $blue;
 			border-radius: 5px;
 			font-size: 25px;
 		}
@@ -34,7 +34,7 @@
 			cursor: pointer;
 			text-transform: uppercase;
 			list-style: none;
-			padding: 10px 0;
+			padding: 8px 0;
 		}
 	}
 }

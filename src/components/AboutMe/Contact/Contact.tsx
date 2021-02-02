@@ -1,9 +1,10 @@
 import React, { CSSProperties } from "react";
 import classNames from 'classnames';
 import { ClassNamesFn } from "classnames/types";
-import Constants from "util/Constants";
 import { FaBlog } from 'react-icons/fa';
 import { AiFillFacebook, AiFillMail, AiFillRocket } from 'react-icons/ai';
+import { MdCallEnd } from 'react-icons/md';
+import Constants from "util/Constants";
 
 const style = require("./Contact.scss");
 const cx: ClassNamesFn = classNames.bind(style);
@@ -20,7 +21,10 @@ const Contact = (): JSX.Element => {
   return (
     <div className={cx('Contact')}>
       <div>
-        <div className={cx('Contact-Title')}>연락처</div>
+        <div className={cx('Contact-Title')}>
+          <MdCallEnd className={cx('Contact-Title-Icon')} />
+          <div>연락처</div>
+        </div>
 
         <div className={cx('Contact-Contents')}>
           <div>전화번호: {PHONE_NUMBER}</div>

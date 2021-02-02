@@ -1,13 +1,14 @@
 import { FaMedal, FaMountain, FaWater, FaAward, FaSchool, FaMicrophone, FaLaptopCode, FaElementor, FaReact, FaJava, FaPersonBooth } from 'react-icons/fa';
 import { GiElectric, GiForestCamp, GiNothingToSay, GiBlood, GiPineTree, GiConvict, GiTalk } from 'react-icons/gi';
 import { RiSlideshow3Line, RiCalendarEventLine, RiPrinterCloudLine, RiSmartphoneLine } from 'react-icons/ri';
-import { IoMdBaseball } from 'react-icons/io';
+import { IoMdBaseball, IoMdSchool } from 'react-icons/io';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { BsPencil } from 'react-icons/bs';
 import { FcNightLandscape, FcConferenceCall, FcDocument } from 'react-icons/fc';
 import { IconType } from 'react-icons/lib';
 import { GrGraphQl, GrTestDesktop } from 'react-icons/gr';
 import { HistoryEnums } from "enum/HistoryEnum";
+import { MdLocalAirport } from 'react-icons/md';
 
 export interface IHistoryType {
   // 0 = 수상, 1 = 활동, 2 = 대회, 3 = 컨퍼런스
@@ -20,6 +21,13 @@ export interface IHistoryType {
 const { AWARDS, ACTIVITY, COMPETITION, CONFERENCE } = HistoryEnums;
 
 export const myHistory: IHistoryType[] = [
+  {
+    type: ACTIVITY,
+    name: '대구소프트웨어고등학교 입학',
+    date: '2019.03.02',
+    icon: IoMdSchool,
+  },
+
   {
     type: ACTIVITY,
     name: '교내 기초전자교육',
@@ -46,6 +54,20 @@ export const myHistory: IHistoryType[] = [
     name: '해양 수련활동',
     date: '2019.06.20 ~ 06.22',
     icon: FaWater,
+  },
+
+  {
+    type: COMPETITION,
+    name: '공공데이터 활용 (교육부문) 참가',
+    date: '2019.07',
+    icon: FaLaptopCode,
+  },
+
+  {
+    type: COMPETITION,
+    name: '인천국제공항 국민 참여 혁신 공모전 참가',
+    date: '2019.07',
+    icon: MdLocalAirport,
   },
 
   {

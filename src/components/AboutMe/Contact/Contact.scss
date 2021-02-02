@@ -35,6 +35,14 @@
 		margin-bottom: 12px;
 		padding-bottom: 8px;
 		border-bottom: 1px solid $white;
+		display: flex;
+		display: -webkit-flex;
+		align-items: flex-end;
+
+		&-Icon {
+			margin-right: 8px;
+			color: $red;
+		}
 	}
 
 	&-Contents {

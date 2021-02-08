@@ -58,7 +58,7 @@
 		flex-wrap: wrap;
 
 		& > * {
-			width: 220px;
+			width: 210px;
 			height: 100%;
 			border: none;
 			border-radius: 5px;
@@ -67,7 +67,7 @@
 			justify-content: center;
 			padding: 12px 0;
 			font-size: $font_25;
-			margin-left: 10px;
+			margin-left: 12px;
 			margin-top: 10px;
 			cursor: pointer;
 		}

@@ -40,6 +40,11 @@ export const tooltipTitles: ITooltipTitleTypes[] = [
   },
 
   {
+    progressName: 'Recoil',
+    title: '최근에 관심을 가지고있는 React의 상태관리 라이브러리이며, 적극 도입할 예정입니다.',
+  },
+
+  {
     progressName: 'Redux',
     title: 'dispatch, action의 원리와 action type을 이용하여 axios와 활용을 할 수 있습니다. (React Native에서 많이 사용합니다.)',
   },

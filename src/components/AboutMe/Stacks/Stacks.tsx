@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
 import { FaHtml5, FaCss3Alt, FaJava, FaReact, FaSass, FaVuejs } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
-import { GiStack } from 'react-icons/gi';
+import { GiStack, GiTeslaCoil } from 'react-icons/gi';
 import { GrNode } from 'react-icons/gr';
 import StackItem from '../StackItem';
 import NextLogo from 'assets/images/Next.png';
@@ -61,6 +61,10 @@ const Stacks = (): JSX.Element => {
 
         <StackItem progressName="MobX">
           <img src ={MOBX_LOGO} alt ="mobx" style={imageStyle} />
+        </StackItem>
+
+        <StackItem progressName="Recoil">
+          <GiTeslaCoil className={cx('StackItem-Wrapper-Icon-Recoil')} />
         </StackItem>
 
         <StackItem progressName="Redux">

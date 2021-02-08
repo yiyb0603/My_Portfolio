@@ -85,6 +85,10 @@
 				@include iconStyle($pink);
 			}
 
+			&-Recoil {
+				@include iconStyle($blue);
+			}
+
 			&-Vue {
 				@include iconStyle($green);
 			}
@@ -123,6 +127,10 @@
 
 			&-MobXBar {
 				@include progressBarStyle(85%, $orange);
+			}
+
+			&-RecoilBar {
+				@include progressBarStyle(68%, $blue);
 			}
 
 			&-ReduxBar {

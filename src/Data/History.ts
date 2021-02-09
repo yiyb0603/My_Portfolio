@@ -197,7 +197,7 @@ export const myHistory: IHistoryType[] = [
   },
 
   {
-    type: COMPETITION,
+    type: CONFERENCE,
     name: '2019 대한민국 ICT 융합엑스포 참가 및 부스운영',
     date: '2019.10.30 ~ 11.01',
     icon: GiConvict,
@@ -337,8 +337,8 @@ export const myHistory: IHistoryType[] = [
   },
 
   {
-    type: COMPETITION,
-    name: '2020 대한민국 ICT 융합엑스포 부스 운영',
+    type: CONFERENCE,
+    name: '2020 대한민국 ICT 융합엑스포 참가 및 부스 운영',
     date: '2020.11.19 ~ 11.20',
     icon: FaPersonBooth,
   },

@@ -7,6 +7,6 @@ export enum ProjectEnums {
 
 export enum ProjectTypes {
   ALL,
-  FRONTEND,
-  BACKEND,
+  TEAM,
+  ALONE,
 };

@@ -38,7 +38,7 @@ const ProjectsCard = ({
         <div className ='ProjectsCard-NamePeriod-Period'>{period}</div>
       </div>
 
-      <div className ='ProjectsCard-Stacks'>{stacks.join(', ')}</div>
+      <div className ='ProjectsCard-Stacks' title={stacks.join(', ')}>{stacks.join(', ')}</div>
       <div className ='ProjectsCard-Introduction'>{introduction}</div>
     </div>
   );

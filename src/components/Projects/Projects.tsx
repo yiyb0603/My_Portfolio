@@ -17,29 +17,22 @@ const Projects = (): JSX.Element => {
   const [isModal, setIsModal] = useState<boolean>(false);
   const [projectInfo, setProjectInfo] = useState<IProjectType>({});
 
-  const topics: string[] = ['전체', 'Web', 'Server'];
+  const topics: string[] = ['전체', '팀 프로젝트', '개인 프로젝트'];
 
   const findProject = useCallback((id: number): void => {
     const info: IProjectType | undefined = projectList.find((project: IProjectType) => project.id === id);
     setProjectInfo(info!);
   }, []);
 
-  const { ALL, FRONTEND, BACKEND } = ProjectTypes;
+  const { ALL } = ProjectTypes;
 
   const filterProjects: IProjectType[] = projectList.filter((project: IProjectType) => {
-    const { type } = project!;
     switch (topic) {
       case ALL:
         return project;
-              
-      case FRONTEND:
-        return type!.includes("Front End");
-
-      case BACKEND:
-        return type!.includes("Back End");
 
       default:
-        return project;
+        return project.member === topic;
     };
   });
 

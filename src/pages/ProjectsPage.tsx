@@ -2,7 +2,7 @@ import React from 'react';
 import Projects from 'components/Projects';
 import PageTemplate from 'components/Common/Template/PageTemplate';
 
-const ProjectsPage = () => {
+const ProjectsPage = (): JSX.Element => {
     return (
         <PageTemplate>
             <Projects />

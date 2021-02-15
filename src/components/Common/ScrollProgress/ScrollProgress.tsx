@@ -33,7 +33,12 @@ const ScrollProgress = memo((): JSX.Element => {
     const { innerHeight } = window;
     const { scrollHeight } = document.body;
     const { scrollTop } = document.documentElement;
-    
+
+    if (scrollTop === 0) {
+      setWidth(0);
+      return;
+    }
+
     const scrollPosition: number = Math.round(scrollTop + innerHeight);
     const currentPercent: number = (scrollPosition / scrollHeight) * 100;
 
@@ -41,7 +46,6 @@ const ScrollProgress = memo((): JSX.Element => {
   }, []);
   
   useEffect(() => {
-    handleScroll();
     window.addEventListener('scroll', handleScroll, true);
 
     return () => {

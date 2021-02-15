@@ -15,7 +15,7 @@ const Contact = (): JSX.Element => {
   const iconStyle: CSSProperties = {
     fontSize: 25,
     marginRight: 4,
-    marginTop: 3,
+    marginTop: 2,
   }
 
   return (

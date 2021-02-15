@@ -67,7 +67,7 @@ export const projectList: IProjectType[] = [
     id: 1,
     name: '도담도담 V2 유지보수',
     type: ['Front End'],
-    stacks: ['JavaScript', 'React.js', 'MobX', 'SASS'],
+    stacks: ['JavaScript', 'React.js', 'MobX', 'Scss'],
     period: '2020.06.19 ~ (서비스중)',
     introduction: '교내 스마트 스쿨 플랫폼',
     description: `기숙학교를 지내는 학생들은 교과시간이 끝난 이후에는 학교 안에서 자유롭게 자습을 할 수 있습니다.
@@ -96,7 +96,7 @@ export const projectList: IProjectType[] = [
     id: 2,
     name: '도담도담 관리자',
     type: ['Front End'],
-    stacks: ['JavaScript', 'React.js', 'MobX', 'SASS'],
+    stacks: ['JavaScript', 'React.js', 'MobX', 'Scss'],
     period: '2020.03.15 ~ 05.18 (서비스 중)',
     introduction: '교내 스마트 스쿨 플랫폼 관리자 페이지',
     description: `1번 프로젝트인 '도담도담'의 관리자용 페이지이며, 도담도담을 이루는 요소들을 전반적으로 관리합니다.<br />
@@ -122,7 +122,7 @@ export const projectList: IProjectType[] = [
     id: 3,
     name: '도담도담 선생님',
     type: ['Front End'],
-    stacks: ['TypeScript', 'React.js', 'MobX', 'SASS'],
+    stacks: ['TypeScript', 'React.js', 'MobX', 'Scss'],
     period: '2020.07.31 ~ 09.24 (서비스 중)',
     introduction: '교내 스마트 스쿨 플랫폼 선생님 페이지', 
     description: `1번 프로젝트인 '도담도담'의 선생님용 페이지이며, 학생이 선생님의 승인 등이 필요한 요소 또는<br />
@@ -144,7 +144,7 @@ export const projectList: IProjectType[] = [
     id: 4,
     name: '바인드팀 팀사이트',
     type: ['Front End'],
-    stacks: ['JavaScript', 'React.js', 'SASS'],
+    stacks: ['JavaScript', 'React.js', 'Scss'],
     period: '2020.04.08 ~ 05.10 (서비스 중)',
     introduction: '교내 바인드팀 팀사이트', 
     description: `제가 소속되어 있는 교내 스마트 스쿨 플랫폼 개발팀 바인드 팀의 웹페이지 입니다.
@@ -157,7 +157,7 @@ export const projectList: IProjectType[] = [
     내용 및 디자인 하나하나 섬세하게 생각하면서 제작을 하였습니다. 사실 제작 당시에는 UI 디자인 초안이
       없었지만, PM 선생님 및 팀원들의 도움 덕분에 무사히 제작할 수 있었습니다.
       네이버 및 카카오 공식 홈페이지를 많이 참고했습니다.`,
-    role: '프론트엔드 에서 여러 페이지들을 번번히 만져가면서 제작 서비스 및 유지보수 하였습니다.',
+    role: '프론트엔드 에서 여러 페이지들을 번번히 만져가면서 제작하였고, 서비스 및 유지보수 하였습니다.',
     link: `<a style ='color: ${blue}' href='http://b1nd.com' target='_blank' rel ='noopener noreferrer'>http://b1nd.com</a>`,
   },
 
@@ -165,7 +165,7 @@ export const projectList: IProjectType[] = [
     id: 5,
     name: '여기 코로나',
     type: ['Front End'],
-    stacks: ['JavaScript', 'React.js', 'MobX', 'Axios', 'SASS'],
+    stacks: ['JavaScript', 'React.js', 'MobX', 'Axios', 'Scss'],
     period: '2020.02',
     introduction: '코로나 정보 웹사이트',
     member: TEAM,
@@ -224,7 +224,7 @@ export const projectList: IProjectType[] = [
     id: 7,
     name: 'YLog 개인 블로그',
     type: ['Front End', 'Back End'],
-    stacks: ['TypeScript', 'Next.js', 'SASS', 'MobX', 'Express.js', 'TypeORM', 'MySQL', 'FCM'],
+    stacks: ['TypeScript', 'Next.js', 'Scss', 'MobX', 'Express', 'TypeORM', 'MySQL', 'FCM'],
     period: '2020.09.16 ~ 11',
     introduction: '개인 블로그 사이트',
     description: `
@@ -255,7 +255,7 @@ export const projectList: IProjectType[] = [
     id: 8,
     name: 'School Meals',
     type: ['Front End', 'Back End'],
-    stacks: ['TypeScript', 'JavaScript', 'React.js', 'SASS', 'MobX', 'Express.js'],
+    stacks: ['TypeScript', 'JavaScript', 'React.js', 'Scss', 'MobX', 'Express.js'],
     period: '2020.04 ~ 2020.05',
     introduction: '학교를 검색하여 급식, 일정을 볼 수 있는 웹',
     description: `
@@ -282,7 +282,7 @@ export const projectList: IProjectType[] = [
     id: 9,
     name: 'LIVRO-S',
     type: ['Front End'],
-    stacks: ['JavaScript', 'React.js', 'SASS', 'MobX', 'Styled-Components'],
+    stacks: ['JavaScript', 'React.js', 'Scss', 'MobX', 'Styled-Components'],
     period: '2020.11.23 ~ 11.24 (3개 마이스터고 연합 해커톤)',
     introduction: '3개 마이스터고 학생들의 도서관 웹사이트',
     description: `
@@ -312,7 +312,7 @@ export const projectList: IProjectType[] = [
     id: 10,
     name: 'CoCode',
     type: ['Front End'],
-    stacks: ['TypeScript', 'Next.js', 'SASS', 'MobX'],
+    stacks: ['TypeScript', 'Next.js', 'Scss', 'MobX'],
     period: '2020.09.08 ~ 09.09 (해커톤)',
     introduction: '교내 커뮤니티 사이트',
     description: `
@@ -368,7 +368,7 @@ export const projectList: IProjectType[] = [
     id: 12,
     name: '개인 포트폴리오 페이지',
     type: ['Front End'],
-    stacks: ['TypeScript', 'React.js', 'Sass', 'JSON Array'],
+    stacks: ['TypeScript', 'React.js', 'Sass', 'Github Pages'],
     period: '2020.11 ~ 12',
     introduction: '개인 포트폴리오 웹 페이지',
     thumbnail: PortfolioStack,

@@ -1,0 +1,81 @@
+@import 'styles/Palette/Palette.scss';
+@import 'styles/Fonts/FontScheme.scss';
+
+@mixin buttonStyle($background, $color) {
+	background-color: $background;
+	color: $color;
+	transition: 0.2s ease-in-out;
+	-webkit-transition: 0.2s ease-in-out;
+
+	&:hover {
+		opacity: 0.85;
+	}
+}
+
+.Contact {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	display: -wekbit-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 6rem;
+	color: $white;
+
+	&-Wrapper {
+		flex: 1;
+	}
+
+	&-Title {
+		font-size: $font_25;
+		margin-bottom: 12px;
+		padding-bottom: 8px;
+		border-bottom: 1px solid $white;
+		display: flex;
+		display: -webkit-flex;
+		align-items: flex-end;
+
+		&-Icon {
+			margin-right: 8px;
+			color: $red;
+		}
+	}
+
+	&-Contents {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		color: $gray;
+		font-weight: bold;
+		font-size: $font_22;
+		line-height: 35px;
+
+		&-TextWrap {
+			margin-bottom: 5px;
+		}
+
+		&-Icons {
+			width: 300px;
+			display: flex;
+			display: -webkit-flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			&-Icon {
+				width: 65px;
+				height: 60px;
+				border-radius: 50%;
+				display: block;
+				object-fit: cover;
+				cursor: pointer;
+
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+		}
+	}
+}

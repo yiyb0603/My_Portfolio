@@ -1,0 +1,105 @@
+@import 'styles/Palette/Palette.scss';
+@import 'styles/Fonts/FontScheme.scss';
+
+@mixin flexStyle() {
+	display: flex;
+	display: -webkit-flex;
+}
+
+@mixin iconWrapperStyle() {
+	width: 100px;
+	@include flexStyle();
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin iconStyle($color) {
+	color: $color;
+	font-size: 40px;
+}
+
+@mixin progressWrapperStyle() {
+	width: 90%;
+	height: 25px;
+	background-color: $gray;
+	border-radius: 5px;
+}
+
+@mixin progressBarStyle() {
+	height: 25px;
+	background-image: linear-gradient(
+		50deg,
+		rgba(255, 255, 255, 0.15) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.15) 50%,
+		rgba(255, 255, 255, 0.15) 75%,
+		transparent 75%,
+		transparent
+	);
+	border-radius: 3px;
+}
+
+.StackItem {
+	color: $white;
+
+	&-Wrapper {
+		@include flexStyle();
+		align-items: center;
+		margin: 15px 0;
+
+		&-Icon {
+			@include iconWrapperStyle();
+
+			&-Java {
+				@include iconStyle($red);
+			}
+
+			&-HTML {
+				@include iconStyle($orange);
+			}
+
+			&-CSS {
+				@include iconStyle($skyBlue);
+			}
+
+			&-JavaScript {
+				@include iconStyle($yellow);
+			}
+
+			&-TypeScript {
+				@include iconStyle($white);
+				background-color: $primary;
+				border-radius: 5px;
+			}
+
+			&-React {
+				@include iconStyle($skyBlue);
+			}
+
+			&-Scss {
+				@include iconStyle($pink);
+			}
+
+			&-Recoil {
+				@include iconStyle($blue);
+			}
+
+			&-Vue {
+				@include iconStyle($green);
+			}
+
+			&-Express {
+				@include iconStyle($green);
+			}
+		}
+
+		&-ProgressWrapper {
+			@include progressWrapperStyle();
+
+			& > * {
+				@include progressBarStyle();
+			}
+		}
+	}
+}

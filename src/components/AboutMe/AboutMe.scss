@@ -1,0 +1,55 @@
+@import 'styles/Palette/Palette.scss';
+@import 'styles/Fonts/FontScheme.scss';
+
+.AboutMe {
+	color: $white;
+	max-width: 1400px;
+
+	&-Wrapper {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+
+		@media screen and (max-width: 930px) {
+			display: flex;
+			display: -webkit-flex;
+			justify-content: center;
+		}
+
+		&-Image {
+			width: 450px;
+			max-width: 450px;
+			height: 360px;
+			max-height: 360px;
+		}
+
+		&-SubTitle {
+			line-height: 2.2rem;
+			font-size: $font_20;
+		}
+
+		&-Introduction {
+			margin: 12px 0;
+			font-size: $font_25;
+			color: $blue;
+		}
+
+		&-ContentsWrapper {
+			@media screen and (max-width: 930px) {
+				display: flex;
+				display: -webkit-flex;
+				flex-direction: column;
+				-ms-flex-direction: column;
+				align-items: center;
+				padding-left: 10px;
+			}
+
+			&-Contents {
+				font-size: 4rem;
+				text-align: center;
+			}
+		}
+	}
+}

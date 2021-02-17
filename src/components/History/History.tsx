@@ -5,13 +5,13 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { IHistoryType, myHistory } from 'data/History';
 import { Palette } from 'styles/Palette/Palette';
+import historyTopics from "data/models/historyTopics";
 
 const style = require("./History.scss");
 const cx: ClassNamesFn = classNames.bind(style);
 
 const History = (): JSX.Element => {
   const { blue, white } = Palette;
-  const topics: string[] = ['전체', '수상', '활동', '대회', '컨퍼런스'];
   const [selectButton, setSelectButton] = useState<number>(-1);
 
   const onClickButton = useCallback((e: MouseEvent<HTMLButtonElement>): void => {
@@ -26,7 +26,7 @@ const History = (): JSX.Element => {
     <div className={cx('History')}>
       <div className={cx('History-SelectZone')}>
         {
-          topics.map((topic: string, idx: number) => {
+          historyTopics.map((topic: string, idx: number) => {
             return (
               <button
                 id={(idx - 1).toString()}

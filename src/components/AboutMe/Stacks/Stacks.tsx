@@ -20,8 +20,8 @@ const Stacks = (): JSX.Element => {
   const TYPE_ORM_LOGO: string = "https://avatars2.githubusercontent.com/u/20165699?s=400&v=4";
 
   const imageStyle: CSSProperties = {
-    width: 60,
-    height: 60,
+    width: 55,
+    height: 55,
     borderRadius: 5,
     objectFit: 'cover',
   };
@@ -71,8 +71,8 @@ const Stacks = (): JSX.Element => {
           <img src={ReduxLogo} alt ="redux" style={imageStyle} />
         </StackItem>
 
-        <StackItem progressName="Sass">
-          <FaSass className={cx('StackItem-Wrapper-Icon-Sass')} />
+        <StackItem progressName="Scss">
+          <FaSass className={cx('StackItem-Wrapper-Icon-Scss')} />
         </StackItem>
 
         <StackItem progressName="Vue">

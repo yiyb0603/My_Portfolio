@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react';
-import { find } from 'lodash';
 import classNames from 'classnames';
 import { projectList } from 'data/ProjectList';
 import ProjectsCard from './ProjectsCard';
@@ -8,6 +7,7 @@ import ProjectModal from './ProjectModal';
 import { ClassNamesFn } from 'classnames/types';
 import { ProjectTypes } from 'enum/ProjectEnum';
 import FadeIn from 'react-fade-in';
+import projectTopics from 'data/models/projectTopics';
 
 const style = require('./Projects.scss');
 const cx: ClassNamesFn = classNames.bind(style);
@@ -16,8 +16,6 @@ const Projects = (): JSX.Element => {
   const [topic, setTopic] = useState<ProjectTypes>(0);
   const [isModal, setIsModal] = useState<boolean>(false);
   const [projectInfo, setProjectInfo] = useState<IProjectType>({});
-
-  const topics: string[] = ['전체', '팀 프로젝트', '개인 프로젝트'];
 
   const findProject = useCallback((id: number): void => {
     const info: IProjectType | undefined = projectList.find((project: IProjectType) => project.id === id);
@@ -64,7 +62,7 @@ const Projects = (): JSX.Element => {
       <div className ={cx("Projects")}>
         <div className={cx("Projects-Top")}>
         {
-          topics.map((top: string, idx: number) => {
+          projectTopics.map((top: string, idx: number) => {
             return (
               <div key={idx} className={cx({
                 'Projects-Top-Current': topic === idx

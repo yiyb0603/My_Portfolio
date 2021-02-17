@@ -20,17 +20,14 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 3px solid $blue;
-	margin-bottom: 5rem;
+	margin-bottom: 6rem;
 	color: $white;
-	padding: 1rem 5px;
 
-	@media screen and (max-width: 930px) {
-		padding-left: 1rem;
+	&-Wrapper {
+		flex: 1;
 	}
 
 	&-Title {
-		width: 300px;
 		font-size: $font_25;
 		margin-bottom: 12px;
 		padding-bottom: 8px;
@@ -46,46 +43,33 @@
 	}
 
 	&-Contents {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-between;
+		align-items: center;
 		color: $gray;
 		font-weight: bold;
 		font-size: $font_20;
 		line-height: 30px;
-	}
 
-	&-Buttons {
-		display: flex;
-		display: -webkit-flex;
-		flex-wrap: wrap;
-
-		& > * {
-			width: 210px;
-			height: 100%;
-			border: none;
-			border-radius: 5px;
+		&-Icons {
 			display: flex;
 			display: -webkit-flex;
-			justify-content: center;
-			padding: 12px 0;
-			font-size: $font_25;
-			margin-left: 12px;
-			margin-top: 10px;
-			cursor: pointer;
-		}
+			flex-wrap: wrap;
 
-		&-Facebook {
-			@include buttonStyle($primary, $white);
-		}
+			&-Icon {
+				width: 65px;
+				height: 60px;
+				border-radius: 50%;
+				display: block;
+				object-fit: cover;
+				margin-left: 14px;
+				cursor: pointer;
 
-		&-Gmail {
-			@include buttonStyle($red, $white);
-		}
-
-		&-Blog {
-			@include buttonStyle($green, $white);
-		}
-
-		&-RocketPunch {
-			@include buttonStyle($blue, $white);
+				&:hover {
+					opacity: 0.6;
+				}
+			}
 		}
 	}
 }

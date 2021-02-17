@@ -4,7 +4,6 @@
 .AboutMe {
 	color: $white;
 	max-width: 1400px;
-	border-bottom: 3px solid $blue;
 
 	&-Wrapper {
 		display: flex;
@@ -19,15 +18,11 @@
 			justify-content: center;
 		}
 
-		& > * {
-			margin-bottom: 12px;
-		}
-
 		&-Image {
 			width: 450px;
 			max-width: 450px;
-			height: 420px;
-			max-height: 420px;
+			height: 360px;
+			max-height: 360px;
 		}
 
 		&-SubTitle {
@@ -54,27 +49,6 @@
 			&-Contents {
 				font-size: 4rem;
 				text-align: center;
-			}
-
-			&-Github {
-				display: flex;
-				display: -webkit-flex;
-				justify-content: space-around;
-				outline: none;
-				border: 1px solid $white;
-				border-radius: 5px;
-				padding: 8px 10px;
-				background-color: $black;
-				color: $white;
-				font-size: $font_25;
-				cursor: pointer;
-				transition: 0.2s ease;
-				-webkit-transition: 0.2s ease;
-
-				&:hover {
-					background-color: $white;
-					color: $black;
-				}
 			}
 		}
 	}

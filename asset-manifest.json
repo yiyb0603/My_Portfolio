@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/my_portfolio/static/css/main.4e83e0d1.chunk.css",
-    "main.js": "/my_portfolio/static/js/main.eb557c08.chunk.js",
-    "main.js.map": "/my_portfolio/static/js/main.eb557c08.chunk.js.map",
+    "main.css": "/my_portfolio/static/css/main.7427ac2f.chunk.css",
+    "main.js": "/my_portfolio/static/js/main.cd2dfff1.chunk.js",
+    "main.js.map": "/my_portfolio/static/js/main.cd2dfff1.chunk.js.map",
     "runtime-main.js": "/my_portfolio/static/js/runtime-main.77f2245f.js",
     "runtime-main.js.map": "/my_portfolio/static/js/runtime-main.77f2245f.js.map",
     "static/css/2.22ca87da.chunk.css": "/my_portfolio/static/css/2.22ca87da.chunk.css",
-    "static/js/2.d470e0ab.chunk.js": "/my_portfolio/static/js/2.d470e0ab.chunk.js",
-    "static/js/2.d470e0ab.chunk.js.map": "/my_portfolio/static/js/2.d470e0ab.chunk.js.map",
+    "static/js/2.85922a43.chunk.js": "/my_portfolio/static/js/2.85922a43.chunk.js",
+    "static/js/2.85922a43.chunk.js.map": "/my_portfolio/static/js/2.85922a43.chunk.js.map",
     "index.html": "/my_portfolio/index.html",
-    "precache-manifest.21c347a833053bc7b42e4ae6de3eda22.js": "/my_portfolio/precache-manifest.21c347a833053bc7b42e4ae6de3eda22.js",
+    "precache-manifest.ecd6bb612775dc1f11173e216f0d25c6.js": "/my_portfolio/precache-manifest.ecd6bb612775dc1f11173e216f0d25c6.js",
     "service-worker.js": "/my_portfolio/service-worker.js",
     "static/css/2.22ca87da.chunk.css.map": "/my_portfolio/static/css/2.22ca87da.chunk.css.map",
-    "static/css/main.4e83e0d1.chunk.css.map": "/my_portfolio/static/css/main.4e83e0d1.chunk.css.map",
-    "static/js/2.d470e0ab.chunk.js.LICENSE.txt": "/my_portfolio/static/js/2.d470e0ab.chunk.js.LICENSE.txt",
+    "static/css/main.7427ac2f.chunk.css.map": "/my_portfolio/static/css/main.7427ac2f.chunk.css.map",
+    "static/js/2.85922a43.chunk.js.LICENSE.txt": "/my_portfolio/static/js/2.85922a43.chunk.js.LICENSE.txt",
     "static/media/AdminAllow.png": "/my_portfolio/static/media/AdminAllow.82978e8e.png",
     "static/media/AdminAuthority.png": "/my_portfolio/static/media/AdminAuthority.4c40cb2d.png",
     "static/media/AdminClass.png": "/my_portfolio/static/media/AdminClass.1e43bd46.png",
@@ -66,8 +66,8 @@
   "entrypoints": [
     "static/js/runtime-main.77f2245f.js",
     "static/css/2.22ca87da.chunk.css",
-    "static/js/2.d470e0ab.chunk.js",
-    "static/css/main.4e83e0d1.chunk.css",
-    "static/js/main.eb557c08.chunk.js"
+    "static/js/2.85922a43.chunk.js",
+    "static/css/main.7427ac2f.chunk.css",
+    "static/js/main.cd2dfff1.chunk.js"
   ]
 }

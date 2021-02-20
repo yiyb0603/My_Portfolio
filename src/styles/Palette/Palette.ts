@@ -1,6 +1,5 @@
 import { ThemeEnums } from "enum/ThemeEnum";
-import { useRecoilValue } from "recoil";
-import { themeMode } from "recoil/Theme";
+import { getStorage } from "lib/Storage";
 
 interface IPaletteTypes {
 	red: string;
@@ -23,7 +22,7 @@ interface IPaletteTypes {
 	primary: string;
 }
 
-const theme = Number(localStorage.getItem('theme'));
+const theme = Number(getStorage('theme'));
 const { LIGHT } = ThemeEnums;
 
 export const Palette: IPaletteTypes = {
@@ -37,8 +36,8 @@ export const Palette: IPaletteTypes = {
 	purple: '#841DFA',
 	mint: '#00d2d3',
 	pink: '#e84393',
-	theme: !theme || theme === LIGHT ? '#ffffff' : '#000000',
-	contrast: !theme || theme === LIGHT ? '#000000' : '#ffffff',
+	theme: !theme || theme === LIGHT ? '#ffffff' : '#212121',
+	contrast: !theme || theme === LIGHT ? '#212121' : '#ffffff',
 	lighterGray: '#dfe6e9',
 	gray: '#b2bec3',
 	white: '#ffffff',

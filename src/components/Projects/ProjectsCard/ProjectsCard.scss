@@ -20,8 +20,7 @@
 	padding: 1rem 1.7rem;
 	margin: 5px 1rem;
 	margin-bottom: 2rem;
-	box-shadow: 4px 4px 6px rgba($rgbaNavbar, 0.4),
-		-4px -4px 6px rgba($rgbaNavbar, 0.4);
+	box-shadow: 2px 2px 5px rgba(0, 0, 30, 0.4), -2px -2px 5px rgba(0, 0, 30, 0.4);
 	transition: all 0.2s;
 	-webkit-transition: all 0.2s;
 	color: var(--contrast);
@@ -61,7 +60,7 @@
 		}
 
 		&-Period {
-			color: var(--purple);
+			color: var(--pink);
 			font-size: 14px;
 			font-weight: bold;
 		}

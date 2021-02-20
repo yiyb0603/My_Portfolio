@@ -1,5 +1,9 @@
 import React from 'react';
-import './ProjectsCard.scss';
+import classNames from 'classnames';
+import { ClassNamesFn } from 'classnames/types';
+
+const style = require('./ProjectsCard.scss');
+const cx: ClassNamesFn = classNames.bind(style);
 
 interface ProjectsCardProps {
   name: string;
@@ -29,17 +33,26 @@ const ProjectsCard = ({
   handleClick,
 } : ProjectsCardProps) => {
   return (
-    <div className ='ProjectsCard' onClick ={handleClick}>
-      <div className ='ProjectsCard-Types'>{type.join(', ')}</div>
-      <img className ='ProjectsCard-Thumbnail' src ={thumbnail || gallery[0]} alt ='gallery' />
+    <div className={cx('ProjectsCard')} onClick ={handleClick}>
+      <div className={cx('ProjectsCard-Types')}>{type.join(', ')}</div>
+      <img
+        className={cx('ProjectsCard-Thumbnail')}
+        src ={thumbnail || gallery[0]}
+        alt ='gallery'
+      />
       
-      <div className ='ProjectsCard-NamePeriod'>
-        <div className ='ProjectsCard-NamePeriod-Name'>{name}</div>
-        <div className ='ProjectsCard-NamePeriod-Period'>{period}</div>
+      <div className={cx('ProjectsCard-NamePeriod')}>
+        <div className={cx('ProjectsCard-NamePeriod-Name')}>{name}</div>
+        <div className={cx('ProjectsCard-NamePeriod-Period')}>{period}</div>
       </div>
 
-      <div className ='ProjectsCard-Stacks' title={stacks.join(', ')}>{stacks.join(', ')}</div>
-      <div className ='ProjectsCard-Introduction'>{introduction}</div>
+      <div
+        className={cx('ProjectsCard-Stacks')}
+        title={stacks.join(', ')}
+      >
+        {stacks.join(', ')}
+      </div>
+      <div className={cx('ProjectsCard-Introduction')}>{introduction}</div>
     </div>
   );
 }

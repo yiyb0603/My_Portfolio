@@ -59,12 +59,14 @@ const Projects = (): JSX.Element => {
 
   return (
     <FadeIn>
-      <div className ={cx("Projects")}>
+      <div className={cx("Projects")}>
         <div className={cx("Projects-Top")}>
         {
           projectTopics.map((top: string, idx: number) => {
             return (
-              <div key={idx} className={cx({
+              <div
+                key={idx}
+                className={cx({
                 'Projects-Top-Current': topic === idx
               })} onClick={() => setTopic(idx)}>{top}</div>
             );

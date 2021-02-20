@@ -1,0 +1,20 @@
+.ToggleTheme {
+	width: 65px;
+	height: 65px;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--theme);
+	border: 2px solid var(--yellow);
+	color: var(--yellow);
+	border-radius: 15px;
+	font-size: 2rem;
+	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+
+	&:hover {
+		background-color: var(--yellow);
+		color: var(--white);
+	}
+}

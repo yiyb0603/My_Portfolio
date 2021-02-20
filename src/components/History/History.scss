@@ -1,9 +1,6 @@
-@import 'styles/Palette/Palette.scss';
-@import 'styles/Fonts/FontScheme.scss';
-
 @mixin selectedStyle() {
-	color: $white;
-	background-color: $blue;
+	color: var(--white);
+	background-color: var(--blue);
 }
 
 .History {
@@ -27,6 +24,7 @@
 			font-size: 14px;
 			margin-left: 4px;
 			border: none;
+			border-radius: 5px;
 			outline: none;
 			transition: 0.15s ease-in;
 			-webkit-transition: 0.15s ease-in;
@@ -41,4 +39,12 @@
 			@include selectedStyle();
 		}
 	}
+}
+
+.vertical-timeline::before {
+	background: var(--contrast) !important;
+}
+
+.vertical-timeline-element-date {
+	color: var(--contrast);
 }

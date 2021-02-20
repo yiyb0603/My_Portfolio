@@ -5,6 +5,7 @@ import NavBar from "components/Common/NavBar";
 import Footer from "components/Common/Footer";
 import ScrollToTop from "components/Common/ScrollToTop";
 import ScrollProgress from "components/Common/ScrollProgress";
+import ToggleTheme from "components/Common/ToggleTheme";
 
 const style = require("./PageTemplate.scss");
 const cx: ClassNamesFn = classNames.bind(style);
@@ -15,14 +16,18 @@ interface IPageTemplateProps {
 
 const PageTemplate = ({ children }: IPageTemplateProps): JSX.Element => {
   return (
-    <div className ={cx('PageTemplate')}>
+    <div className={cx('PageTemplate')}>
       <ScrollProgress />
-      <ScrollToTop />
       <NavBar />
         <div className ={cx('PageTemplate-Contents')}>
           {children && children}
         </div>
       <Footer />
+
+      <div className={cx('PageTemplate-Fixed')}>
+        <ToggleTheme />
+        <ScrollToTop />
+      </div>
     </div>
   );
 };

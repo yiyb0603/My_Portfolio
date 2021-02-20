@@ -1,6 +1,3 @@
-@import 'styles/Palette/Palette.scss';
-@import 'styles/Fonts/FontScheme.scss';
-
 @mixin flexStyle() {
 	display: flex;
 	display: -webkit-flex;
@@ -21,7 +18,7 @@
 @mixin progressWrapperStyle() {
 	width: 90%;
 	height: 25px;
-	background-color: $gray;
+	background-color: var(--gray);
 	border-radius: 5px;
 }
 
@@ -41,7 +38,7 @@
 }
 
 .StackItem {
-	color: $white;
+	color: var(--contrast);
 
 	&-Wrapper {
 		@include flexStyle();
@@ -52,45 +49,45 @@
 			@include iconWrapperStyle();
 
 			&-Java {
-				@include iconStyle($red);
+				@include iconStyle(var(--red));
 			}
 
 			&-HTML {
-				@include iconStyle($orange);
+				@include iconStyle(var(--orange));
 			}
 
 			&-CSS {
-				@include iconStyle($skyBlue);
+				@include iconStyle(var(--skyBlue));
 			}
 
 			&-JavaScript {
-				@include iconStyle($yellow);
+				@include iconStyle(var(--yellow));
 			}
 
 			&-TypeScript {
-				@include iconStyle($white);
-				background-color: $primary;
+				@include iconStyle(var(--contrast));
+				background-color: var(--primary);
 				border-radius: 5px;
 			}
 
 			&-React {
-				@include iconStyle($skyBlue);
+				@include iconStyle(var(--skyBlue));
 			}
 
 			&-Scss {
-				@include iconStyle($pink);
+				@include iconStyle(var(--pink));
 			}
 
 			&-Recoil {
-				@include iconStyle($blue);
+				@include iconStyle(var(--blue));
 			}
 
 			&-Vue {
-				@include iconStyle($green);
+				@include iconStyle(var(--green));
 			}
 
 			&-Express {
-				@include iconStyle($green);
+				@include iconStyle(var(--green));
 			}
 		}
 

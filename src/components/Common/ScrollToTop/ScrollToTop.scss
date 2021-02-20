@@ -1,13 +1,7 @@
-@import 'styles/Fonts/FontScheme.scss';
-@import 'styles/Palette/Palette.scss';
-
 .ScrollToTop {
 	width: 65px;
 	height: 65px;
-	position: fixed;
-	bottom: 2rem;
-	right: 2rem;
-	background-color: $blue;
+	background-color: var(--blue);
 	border: none;
 	outline: none;
 	border-radius: 15px;
@@ -20,14 +14,13 @@
 	cursor: pointer;
 	-webkit-transition: all 0.15s ease-in-out;
 	transition: all 0.15s ease-in-out;
-	z-index: 1000;
 
 	&:hover {
 		opacity: 0.8;
 	}
 
 	&-Icon {
-		color: $white;
-		font-size: $font_2rem;
+		color: var(--white);
+		font-size: 2rem;
 	}
 }

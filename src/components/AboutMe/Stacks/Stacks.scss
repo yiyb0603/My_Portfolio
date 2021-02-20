@@ -1,13 +1,11 @@
-@import 'styles/Palette/Palette.scss';
-
 .Stacks {
-	color: $white;
+	color: var(--contrast);
 
 	&-Top {
 		display: flex;
 		display: -webkit-flex;
 		align-items: center;
-		border-bottom: 1px solid $white;
+		border-bottom: 1px solid var(--contrast);
 		padding-bottom: 8px;
 
 		&-Icon {

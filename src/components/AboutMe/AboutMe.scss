@@ -1,8 +1,5 @@
-@import 'styles/Palette/Palette.scss';
-@import 'styles/Fonts/FontScheme.scss';
-
 .AboutMe {
-	color: $white;
+	color: var(--contrast);
 	max-width: 1400px;
 
 	&-Wrapper {
@@ -27,13 +24,13 @@
 
 		&-SubTitle {
 			line-height: 2.2rem;
-			font-size: $font_20;
+			font-size: 20px;
 		}
 
 		&-Introduction {
 			margin: 12px 0;
-			font-size: $font_25;
-			color: $blue;
+			font-size: 25px;
+			color: var(--blue);
 		}
 
 		&-ContentsWrapper {

@@ -1,13 +1,10 @@
-@import 'styles/Palette/Palette.scss';
-@import 'styles/Fonts/FontScheme.scss';
-
 @mixin arrowStyle() {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	background-color: $gray;
-	color: $white;
-	font-size: $font_20;
+	background-color: var(--gray);
+	color: var(--contrast);
+	font-size: 20px;
 	font-weight: bold;
 	border: none;
 	outline: none;
@@ -31,6 +28,7 @@
 	user-select: none;
 	-moz-user-select: none;
 	-webkit-user-drag: none;
+	color: var(--contrast) !important;
 
 	&-LeftArrow {
 		@include arrowStyle();
@@ -55,17 +53,17 @@
 			height: 12px;
 			border: none;
 			outline: none;
-			background-color: $gray;
+			background-color: var(--gray);
 			border-radius: 50%;
 			margin-right: 10px;
 			cursor: pointer;
 
 			&:hover {
-				background-color: $blue;
+				background-color: var(--blue);
 			}
 
 			&-Current {
-				background-color: $blue;
+				background-color: var(--blue);
 			}
 		}
 	}
@@ -87,7 +85,7 @@
 		margin-left: 5px;
 
 		&-Selected {
-			color: $blue;
+			color: var(--blue);
 		}
 
 		& > div:last-child {
@@ -95,7 +93,7 @@
 		}
 
 		& > * {
-			border-right: 1px solid $blue;
+			border-right: 1px solid var(--blue);
 			padding: 0 6px;
 			margin: 2px 0;
 			cursor: pointer;
@@ -112,7 +110,7 @@
 
 	&-Contents {
 		word-break: break-all;
-		border-top: 1px solid $gray;
+		border-top: 1px solid var(--gray);
 		line-height: 30px;
 		padding: 3px 10px;
 		margin-top: 3px;

@@ -283,7 +283,7 @@ export const projectList: IProjectType[] = [
     name: 'LIVRO-S',
     type: ['Front End'],
     stacks: ['JavaScript', 'React.js', 'Scss', 'MobX', 'Styled-Components'],
-    period: '2020.11.23 ~ 11.24 (3개 마이스터고 연합 해커톤)',
+    period: '2020.11.23 ~ 11.24',
     introduction: '3개 마이스터고 학생들의 도서관 웹사이트',
     description: `
     2020년 3개 마이스터고 연합 해커톤때 진행했던 프로젝트 입니다.<br/>
@@ -313,7 +313,7 @@ export const projectList: IProjectType[] = [
     name: 'CoCode',
     type: ['Front End'],
     stacks: ['TypeScript', 'Next.js', 'Scss', 'MobX'],
-    period: '2020.09.08 ~ 09.09 (해커톤)',
+    period: '2020.09.08 ~ 09.09',
     introduction: '교내 커뮤니티 사이트',
     description: `
     2020년 대구SW고 해커톤때 만들었던 교내 커뮤니티 사이트 프로젝트 입니다.<br/>

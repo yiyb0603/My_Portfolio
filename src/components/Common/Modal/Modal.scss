@@ -1,14 +1,12 @@
-@import 'styles/Palette/Palette.scss';
-@import 'styles/Fonts/FontScheme.scss';
-
 .Modal {
+	width: 800px;
+	height: 70%;
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: $white;
-	width: 800px;
-	height: 70%;
+	background-color: var(--tender-theme);
+	color: var(--contrast);
 	padding: 15px 20px;
 	border-radius: 5px;
 	overflow-x: hidden;
@@ -36,7 +34,7 @@
 		display: -webkit-flex;
 		flex-direction: column;
 		-ms-flex-direction: column;
-		border-bottom: 1px solid $gray;
+		border-bottom: 1px solid var(--gray);
 		padding-bottom: 2px;
 
 		&-TopWrapper {
@@ -52,18 +50,18 @@
 
 				&-Period {
 					margin-bottom: 4px;
-					font-size: $font_14;
+					font-size: 14px;
 				}
 
 				&-Title {
-					font-size: $font_25;
+					font-size: 25px;
 					margin-right: 8px;
 				}
 			}
 
 			&-Close {
-				font-size: $font_30;
-				color: $primary;
+				font-size: 30px;
+				color: var(--primary);
 				cursor: pointer;
 			}
 		}
@@ -78,7 +76,7 @@
 			&-Stack {
 				margin-top: 2px;
 				margin-right: 10px;
-				border: 1px solid $gray;
+				border: 1px solid var(--gray);
 				border-radius: 25px;
 				padding: 3px 10px;
 				vertical-align: middle;

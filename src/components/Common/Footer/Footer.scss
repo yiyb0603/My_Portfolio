@@ -1,10 +1,7 @@
-@import 'styles/Palette/Palette.scss';
-@import 'styles/Fonts/FontScheme.scss';
-
 .Footer {
 	text-align: center;
-	background-color: darken($navbar, 10%);
+	background-color: var(--navbar);
 	padding: 2rem 0;
 	font-size: 1.5rem;
-	color: $white;
+	color: var(--white);
 }

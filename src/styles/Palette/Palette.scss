@@ -1,21 +1,55 @@
-$red: #f5160a;
-$orange: #e67e22;
-$yellow: #f5e62d;
-$green: #27ae60;
-$blue: #0984e3;
-$skyBlue: #00a8ff;
-$navy: #000080;
-$purple: #6c5ce7;
-$mint: #00d2d3;
-$pink: #e84393;
-$lighterGray: #dfe6e9;
-$gray: #b2bec3;
-$white: #ffffff;
-$black: #000000;
-$snow: #dff9fb;
-$primary: #1b60ff;
-$lighterGreen: #55efc4;
-$navbar: #2c3e50;
-
 $rgbaPrimary: rgb(27, 96, 255);
 $rgbaNavbar: rgb(44, 62, 80);
+
+:root {
+	--blue: #0984e3;
+	--navbar: #2c3e50;
+}
+
+.light {
+	--red: #f5160a;
+	--orange: #e67e22;
+	--yellow: #f5e62d;
+	--green: #27ae60;
+	--blue: #0984e3;
+	--skyBlue: #00a8ff;
+	--navy: #000080;
+	--purple: #841dfa;
+	--mint: #00d2d3;
+	--pink: #e84393;
+	--lighterGray: #dfe6e9;
+	--theme: #ffffff;
+	--tender-theme: #ffffff;
+	--contrast: #000000;
+	--white: #ffffff;
+	--black: #000000;
+	--gray: #b2bec3;
+	--snow: #dff9fb;
+	--primary: #1b60ff;
+	--lighterGreen: #55efc4;
+	--navbar: #2c3e50;
+}
+
+.dark {
+	--red: #f5160a;
+	--orange: #e67e22;
+	--yellow: #f5e62d;
+	--green: #27ae60;
+	--blue: #0984e3;
+	--skyBlue: #00a8ff;
+	--navy: #000080;
+	--purple: #841dfa;
+	--mint: #00d2d3;
+	--pink: #e84393;
+	--lighterGray: #dfe6e9;
+	--gray: #b2bec3;
+	--theme: #000000;
+	--tender-theme: #111112;
+	--contrast: #ffffff;
+	--white: #ffffff;
+	--black: #000000;
+	--snow: #dff9fb;
+	--primary: #1b60ff;
+	--lighterGreen: #55efc4;
+	--navbar: #2c3e50;
+}

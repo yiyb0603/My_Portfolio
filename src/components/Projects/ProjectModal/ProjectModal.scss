@@ -28,7 +28,7 @@
 	user-select: none;
 	-moz-user-select: none;
 	-webkit-user-drag: none;
-	color: var(--contrast) !important;
+	color: var(--contrast);
 
 	&-LeftArrow {
 		@include arrowStyle();

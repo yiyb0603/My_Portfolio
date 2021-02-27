@@ -30,17 +30,15 @@ const ScrollProgress = memo((): JSX.Element => {
   }, []);
 
   const handleScroll = useCallback((): void => {
-    const { innerHeight } = window;
-    const { scrollHeight } = document.body;
-    const { scrollTop } = document.documentElement;
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
     if (scrollTop === 0) {
       setWidth(0);
       return;
     }
 
-    const scrollPosition: number = Math.round(scrollTop + innerHeight);
-    const currentPercent: number = (scrollPosition / scrollHeight) * 100;
+    const windowHeight = scrollHeight - clientHeight;
+    const currentPercent: number = (scrollTop / windowHeight);
 
     setWidth(currentPercent);
   }, []);
@@ -55,7 +53,7 @@ const ScrollProgress = memo((): JSX.Element => {
 
   return (
     <div className={cx('ScrollProgress')} ref={progressRef} onClick={handleProgressMove}>
-      <div className={cx('ScrollProgress-Progress')} style={{ width: width + '%', }} ></div>
+      <div className={cx('ScrollProgress-Progress')} style={{ transform: `scale(${width}, 1)` }} ></div>
     </div>
   );
 });

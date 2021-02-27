@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useRef, memo } from 'react';
+import React, { useState, useCallback, useEffect, useRef, memo, MouseEvent } from 'react';
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
 
@@ -9,6 +9,26 @@ const ScrollProgress = memo((): JSX.Element => {
   const [width, setWidth] = useState<number>(0);
   const progressRef = useRef<HTMLDivElement | null>(null);
 
+  const handleProgressMove = useCallback((e: MouseEvent<HTMLDivElement>): void => {
+    if (progressRef.current !== null) {
+      const { scrollWidth } = progressRef.current;
+      const { clientX } = e;
+
+      const selectedPercent: number = ((clientX / scrollWidth) * 100);
+      setWidth(selectedPercent);
+      
+      const { scrollHeight, clientHeight } = document.body;
+      const windowHeight: number = scrollHeight - clientHeight;
+
+      const moveScrollPercent: number = ((windowHeight * selectedPercent) / 100);
+
+      window.scrollTo({
+        top: moveScrollPercent,
+        behavior: 'smooth',
+      })
+    }
+  }, []);
+
   const handleScroll = useCallback((): void => {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
@@ -17,10 +37,10 @@ const ScrollProgress = memo((): JSX.Element => {
       return;
     }
 
-    const windowHeight = scrollHeight - clientHeight;
+    const windowHeight: number = scrollHeight - clientHeight;
     const currentPercent: number = (scrollTop / windowHeight);
 
-    setWidth(currentPercent);
+    setWidth(currentPercent * 100);
   }, []);
   
   useEffect(() => {
@@ -32,8 +52,8 @@ const ScrollProgress = memo((): JSX.Element => {
   }, [handleScroll]);
 
   return (
-    <div className={cx('ScrollProgress')} ref={progressRef}>
-      <div className={cx('ScrollProgress-Progress')} style={{ transform: `scale(${width}, 1)` }} ></div>
+    <div className={cx('ScrollProgress')} ref={progressRef} onClick={handleProgressMove}>
+      <div className={cx('ScrollProgress-Progress')} style={{ width: width + '%' }} ></div>
     </div>
   );
 });

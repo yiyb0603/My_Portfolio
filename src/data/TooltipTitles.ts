@@ -94,7 +94,7 @@ export const tooltipTitles: ITooltipTitleTypes[] = [
 
   {
     progressName: 'Express',
-    title: '제가 가장 처음 접해본 자바스크립트 서버 프레임워크이고, 서버 프로젝트에서 많이 사용해왔습니다.',
+    title: '기존에 많이 쓰던 Node.js 프레임워크이며, REST API 서버를 제작할 수 있습니다.',
     progress: '70%',
     background: Palette.green,
   },
@@ -102,14 +102,14 @@ export const tooltipTitles: ITooltipTitleTypes[] = [
   {
     progressName: 'TypeORM',
     title: '백엔드 프로그래밍을 할때 DB와 통신을 주고받는것이 편리해서 자주쓰는 ORM 도구입니다.',
-    progress: '65%',
+    progress: '75%',
     background: Palette.blue,
   },
 
   {
     progressName: 'Nest',
-    title: '현재 공부하고 있는 Express.js 프레임워크 입니다.',
-    progress: '35%',
+    title: 'TypeScript를 기반으로 한 구조가 마음에 들어서 사용하고 있고, REST API 서버를 제작할 수 있습니다.',
+    progress: '65%',
     background: Palette.pink,
   }
 ];

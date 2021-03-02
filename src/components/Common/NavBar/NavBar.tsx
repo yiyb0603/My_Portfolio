@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import classNames from 'classnames';
 import { useLocation, useHistory } from 'react-router-dom';
 import { History } from 'history';
@@ -13,6 +13,12 @@ const NavBar = (): JSX.Element => {
   const history: History<History.PoorMansUnknown> = useHistory();
   const { pathname } = useLocation();
 
+  const onRouteMove = useCallback((path: string): void => {
+    if (path !== pathname) {
+      history.push(path);
+    }
+  }, [history, pathname]);
+
   return (
     <Headroom>
       <div className={cx('NavBar')}>
@@ -23,7 +29,7 @@ const NavBar = (): JSX.Element => {
                 <li
                   key={index}
                   className ={pathname === route.pathname ? 'NavBar-Contents-CurrentItem' : 'NavBar-Contents-Item'} 
-                  onClick ={() => history.push(route.pathname)}
+                  onClick ={() => onRouteMove(route.pathname)}
                 >
                   {route.name}
                 </li>

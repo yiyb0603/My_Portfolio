@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { FaMedal, FaMountain, FaWater, FaAward, FaSchool, FaMicrophone, FaLaptopCode, FaElementor, FaReact, FaJava, FaPersonBooth } from 'react-icons/fa';
 import { GiElectric, GiForestCamp, GiNothingToSay, GiBlood, GiPineTree, GiConvict, GiTalk } from 'react-icons/gi';
 import { RiSlideshow3Line, RiCalendarEventLine, RiPrinterCloudLine, RiSmartphoneLine } from 'react-icons/ri';

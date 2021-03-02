@@ -3,7 +3,7 @@
 	top: 50%;
 	transform: translateY(-50%);
 	background-color: var(--gray);
-	color: var(--contrast);
+	color: var(--white);
 	font-size: 20px;
 	font-weight: bold;
 	border: none;
@@ -103,7 +103,7 @@
 			}
 
 			&:hover {
-				opacity: 0.8;
+				color: var(--blue);
 			}
 		}
 	}

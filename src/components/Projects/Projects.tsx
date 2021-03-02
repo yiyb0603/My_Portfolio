@@ -16,13 +16,18 @@ const Projects = (): JSX.Element => {
   const [topic, setTopic] = useState<ProjectTypes>(0);
   const [isModal, setIsModal] = useState<boolean>(false);
   const [projectInfo, setProjectInfo] = useState<IProjectType>({});
+  const { ALL } = ProjectTypes;
 
   const findProject = useCallback((id: number): void => {
     const info: IProjectType | undefined = projectList.find((project: IProjectType) => project.id === id);
     setProjectInfo(info!);
   }, []);
 
-  const { ALL } = ProjectTypes;
+  const onSetTopic = useCallback((topicIdx: number): void => {
+    if (topicIdx !== topic) {
+      setTopic(topicIdx);
+    }
+  }, [topic]);
 
   const filterProjects: IProjectType[] = projectList.filter((project: IProjectType) => {
     switch (topic) {
@@ -34,7 +39,7 @@ const Projects = (): JSX.Element => {
     };
   });
 
-  const projectLists = filterProjects.map((project: IProjectType) => {
+  const projectLists: JSX.Element[] = filterProjects.map((project: IProjectType) => {
     const { id, name, introduction, gallery, type, stacks, period, thumbnail, feel, role, link } = project;
       return (
         <ProjectsCard
@@ -68,7 +73,7 @@ const Projects = (): JSX.Element => {
                 key={idx}
                 className={cx({
                 'Projects-Top-Current': topic === idx
-              })} onClick={() => setTopic(idx)}>{top}</div>
+              })} onClick={() => onSetTopic(idx)}>{top}</div>
             );
           })
         }

@@ -15,8 +15,12 @@ const History = (): JSX.Element => {
   const [selectButton, setSelectButton] = useState<number>(-1);
 
   const onClickButton = useCallback((e: MouseEvent<HTMLButtonElement>): void => {
-    setSelectButton(Number(e.currentTarget.id));
-  }, []);
+    const { id } = e.currentTarget;
+
+    if (selectButton !== Number(id)) {
+      setSelectButton(Number(id));
+    }
+  }, [selectButton]);
 
   const filterHistory: IHistoryType[] = myHistory.filter((history: IHistoryType) => {
     return selectButton === -1 ? history : history.type === selectButton;

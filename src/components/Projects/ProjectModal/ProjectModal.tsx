@@ -100,7 +100,7 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps): 
           topicNames.map((name: string, index: number) => {
             return (
               <div className={cx({
-                'ProjectModal-Select-Selected': topic === index
+                'ProjectModal-Select-Selected': topic === index,
               })} key={index} onClick={() => setTopic(index)}>{name}</div>
             );
           })

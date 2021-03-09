@@ -32,6 +32,7 @@
 			& > * {
 				cursor: pointer;
 				transition: 0.08s ease-in-out;
+				font-size: 18px;
 
 				&:hover {
 					color: var(--primary);

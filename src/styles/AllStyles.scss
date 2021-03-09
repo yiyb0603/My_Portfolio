@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 @font-face {
 	font-family: 'NanumSquare';
 	src: url('../assets/fonts/NanumSquareRoundB.ttf') format('woff');
@@ -9,7 +11,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'NanumSquare';
+	font-family: 'Noto Sans KR' !important;
 
 	&::-webkit-scrollbar {
 		width: 5px;

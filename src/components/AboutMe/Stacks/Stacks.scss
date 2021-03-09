@@ -5,7 +5,6 @@
 		display: flex;
 		display: -webkit-flex;
 		align-items: center;
-		border-bottom: 1px solid var(--contrast);
 		padding-bottom: 8px;
 
 		&-Icon {
@@ -15,6 +14,37 @@
 		&-Title {
 			margin-left: 6px;
 			font-size: 25px;
+		}
+	}
+
+	&-Stack {
+		min-height: 400px;
+		border: 1px solid var(--lighterGray);
+
+		&-Titles {
+			height: 50px;
+			display: flex;
+			display: -webkit-flex;
+			justify-content: space-around;
+			align-items: center;
+			border-bottom: 1px solid var(--lighterGray);
+
+			& > * {
+				cursor: pointer;
+				transition: 0.08s ease-in-out;
+
+				&:hover {
+					color: var(--primary);
+				}
+
+				@media screen and (max-width: 500px) {
+					font-size: 11px;
+				}
+			}
+
+			&-Current {
+				color: var(--primary);
+			}
 		}
 	}
 }

@@ -43,59 +43,37 @@
 	&-Wrapper {
 		@include flexStyle();
 		align-items: center;
-		margin: 15px 0;
+		border-bottom: 1px solid var(--lighterGray);
+		padding: 10px 0;
 
 		&-Icon {
 			@include iconWrapperStyle();
-
-			&-Java {
-				@include iconStyle(var(--red));
-			}
-
-			&-HTML {
-				@include iconStyle(var(--orange));
-			}
-
-			&-CSS {
-				@include iconStyle(var(--skyBlue));
-			}
-
-			&-JavaScript {
-				@include iconStyle(var(--yellow));
-			}
-
-			&-TypeScript {
-				@include iconStyle(var(--contrast));
-				background-color: var(--primary);
-				border-radius: 5px;
-			}
-
-			&-React {
-				@include iconStyle(var(--skyBlue));
-			}
-
-			&-Scss {
-				@include iconStyle(var(--pink));
-			}
-
-			&-Recoil {
-				@include iconStyle(var(--blue));
-			}
-
-			&-Vue {
-				@include iconStyle(var(--green));
-			}
-
-			&-Express {
-				@include iconStyle(var(--green));
-			}
 		}
 
-		&-ProgressWrapper {
-			@include progressWrapperStyle();
+		&-RightSection {
+			flex: 1;
 
-			& > * {
-				@include progressBarStyle();
+			&-ProgressName {
+				font-size: 20px;
+				font-weight: bold;
+			}
+
+			&-Title {
+				margin: 4.5px 0;
+				padding: 2px 5px;
+				border-radius: 5px;
+				display: inline-block;
+				background-color: var(--skyblue);
+				color: var(--black);
+				opacity: 0.65;
+			}
+
+			&-ProgressWrapper {
+				@include progressWrapperStyle();
+
+				& > * {
+					@include progressBarStyle();
+				}
 			}
 		}
 	}

@@ -1,0 +1,19 @@
+.PageTitle {
+	display: flex;
+	display: -webkit-flex;
+	align-items: flex-end;
+	margin-bottom: 0.5rem;
+
+	&-Title {
+		font-size: 1.65rem;
+		margin-right: 0.625rem;
+
+		@media screen and (max-width: 520px) {
+			font-size: 1.2rem;
+		}
+	}
+
+	&-SubTitle {
+		color: var(--gray);
+	}
+}

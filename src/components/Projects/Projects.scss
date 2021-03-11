@@ -3,26 +3,41 @@
 	max-width: 1400px;
 
 	&-Top {
-		color: var(--contrast);
 		display: flex;
 		display: -webkit-flex;
-		justify-content: flex-end;
-		margin-right: 1rem;
-		margin-bottom: 22px;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding-left: 1rem;
 
-		& > div {
-			margin-left: 2rem;
-			font-size: 22px;
-			cursor: pointer;
+		&-Contents {
+			display: flex;
+			display: -webkit-flex;
+			flex: 1;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: 10px;
 
-			@media screen and (max-width: 475px) {
-				font-size: 1rem;
+			&-Topics {
+				color: var(--contrast);
+				display: flex;
+				display: -webkit-flex;
+				justify-content: flex-end;
+
+				& > * {
+					margin-right: 2rem;
+					font-size: 22px;
+					cursor: pointer;
+
+					@media screen and (max-width: 475px) {
+						font-size: 1rem;
+					}
+				}
+
+				&-Current {
+					color: var(--blue);
+				}
 			}
-		}
-
-		&-Current {
-			border-bottom: 3px solid var(--blue);
-			padding-bottom: 5px;
 		}
 	}
 

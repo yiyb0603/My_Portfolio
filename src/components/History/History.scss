@@ -7,35 +7,40 @@
 	width: 100%;
 	height: 100%;
 
-	&-SelectZone {
-		flex: 1;
+	&-Top {
+		max-width: 1170px;
+		margin: 0 auto;
 		display: flex;
 		display: -webkit-flex;
-		justify-content: flex-end;
-		align-items: center;
+		flex: 1;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 10px;
 
-		& > *:focus {
-			outline: none;
-		}
+		&-SelectZone {
+			display: flex;
+			display: -webkit-flex;
+			align-items: center;
 
-		& > button {
-			width: 80px;
-			height: 35px;
-			margin-left: 4px;
-			border: none;
-			border-radius: 5px;
-			outline: none;
-			transition: 0.15s ease-in;
-			-webkit-transition: 0.15s ease-in;
-			cursor: pointer;
+			& > button {
+				width: 80px;
+				height: 35px;
+				margin-left: 4px;
+				border: none;
+				border-radius: 5px;
+				outline: none;
+				transition: 0.15s ease-in;
+				-webkit-transition: 0.15s ease-in;
+				cursor: pointer;
 
-			&:hover {
+				&:hover {
+					@include selectedStyle();
+				}
+			}
+
+			&-Selected {
 				@include selectedStyle();
 			}
-		}
-
-		&-Selected {
-			@include selectedStyle();
 		}
 	}
 }

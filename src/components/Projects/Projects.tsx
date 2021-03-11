@@ -8,6 +8,7 @@ import { ClassNamesFn } from 'classnames/types';
 import { ProjectTypes } from 'enum/ProjectEnum';
 import FadeIn from 'react-fade-in';
 import projectTopics from 'data/models/projectTopics';
+import PageTitle from 'components/Common/PageTitle';
 
 const style = require('./Projects.scss');
 const cx: ClassNamesFn = classNames.bind(style);
@@ -64,22 +65,31 @@ const Projects = (): JSX.Element => {
 
   return (
     <FadeIn>
-      <div className={cx("Projects")}>
-        <div className={cx("Projects-Top")}>
-        {
-          projectTopics.map((top: string, idx: number) => {
-            return (
-              <div
-                key={idx}
-                className={cx({
-                'Projects-Top-Current': topic === idx
-              })} onClick={() => onSetTopic(idx)}>{top}</div>
-            );
-          })
-        }
+      <div className={cx('Projects')}>
+        <div className={cx('Projects-Top')}>
+          <div className={cx('Projects-Top-Contents')}>
+            <PageTitle
+              title='프로젝트 목록'
+              subTitle='제가 지금까지 진행해온 프로젝트 목록입니다.'
+            />
+
+            <div className={cx('Projects-Top-Contents-Topics')}>
+              {
+                projectTopics.map((top: string, idx: number) => {
+                  return (
+                    <div
+                      key={idx}
+                      className={cx({
+                      'Projects-Top-Contents-Topics-Current': topic === idx
+                    })} onClick={() => onSetTopic(idx)}>{top}</div>
+                  );
+                })
+              }
+            </div>
+          </div>
         </div>
 
-        <div className ={cx("Projects-Grid")}>{projectLists}</div>
+        <div className ={cx('Projects-Grid')}>{projectLists}</div>
         {
           projectInfo.id && isModal ?
             <ProjectModal isModal={isModal} setIsModal={setIsModal} projectInfo ={projectInfo} /> : <></>

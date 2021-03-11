@@ -6,6 +6,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import { IHistoryType, myHistory } from 'data/History';
 import { Palette } from 'styles/Palette/Palette';
 import historyTopics from "data/models/historyTopics";
+import PageTitle from "components/Common/PageTitle";
 
 const style = require("./History.scss");
 const cx: ClassNamesFn = classNames.bind(style);
@@ -28,19 +29,29 @@ const History = (): JSX.Element => {
 
   return (
     <div className={cx('History')}>
-      <div className={cx('History-SelectZone')}>
-        {
-          historyTopics.map((topic: string, idx: number) => {
-            return (
-              <button
-                id={(idx - 1).toString()}
-                key={idx}
-                onClick={onClickButton}
-                className={cx({ 'History-SelectZone-Selected': selectButton === (idx - 1) })}
-              >{topic}</button>
-            );
-          })
-        }
+      <div className={cx('History-Top')}>
+        <PageTitle
+          title='활동 목록'
+          subTitle='제가 지금까지 활동해온 목록입니다.'
+        />
+        <div className={cx('History-Top-SelectZone')}>
+          {
+            historyTopics.map((topic: string, idx: number) => {
+              return (
+                <button
+                  id={(idx - 1).toString()}
+                  key={idx}
+                  className={cx({
+                    'History-Top-SelectZone-Selected': selectButton === (idx - 1),
+                  })}
+                  onClick={onClickButton}
+                >
+                  {topic}
+                </button>
+              );
+            })
+          }
+        </div>
       </div>
 
       <VerticalTimeline>

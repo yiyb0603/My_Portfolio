@@ -127,7 +127,7 @@ export const projectList: IProjectType[] = [
     introduction: '교내 스마트 스쿨 플랫폼 선생님 페이지', 
     description: `1번 프로젝트인 '도담도담'의 선생님용 페이지이며, 학생이 선생님의 승인 등이 필요한 요소 또는
     학생들이 보는 학사일정, 상벌점 내역, 그리고 SMS발송 등의 기능들을 선생님들이 쓰기 쉽도록 선생님용 페이지에서 사용 가능합니다.`,
-    thumbnail: WebTeacherMain,
+    thumbnail: WebTeacherMobile,
     member: TEAM,
     gallery: [WebTeacherMain, WebTeacherReason, WebTeacherSecond, WebTeacherMobile, WebTeacher, TeacherSign],
     feel: `
@@ -233,7 +233,7 @@ export const projectList: IProjectType[] = [
     또한 기존의 Naver, Tistory 등의 흔한 블로그보다 직접 저만의 블로그를 만들고, 관리해보고 싶었기에 블로그를 주제로 선택했습니다.<br/>
     그리고 처음으로 FCM을 도입해봄으로써 알림기능의 신기함을 느꼈습니다.<br/>
     `,
-    thumbnail: YLogMain,
+    thumbnail: YLogWrite,
     member: ALONE,
     gallery: [YLogMain, YLogPost, YLogProfile, YLogWrite, YLogSign, YLogAdmin],
     feel: `
@@ -262,7 +262,7 @@ export const projectList: IProjectType[] = [
     전국에 있는 학교를 검색하여 급식 및 일정을 볼 수 있는 웹페이지를 제작했습니다.<br/>
     기존에 나이스 API를 이용해보고 싶었던 저는, 이번 기회를 통해 나이스 API를 사용해볼 수 있었습니다.
     `,
-    thumbnail: SchoolMain,
+    thumbnail: SchoolMeal,
     member: ALONE,
     gallery: [SchoolMain, SchoolMeal, SchoolSchedule],
     feel: `
@@ -272,7 +272,6 @@ export const projectList: IProjectType[] = [
     `,
     role: '프론트엔드, 백엔드를 혼자서 제작하였습니다.',
     link: `
-    서비스가 종료되었습니다.<br />
     깃허브: <a style ='color: ${blue}' href='https://github.com/yiyb0603/SchoolMeals_TS' target='_blank' rel ='noopener noreferrer'>
     https://github.com/yiyb0603/SchoolMeals_TS</a>
     `,
@@ -320,7 +319,7 @@ export const projectList: IProjectType[] = [
     학생들끼리 소통할 수 있는 커뮤니티 게시판, 학생과 선생님이 소통할 수 있는 급식건의 게시판을 만들어 소통 공간을 만들었습니다.<br/>
     플랫폼은 3개로 서버, 웹, 안드로이드로 제작하였습니다.
     `,
-    thumbnail: CoCodeCommunity,
+    thumbnail: CoCodeSign,
     member: TEAM,
     gallery: [CoCodeCommunity, CoCodeMealCom, CoCodeMeals, CoCodeSign],
     feel: `

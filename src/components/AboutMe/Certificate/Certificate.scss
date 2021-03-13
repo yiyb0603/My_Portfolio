@@ -1,0 +1,22 @@
+.Certificate {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	display: -wekbit-flex;
+	flex-flow: column wrap;
+	color: var(--contrast);
+
+	&-CertifiWrap {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 18px;
+
+		&-Left {
+			display: flex;
+			display: -webkit-flex;
+			align-items: center;
+		}
+	}
+}

@@ -4,6 +4,8 @@ import { ClassNamesFn } from "classnames/types";
 import { MdCallEnd } from 'react-icons/md';
 import Constants from "util/Constants";
 import contactList, { IContactListType } from "data/models/contactList";
+import SectionTitle from "../SectionTitle";
+import { Palette } from "styles/Palette/Palette";
 
 const style = require("./Contact.scss");
 const cx: ClassNamesFn = classNames.bind(style);
@@ -18,10 +20,10 @@ const Contact = (): JSX.Element => {
   return (
     <div className={cx('Contact')}>
       <div className={cx('Contact-Wrapper')}>
-        <div className={cx('Contact-Title')}>
-          <MdCallEnd className={cx('Contact-Title-Icon')} />
-          <div>연락처</div>
-        </div>
+        <SectionTitle
+          name='연락처'
+          icon={<MdCallEnd style={{ color: Palette.red }} />}
+        />
 
         <div className={cx('Contact-Contents')}>
           <div className={cx('Contact-Contents-TextWrap')}>

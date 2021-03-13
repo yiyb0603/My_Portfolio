@@ -5,6 +5,8 @@ import Stacks from './Stacks';
 import HomeImage from 'assets/images/Home.svg';
 import FadeIn from 'react-fade-in';
 import Contact from './Contact';
+import Certificate from './Certificate';
+import Education from './Education';
 
 const style = require("./AboutMe.scss");
 const cx: ClassNamesFn = classNames.bind(style);
@@ -32,10 +34,16 @@ const AboutMe = (): JSX.Element => {
 
           <img src={HomeImage} alt ="homeimage" className={cx('AboutMe-Wrapper-Image')} />
         </div>
+
+        <Contact />
+
+        <div className={cx('AboutMe-EduCertifiWrapper')}>
+          <Education />
+          <Certificate />
+        </div>
+
+        <Stacks />
       </div>
-      
-      <Contact />
-      <Stacks />
     </FadeIn>
   );
 }

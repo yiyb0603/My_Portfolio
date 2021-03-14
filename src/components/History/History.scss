@@ -3,12 +3,14 @@
 	background-color: var(--blue);
 }
 
+$maxWidth: 1400px;
+
 .History {
 	width: 100%;
 	height: 100%;
 
 	&-Top {
-		max-width: 1170px;
+		max-width: $maxWidth;
 		margin: 0 auto;
 		display: flex;
 		display: -webkit-flex;
@@ -45,10 +47,15 @@
 	}
 }
 
-.vertical-timeline::before {
-	background: var(--contrast) !important;
-}
+.vertical-timeline {
+	width: 100% !important;
+	max-width: $maxWidth;
 
-.vertical-timeline-element-date {
-	color: var(--contrast);
+	&::before {
+		background-color: var(--contrast) !important;
+	}
+
+	&-element-date {
+		color: var(--contrast);
+	}
 }

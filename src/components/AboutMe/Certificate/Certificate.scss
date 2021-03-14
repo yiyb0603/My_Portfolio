@@ -17,6 +17,15 @@
 			display: flex;
 			display: -webkit-flex;
 			align-items: center;
+
+			&-Name {
+				cursor: pointer;
+				transition: 0.08s ease-in-out;
+
+				&:hover {
+					color: var(--primary);
+				}
+			}
 		}
 	}
 }

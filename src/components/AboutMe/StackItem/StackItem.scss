@@ -66,6 +66,10 @@
 				background-color: var(--skyblue);
 				color: var(--black);
 				opacity: 0.65;
+
+				@media screen and (max-width: 500px) {
+					font-size: 14px;
+				}
 			}
 
 			&-ProgressWrapper {

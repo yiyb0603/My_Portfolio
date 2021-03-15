@@ -7,6 +7,7 @@ import FadeIn from 'react-fade-in';
 import Contact from './Contact';
 import Certificate from './Certificate';
 import Education from './Education';
+import { FiAlertOctagon } from 'react-icons/fi';
 
 const style = require("./AboutMe.scss");
 const cx: ClassNamesFn = classNames.bind(style);
@@ -29,6 +30,17 @@ const AboutMe = (): JSX.Element => {
 
             <div className={cx('AboutMe-Wrapper-Introduction')}>
               안녕하세요 깨끗한 세상을 지향하는<br />개발자 권용빈 입니다.
+            </div>
+
+            <div className={cx('AboutMe-Wrapper-ContentsWrapper-Training')}>
+              <FiAlertOctagon
+                className={cx('AboutMe-Wrapper-ContentsWrapper-Training-Icon')}
+              />
+              <div
+                className={cx('AboutMe-Wrapper-ContentsWrapper-Training-Text')}
+              >
+                2021년 7월 19일부터 현장실습이 가능합니다.
+              </div>
             </div>
           </div>
 

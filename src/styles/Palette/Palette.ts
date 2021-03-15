@@ -29,7 +29,7 @@ const { LIGHT } = ThemeEnums;
 export const Palette: IPaletteTypes = {
 	red: '#F5160A',
 	orange: '#e67e22',
-	yellow: '#F5E62D',
+	yellow: '#ede139',
 	green: '#27ae60',
 	boldGreen: '#163037',
 	blue: '#0984e3',

@@ -45,6 +45,23 @@
 				font-size: 4rem;
 				text-align: center;
 			}
+
+			&-Training {
+				display: flex;
+				display: -webkit-flex;
+				align-items: center;
+
+				&-Icon {
+					color: var(--orange);
+					margin-right: 4px;
+					font-size: 1.8rem;
+				}
+
+				&-Text {
+					font-size: 1.05rem;
+					font-weight: bold;
+				}
+			}
 		}
 	}
 

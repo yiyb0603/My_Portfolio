@@ -1,12 +1,12 @@
-import React, { Dispatch, SetStateAction, useCallback, useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useCallback, useEffect, useState } from 'react';
 import classNames from 'classnames';
-import { ClassNamesFn } from "classnames/types";
+import { ClassNamesFn } from 'classnames/types';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
-import Modal from "components/Common/Modal";
-import { IProjectType } from "interface/ProjectType";
-import { ProjectEnums } from "enum/ProjectEnum";
+import Modal from 'components/Common/Modal';
+import { IProjectType } from 'interface/ProjectType';
+import { ProjectEnums } from 'enum/ProjectEnum';
 
-const style = require("./ProjectModal.scss");
+const style = require('./ProjectModal.scss');
 const cx: ClassNamesFn = classNames.bind(style);
 
 interface ProjectModalProps {
@@ -90,8 +90,8 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps): 
         <img
           className={cx('ProjectModal-Image')}
           onClick={() => window.open(gallery![index], 'image', 'width = 800, heigh= 600, left = 400, top = 400, resizable = yes')}
-          src ={gallery![index]}
-          alt ="gallerys"
+          src={gallery![index]}
+          alt='gallerys'
         />
       </div>
 

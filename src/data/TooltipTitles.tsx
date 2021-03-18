@@ -1,15 +1,16 @@
-import React, { CSSProperties } from "react";
-import { StackEnums } from "enum/StackEnum";
-import { Palette } from "styles/Palette/Palette";
+import React, { CSSProperties } from 'react';
+import { StackEnums } from 'enum/StackEnum';
+import { Palette } from 'styles/Palette/Palette';
 import CLogo from 'assets/images/CLogo.svg';
-import { FaHtml5, FaJava, FaReact, FaSass, FaVuejs } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { GiTeslaCoil } from "react-icons/gi";
+import { FaHtml5, FaJava, FaReact, FaSass, FaVuejs } from 'react-icons/fa';
+import { IoLogoJavascript } from 'react-icons/io';
+import { AiOutlineGithub } from 'react-icons/ai';
+import { GiTeslaCoil } from 'react-icons/gi';
 import NextLogo from 'assets/images/Next.png';
 import ReduxLogo from 'assets/images/redux.svg';
 import NestLogo from 'assets/images/nest.jpg';
 import CSharpLogo from 'assets/images/c-sharp.png';
-import { GrNode } from "react-icons/gr";
+import { GrNode } from 'react-icons/gr';
 
 export interface ITooltipTitleTypes {
   progressName: string;
@@ -176,5 +177,14 @@ export const tooltipTitles: ITooltipTitleTypes[] = [
     background: Palette.pink,
     level: MEDIUM,
     icon: <img src={NestLogo} alt ='nest' style={imageStyle} />,
-  }
+  },
+
+  {
+    progressName: 'Github',
+    title: '깃허브를 이용하여 팀 협업과 프로젝트 관리를 했습니다.',
+    progress: '80%',
+    background: Palette.black,
+    level: HIGH,
+    icon: <AiOutlineGithub />,
+  },
 ];

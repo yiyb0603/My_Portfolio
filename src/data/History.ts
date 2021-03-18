@@ -121,7 +121,7 @@ export const myHistory: IHistoryType[] = [
   },
 
   {
-    type: COMPETITION,
+    type: ACTIVITY,
     name: '구미 3D프린터 기업 \"나인랩스\" 동아리 체험연수',
     date: '2019.07.29 ~ 08.02',
     icon: RiPrinterCloudLine,
@@ -317,6 +317,13 @@ export const myHistory: IHistoryType[] = [
   },
 
   {
+    type: COMPETITION,
+    name: '2020 대구 SW고 교내 해커톤 참가',
+    date: '2020.09.08 ~ 09.09',
+    icon: FaLaptopCode,
+  },
+
+  {
     type: ACTIVITY,
     name: '3개 SW마이스터고 온라인 웨비나 톡톡톡 행사 참가',
     date: '2020.09.23',
@@ -370,5 +377,12 @@ export const myHistory: IHistoryType[] = [
     name: 'OCAJP 국제 자격증 취득',
     date: '2021.01.08',
     icon: FaJava,
+  },
+
+  {
+    type: AWARDS,
+    name: '프로젝트 실습 교과우수상',
+    date: '2021.02.05',
+    icon: FaAward,
   },
 ];

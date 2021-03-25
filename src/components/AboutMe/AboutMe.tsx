@@ -36,9 +36,7 @@ const AboutMe = (): JSX.Element => {
               <FiAlertOctagon
                 className={cx('AboutMe-Wrapper-ContentsWrapper-Training-Icon')}
               />
-              <div
-                className={cx('AboutMe-Wrapper-ContentsWrapper-Training-Text')}
-              >
+              <div className={cx('AboutMe-Wrapper-ContentsWrapper-Training-Text')}>
                 2021년 7월 19일부터 현장실습이 가능합니다.
               </div>
             </div>

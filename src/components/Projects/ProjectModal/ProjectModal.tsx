@@ -2,6 +2,8 @@ import React, { Dispatch, SetStateAction, useCallback, useEffect, useState } fro
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Modal from 'components/Common/Modal';
 import { IProjectType } from 'interface/ProjectType';
 import { ProjectEnums } from 'enum/ProjectEnum';
@@ -50,11 +52,17 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps): 
     }
   }, [index]);
 
+  const handleSetTopic = useCallback((index: number): void => {
+    if (topic !== index) {
+      setTopic(index);
+    }
+  }, [topic]);
+
   useEffect(() => {
     setImageDots(gallery!.map((_, galleryIdx: number) => {
       return (
         <div key={galleryIdx} className={cx('ProjectModal-DotWrapper-Dot', {
-          'ProjectModal-DotWrapper-Dot-Current': galleryIdx === index
+          'ProjectModal-DotWrapper-Dot-Current': galleryIdx === index,
         })} onClick={() => handleDotClick(galleryIdx)}></div>
       );
     }));
@@ -87,10 +95,11 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps): 
         }
 
         <div className={cx('ProjectModal-DotWrapper')}>{imageDots}</div>  
-        <img
+        <LazyLoadImage
           className={cx('ProjectModal-Image')}
           onClick={() => window.open(gallery![index], 'image', 'width = 800, heigh= 600, left = 400, top = 400, resizable = yes')}
           src={gallery![index]}
+          effect='blur'
           alt='gallerys'
         />
       </div>
@@ -101,7 +110,7 @@ const ProjectModal = ({ isModal, setIsModal, projectInfo }: ProjectModalProps): 
             return (
               <div className={cx({
                 'ProjectModal-Select-Selected': topic === index,
-              })} key={index} onClick={() => setTopic(index)}>{name}</div>
+              })} key={index} onClick={() => handleSetTopic(index)}>{name}</div>
             );
           })
         }

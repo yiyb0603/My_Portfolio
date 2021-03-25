@@ -15,10 +15,7 @@
 		display: -webkit-flex;
 		justify-content: space-between;
 		align-items: flex-end;
-
-		& > * {
-			z-index: 10;
-		}
+		z-index: 4;
 	}
 
 	&-Contents {

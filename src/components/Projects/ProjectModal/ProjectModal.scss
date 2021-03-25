@@ -17,6 +17,7 @@
 	cursor: pointer;
 	transition: 0.15s ease-in-out;
 	-webkit-transition: 0.15s ease-in-out;
+	z-index: 4;
 
 	&:hover {
 		opacity: 0.8;
@@ -116,4 +117,10 @@
 		margin-top: 3px;
 		padding-top: 5px;
 	}
+}
+
+.lazy-load-image-background {
+	width: 100%;
+	margin: 0 auto;
+	z-index: 0;
 }

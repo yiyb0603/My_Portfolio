@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const style = require('./ProjectsCard.scss');
 const cx: ClassNamesFn = classNames.bind(style);
@@ -35,10 +37,11 @@ const ProjectsCard = ({
   return (
     <div className={cx('ProjectsCard')} onClick ={handleClick}>
       <div className={cx('ProjectsCard-Types')}>{type.join(', ')}</div>
-      <img
+      <LazyLoadImage
         className={cx('ProjectsCard-Thumbnail')}
         src ={thumbnail || gallery[0]}
         alt ='gallery'
+        effect='blur'
       />
       
       <div className={cx('ProjectsCard-NamePeriod')}>

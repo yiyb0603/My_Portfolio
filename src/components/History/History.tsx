@@ -5,8 +5,8 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import useHistoryControl from 'hooks/history/useHistoryControl';
 import { IHistory } from 'data/History';
 import historyTopics from 'data/models/historyTopics';
-import PageTitle from 'components/Common/PageTitle';
 import palette from 'styles/palette';
+import PageTitle from 'components/Common/PageTitle';
 
 import 'react-vertical-timeline-component/style.min.css';
 

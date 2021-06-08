@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo } from 'react';
-import { projectList } from 'data/ProjectList';
+import projectList from 'data/ProjectList';
 import { ProjectTypes } from 'lib/enum/ProjectEnum';
 import { IProject } from 'lib/interface/ProjectType';
 import useModal from 'hooks/util/useModal';

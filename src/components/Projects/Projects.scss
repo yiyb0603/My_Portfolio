@@ -1,54 +1,54 @@
 .Projects {
-	width: 100%;
-	max-width: 1400px;
+  width: 100%;
+  max-width: 1400px;
 
-	&-Top {
-		display: flex;
-		display: -webkit-flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		padding-left: 1rem;
+  &-Top {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 1rem;
 
-		&-Contents {
-			display: flex;
-			display: -webkit-flex;
-			flex: 1;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-			padding-bottom: 10px;
+    &-Contents {
+      display: flex;
+      display: -webkit-flex;
+      flex: 1;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
 
-			&-Topics {
-				color: var(--contrast);
-				display: flex;
-				display: -webkit-flex;
-				justify-content: flex-end;
+      &-Topics {
+        color: var(--contrast);
+        display: flex;
+        display: -webkit-flex;
+        justify-content: flex-end;
 
-				& > * {
-					margin-right: 2rem;
-					font-size: 22px;
-					cursor: pointer;
+        & > * {
+          margin-right: 2rem;
+          font-size: 22px;
+          cursor: pointer;
 
-					@media screen and (max-width: 475px) {
-						font-size: 1rem;
-					}
-				}
+          @media screen and (max-width: 475px) {
+            font-size: 1rem;
+          }
+        }
 
-				&-Current {
-					color: var(--blue);
-				}
-			}
-		}
-	}
+        &-Current {
+          color: var(--blue);
+        }
+      }
+    }
+  }
 
-	&-Grid {
-		flex: 1;
-		display: flex;
-		display: -webkit-flex;
-		flex-wrap: wrap;
+  &-Grid {
+    flex: 1;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
 
-		@media screen and (max-width: 900px) {
-			justify-content: center;
-		}
-	}
+    @media screen and (max-width: 900px) {
+      justify-content: center;
+    }
+  }
 }

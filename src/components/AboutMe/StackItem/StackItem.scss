@@ -1,84 +1,84 @@
 @mixin flexStyle() {
-	display: flex;
-	display: -webkit-flex;
+  display: flex;
+  display: -webkit-flex;
 }
 
 @mixin iconWrapperStyle() {
-	width: 100px;
-	@include flexStyle();
-	justify-content: center;
-	align-items: center;
+  width: 100px;
+  @include flexStyle();
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin iconStyle($color) {
-	color: $color;
-	font-size: 40px;
+  color: $color;
+  font-size: 40px;
 }
 
 @mixin progressWrapperStyle() {
-	width: 90%;
-	height: 25px;
-	background-color: var(--gray);
-	border-radius: 5px;
+  width: 90%;
+  height: 25px;
+  background-color: var(--gray);
+  border-radius: 5px;
 }
 
 @mixin progressBarStyle() {
-	height: 25px;
-	background-image: linear-gradient(
-		50deg,
-		rgba(255, 255, 255, 0.15) 25%,
-		transparent 25%,
-		transparent 50%,
-		rgba(255, 255, 255, 0.15) 50%,
-		rgba(255, 255, 255, 0.15) 75%,
-		transparent 75%,
-		transparent
-	);
-	border-radius: 3px;
+  height: 25px;
+  background-image: linear-gradient(
+    50deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 3px;
 }
 
 .StackItem {
-	color: var(--contrast);
+  color: var(--contrast);
 
-	&-Wrapper {
-		@include flexStyle();
-		align-items: center;
-		border-bottom: 1px solid var(--lighterGray);
-		padding: 10px 0;
+  &-Wrapper {
+    @include flexStyle();
+    align-items: center;
+    border-bottom: 1px solid var(--lighterGray);
+    padding: 10px 0;
 
-		&-Icon {
-			@include iconWrapperStyle();
-		}
+    &-Icon {
+      @include iconWrapperStyle();
+    }
 
-		&-RightSection {
-			flex: 1;
+    &-RightSection {
+      flex: 1;
 
-			&-ProgressName {
-				font-size: 20px;
-				font-weight: bold;
-			}
+      &-ProgressName {
+        font-size: 20px;
+        font-weight: bold;
+      }
 
-			&-Title {
-				margin: 3px 0;
-				padding: 2px 4px;
-				border-radius: 5px;
-				display: inline-block;
-				background-color: var(--skyblue);
-				color: var(--black);
-				opacity: 0.65;
+      &-Title {
+        margin: 3px 0;
+        padding: 2px 4px;
+        border-radius: 5px;
+        display: inline-block;
+        background-color: var(--skyblue);
+        color: var(--black);
+        opacity: 0.65;
 
-				@media screen and (max-width: 500px) {
-					font-size: 14px;
-				}
-			}
+        @media screen and (max-width: 500px) {
+          font-size: 14px;
+        }
+      }
 
-			&-ProgressWrapper {
-				@include progressWrapperStyle();
+      &-ProgressWrapper {
+        @include progressWrapperStyle();
 
-				& > * {
-					@include progressBarStyle();
-				}
-			}
-		}
-	}
+        & > * {
+          @include progressBarStyle();
+        }
+      }
+    }
+  }
 }

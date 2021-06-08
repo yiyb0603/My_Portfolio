@@ -1,14 +1,14 @@
 .SectionTitle {
-	font-size: 25px;
-	margin-bottom: 12px;
-	padding-bottom: 6px;
-	border-bottom: 1px solid var(--contrast);
-	display: flex;
-	display: -webkit-flex;
-	flex: 1;
+  font-size: 25px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--contrast);
+  display: flex;
+  display: -webkit-flex;
+  flex: 1;
 
-	&-Icon {
-		margin-top: 4px;
-		margin-right: 8px;
-	}
+  &-Icon {
+    margin-top: 4px;
+    margin-right: 8px;
+  }
 }

@@ -1,17 +1,22 @@
-import React, { StrictMode } from 'react';
+import React, { StrictMode, Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
-import App from './components/App';
+import ProgressLoading from 'components/Common/ProgressLoading';
+import App from 'components/App';
+
 import './styles/global.scss';
+import './styles/palette.scss';
 
 const Root = (): JSX.Element => {
   return (
     <RecoilRoot>
-      <BrowserRouter basename='/my_portfolio'>
-        <StrictMode>
-          <App />
-        </StrictMode>
-      </BrowserRouter>
+      <Suspense fallback={ProgressLoading}>
+        <BrowserRouter basename='/my_portfolio'>
+          <StrictMode>
+            <App />
+          </StrictMode>
+        </BrowserRouter>
+      </Suspense>
     </RecoilRoot>
   );
 };

@@ -5,7 +5,7 @@ import PageTemplate from 'components/Common/Template/PageTemplate';
 const ProjectsPage = (): JSX.Element => {
   return (
     <PageTemplate>
-        <Projects />
+      <Projects />
     </PageTemplate>
   );
 };

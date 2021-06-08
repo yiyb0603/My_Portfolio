@@ -48,6 +48,7 @@
     transform: translate(-50%, 0%);
     display: flex;
     display: -webkit-flex;
+    z-index: 3;
 
     &-Dot {
       width: 12px;
@@ -71,12 +72,14 @@
 
   &-Image {
     max-width: 100%;
+    min-height: 380px;
     max-height: 380px;
     display: block;
     margin: 0 auto;
     object-fit: fill;
     padding: 10px 0;
     cursor: pointer;
+    z-index: 2;
   }
 
   &-Select {
@@ -84,6 +87,7 @@
     display: -webkit-flex;
     align-items: center;
     margin-left: 5px;
+    margin-top: 0.5rem;
 
     &-Selected {
       color: var(--blue);

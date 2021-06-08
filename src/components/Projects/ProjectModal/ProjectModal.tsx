@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, memo } from 'react';
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
@@ -108,4 +108,4 @@ const ProjectModal = ({
   );
 };
 
-export default ProjectModal;
+export default memo(ProjectModal);

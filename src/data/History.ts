@@ -8,10 +8,10 @@ import { BsPencil } from 'react-icons/bs';
 import { FcNightLandscape, FcConferenceCall, FcDocument } from 'react-icons/fc';
 import { IconType } from 'react-icons/lib';
 import { GrGraphQl, GrTestDesktop } from 'react-icons/gr';
-import { HistoryEnums } from "enum/HistoryEnum";
+import { HistoryEnums } from 'lib/enum/HistoryEnum';
 import { MdLocalAirport } from 'react-icons/md';
 
-export interface IHistoryType {
+export interface IHistory {
   // 0 = 수상, 1 = 활동, 2 = 대회, 3 = 컨퍼런스
   type: HistoryEnums,
   name: string;
@@ -21,7 +21,7 @@ export interface IHistoryType {
 
 const { AWARDS, ACTIVITY, COMPETITION, CONFERENCE } = HistoryEnums;
 
-export const myHistory: IHistoryType[] = [
+export const myHistory: IHistory[] = [
   {
     type: ACTIVITY,
     name: '대구소프트웨어고등학교 입학',
@@ -80,7 +80,7 @@ export const myHistory: IHistoryType[] = [
 
   {
     type: ACTIVITY,
-    name: '여동엽 선배님 - \"니들이 기획을 잘해?\" 학생전문가 특강',
+    name: '여동엽 선배님 - \'니들이 기획을 잘해?\' 학생전문가 특강',
     date: '2019.07.08',
     icon: RiCalendarEventLine,
   },
@@ -122,7 +122,7 @@ export const myHistory: IHistoryType[] = [
 
   {
     type: ACTIVITY,
-    name: '구미 3D프린터 기업 \"나인랩스\" 동아리 체험연수',
+    name: '구미 3D프린터 기업 \'나인랩스\' 동아리 체험연수',
     date: '2019.07.29 ~ 08.02',
     icon: RiPrinterCloudLine,
   },
@@ -150,14 +150,14 @@ export const myHistory: IHistoryType[] = [
 
   {
     type: COMPETITION,
-    name: '교내 \"제주도를 부탁해\" 메이커톤',
+    name: '교내 \'제주도를 부탁해\' 메이커톤',
     date: '2019.09',
     icon: FcNightLandscape,
   },
 
   {
     type: AWARDS,
-    name: "교내 생활태도 우수 표창장",
+    name: '교내 생활태도 우수 표창장',
     date: '2019.09.09',
     icon: FaAward,
   },
@@ -220,7 +220,7 @@ export const myHistory: IHistoryType[] = [
 
   {
     type: AWARDS,
-    name: `교내 메이커톤 "제주도를 부탁해" 대상`,
+    name: `교내 메이커톤 '제주도를 부탁해' 대상`,
     date: '2019.12.18',
     icon: FaMedal,
   },

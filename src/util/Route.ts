@@ -1,13 +1,13 @@
 import * as Pages from 'pages';
 
-export interface IRoutesTypes {
+export interface IRoute {
   name: string;
   pathname: string;
   component: () => JSX.Element;
 }
 
 const { Project, AboutMe, History } = Pages;
-export const routes: IRoutesTypes[] = [
+const routes: IRoute[] = [
   {
     pathname: '/',
     name: 'HOME',
@@ -26,3 +26,5 @@ export const routes: IRoutesTypes[] = [
     component: History,
   },
 ];
+
+export default routes;

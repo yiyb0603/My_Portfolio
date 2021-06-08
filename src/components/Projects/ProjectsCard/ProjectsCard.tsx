@@ -15,9 +15,6 @@ interface ProjectsCardProps {
   gallery: string[];
   introduction: string;
   thumbnail: string;
-  feel: string;
-  link: string;
-  role: string;
   handleClick: () => void;
 };
 
@@ -28,9 +25,6 @@ const ProjectsCard = ({
   stacks,
   period,
   gallery,
-  feel,
-  link,
-  role,
   thumbnail,
   handleClick,
 } : ProjectsCardProps) => {

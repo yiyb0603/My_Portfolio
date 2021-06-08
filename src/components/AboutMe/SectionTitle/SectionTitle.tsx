@@ -10,7 +10,10 @@ interface SectionTitleProps {
   icon: JSX.Element;
 }
 
-const SectionTitle = ({ name, icon }: SectionTitleProps): JSX.Element => {
+const SectionTitle = ({
+  name,
+  icon,
+}: SectionTitleProps): JSX.Element => {
   return (
     <div className={cx('SectionTitle')}>
       <div className={cx('SectionTitle-Icon')}>

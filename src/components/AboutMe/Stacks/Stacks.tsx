@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
 import { GiStack } from 'react-icons/gi';
 import StackItem from '../StackItem';
-import { StackEnums } from 'enum/StackEnum';
 import { ITooltipTitleTypes, tooltipTitles } from 'data/TooltipTitles';
+import { StackEnums } from 'lib/enum/StackEnum';
 
 const style = require('./Stacks.scss');
 const cx: ClassNamesFn = classNames.bind(style);
@@ -13,9 +13,11 @@ const Stacks = (): JSX.Element => {
   const { HIGH, MEDIUM, LOW } = StackEnums;
   const [stackType, setStackType] = useState<StackEnums>(HIGH);
 
-  const filterSkills: ITooltipTitleTypes[] = tooltipTitles.filter((tooltip) => {
-    return tooltip.level === stackType;
-  });
+  const filterSkills: ITooltipTitleTypes[] = useMemo(() => {
+    return tooltipTitles.filter((tooltip) => {
+      return tooltip.level === stackType;
+    });
+  }, [stackType]);
 
   return (
     <div className={cx('Stacks')}>

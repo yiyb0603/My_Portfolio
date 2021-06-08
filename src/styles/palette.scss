@@ -1,0 +1,33 @@
+$rgbaPrimary: rgb(27, 96, 255);
+$rgbaNavbar: rgb(44, 62, 80);
+
+:root {
+  --red: #f5160a;
+  --orange: #e67e22;
+  --yellow: #ede139;
+  --green: #27ae60;
+  --blue: #0984e3;
+  --skyblue: #dbedff;
+  --navy: #000080;
+  --purple: #841dfa;
+  --mint: #00d2d3;
+  --pink: #e84393;
+  --lighterGray: #dfe6e9;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #b2bec3;
+  --snow: #dff9fb;
+  --primary: #1b60ff;
+  --lighterGreen: #55efc4;
+  --navbar: #2c3e50;
+}
+
+.light {
+  --theme: #f2f2f2;
+  --contrast: #000000;
+}
+
+.dark {
+  --theme: #212121;
+  --contrast: #f2f2f2;
+}

@@ -1,31 +1,24 @@
-import React, { useCallback, useState, MouseEvent } from "react";
+import React from 'react';
 import classNames from 'classnames';
-import { ClassNamesFn } from "classnames/types";
+import { ClassNamesFn } from 'classnames/types';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { IHistoryType, myHistory } from 'data/History';
-import { Palette } from 'styles/Palette/Palette';
-import historyTopics from "data/models/historyTopics";
-import PageTitle from "components/Common/PageTitle";
+import useHistoryControl from 'hooks/history/useHistoryControl';
+import { IHistory } from 'data/History';
+import historyTopics from 'data/models/historyTopics';
+import PageTitle from 'components/Common/PageTitle';
+import palette from 'styles/palette';
 
-const style = require("./History.scss");
+import 'react-vertical-timeline-component/style.min.css';
+
+const style = require('./History.scss');
 const cx: ClassNamesFn = classNames.bind(style);
 
 const History = (): JSX.Element => {
-  const { blue, white } = Palette;
-  const [selectButton, setSelectButton] = useState<number>(-1);
-
-  const onClickButton = useCallback((e: MouseEvent<HTMLButtonElement>): void => {
-    const { id } = e.currentTarget;
-
-    if (selectButton !== Number(id)) {
-      setSelectButton(Number(id));
-    }
-  }, [selectButton]);
-
-  const filterHistory: IHistoryType[] = myHistory.filter((history: IHistoryType) => {
-    return selectButton === -1 ? history : history.type === selectButton;
-  });
+  const {
+    selectButton,
+    onClickButton,
+    filterHistory,
+  } = useHistoryControl();
 
   return (
     <div className={cx('History')}>
@@ -56,19 +49,19 @@ const History = (): JSX.Element => {
 
       <VerticalTimeline>
         {
-          filterHistory.map((history: IHistoryType, index: number) => {
+          filterHistory.map((history: IHistory, index: number) => {
             const { name, date, icon } = history;
 
             return (
               <VerticalTimelineElement
                 key={index}
-                contentStyle={{ backgroundColor: blue, color: white }}
-                className="vertical-timeline-element--education"
+                contentStyle={{ backgroundColor: palette.blue, color: palette.white }}
+                className='vertical-timeline-element--education'
                 date={date}
-                iconStyle={{ backgroundColor: blue }}
-                icon={icon({ color: white })}
+                iconStyle={{ backgroundColor: palette.blue }}
+                icon={icon({ color: palette.white })}
               >
-                <h3 className="vertical-timeline-element-title">{date}</h3>
+                <h3 className='vertical-timeline-element-title'>{date}</h3>
                 <p>
                   {name}
                 </p>

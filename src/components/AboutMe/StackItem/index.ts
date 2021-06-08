@@ -1,1 +1,1 @@
-export { default } from "./StackItem";
+export { default } from './StackItem';

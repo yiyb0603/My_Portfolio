@@ -1,1 +1,1 @@
-export { default } from "./PageTemplate";
+export { default } from './PageTemplate';

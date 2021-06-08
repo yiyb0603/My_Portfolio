@@ -1,6 +1,6 @@
-import { ProjectTypes } from "enum/ProjectEnum";
+import { ProjectTypes } from 'lib/enum/ProjectEnum';
 
-export interface IProjectType {
+export interface IProject {
   id?: number;
   name?: string;
   type?: string[];

@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, ReactNode, useCallback } from 'react';
+import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -7,19 +7,20 @@ const style = require('./Modal.scss');
 const cx: ClassNamesFn = classNames.bind(style);
 
 interface ModalProps {
-  isModal: boolean;
-  setIsModal: Dispatch<SetStateAction<boolean>>;
+  handleCloseModal: () => void;
   title: string;
   period: string;
   stacks: string[];
   children?: ReactNode;
 };
 
-const Modal = ({ isModal, setIsModal, title, period, stacks, children }: ModalProps): JSX.Element => {
-  const handleCloseModal = useCallback((): void => {
-    setIsModal(!isModal);
-  }, [isModal, setIsModal]);
-
+const Modal = ({
+  handleCloseModal,
+  title,
+  period,
+  stacks,
+  children,
+}: ModalProps): JSX.Element => {
   return (
     <>
       <div className={cx('Modal-Wrapper')} onClick={handleCloseModal}></div>

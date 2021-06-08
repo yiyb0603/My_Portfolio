@@ -1,7 +1,7 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, useMemo } from 'react';
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
-import { StackEnums } from 'enum/StackEnum';
+import { StackEnums } from 'lib/enum/StackEnum';
 
 const style = require('./StackItem.scss');
 const cx: ClassNamesFn = classNames.bind(style);
@@ -23,15 +23,19 @@ const StackItem = ({
   level,
   icon,
 }: StackItemProps): JSX.Element => {
-  const progressStyle: CSSProperties = {
-    width: progress,
-    backgroundColor: background,
-  };
+  const progressStyle: CSSProperties = useMemo(() => {
+    return {
+      width: progress,
+      backgroundColor: background,
+    };
+  }, [background, progress]);
 
-  const iconStyle: CSSProperties = {
-    fontSize: 50,
-    color: background,
-  };
+  const iconStyle: CSSProperties = useMemo(() => {
+    return {
+      fontSize: 50,
+      color: background,
+    };
+  }, [background]);
 
   return (
     <div className={cx('StackItem-Wrapper')}>

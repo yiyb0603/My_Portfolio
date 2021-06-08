@@ -1,13 +1,13 @@
-import React, { useCallback } from "react";
+import React, { useCallback } from 'react';
 import classNames from 'classnames';
-import { ClassNamesFn } from "classnames/types";
+import { ClassNamesFn } from 'classnames/types';
 import { MdCallEnd } from 'react-icons/md';
-import Constants from "util/Constants";
-import contactList, { IContactListType } from "data/models/contactList";
-import SectionTitle from "../SectionTitle";
-import { Palette } from "styles/Palette/Palette";
+import Constants from 'util/Constants';
+import contactList, { IContactListType } from 'data/models/contactList';
+import SectionTitle from '../SectionTitle';
+import palette from 'styles/palette';
 
-const style = require("./Contact.scss");
+const style = require('./Contact.scss');
 const cx: ClassNamesFn = classNames.bind(style);
 
 const Contact = (): JSX.Element => {
@@ -22,7 +22,7 @@ const Contact = (): JSX.Element => {
       <div className={cx('Contact-Wrapper')}>
         <SectionTitle
           name='연락처'
-          icon={<MdCallEnd style={{ color: Palette.red }} />}
+          icon={<MdCallEnd style={{ color: palette.red }} />}
         />
 
         <div className={cx('Contact-Contents')}>

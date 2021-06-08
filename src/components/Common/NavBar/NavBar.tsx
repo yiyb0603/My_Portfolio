@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
 import classNames from 'classnames';
+import { ClassNamesFn } from 'classnames/types';
 import { useLocation, useHistory } from 'react-router-dom';
 import { History } from 'history';
 import Headroom from 'react-headroom';
-import { IRoutesTypes, routes } from 'util/Route';
-import { ClassNamesFn } from 'classnames/types';
+import routes, { IRoute } from 'util/Route';
 
 const style = require('./NavBar.scss');
 const cx: ClassNamesFn = classNames.bind(style);
@@ -24,7 +24,7 @@ const NavBar = (): JSX.Element => {
       <div className={cx('NavBar')}>
         <ul className={cx('NavBar-Contents')}>
           {
-            routes.map((route: IRoutesTypes, index: number) => {
+            routes.map((route: IRoute, index: number) => {
               return (
                 <li
                   key={index}

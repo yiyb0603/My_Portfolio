@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import App from './components/App';
-import './styles/AllStyles.scss';
+import './styles/global.scss';
 
 const Root = (): JSX.Element => {
   return (
     <RecoilRoot>
-      <BrowserRouter basename="/my_portfolio">
-        <App />
+      <BrowserRouter basename='/my_portfolio'>
+        <StrictMode>
+          <App />
+        </StrictMode>
       </BrowserRouter>
     </RecoilRoot>
   );

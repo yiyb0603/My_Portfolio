@@ -1,5 +1,5 @@
-import { Palette } from 'styles/Palette/Palette';
-import { IProjectType } from 'interface/ProjectType';
+import palette from 'styles/palette';
+import { IProject } from 'lib/interface/ProjectType';
 
 import WebWakeSong from 'assets/images/mockup/WebStudent/WakeSong.png';
 import WebSchedule from 'assets/images/mockup/WebStudent/Web_Schedule.png';
@@ -57,12 +57,12 @@ import PortfolioProject from 'assets/images/mockup/Portfolio/Portfolio_Project.p
 import PortfolioStack from 'assets/images/mockup/Portfolio/Portfolio_Stack.png';
 
 import PolypoidMockup from 'assets/images/mockup/Polypoid/Polypoid.png';
-import { ProjectTypes } from 'enum/ProjectEnum';
+import { ProjectTypes } from 'lib/enum/ProjectEnum';
 
-const { blue } = Palette;
+const { blue } = palette;
 const { TEAM, ALONE } = ProjectTypes;
 
-export const projectList: IProjectType[] = [
+export const projectList: IProject[] = [
   {
     id: 1,
     name: '도담도담 V2 유지보수',

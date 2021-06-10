@@ -1,7 +1,7 @@
 import { ThemeEnums } from 'lib/enum/ThemeEnum';
 import Storage from 'lib/storage';
 
-const theme: number = Number(Storage.getStorage('theme'));
+const theme: string | null = Storage.getStorage('theme');
 const { LIGHT } = ThemeEnums;
 
 const palette = {
@@ -23,6 +23,7 @@ const palette = {
 	white: '#ffffff',
 	black: '#000000',
 	snow: '#dff9fb',
+	navbar: '2c3e50',
 	primary: '#1b60ff',
 };
 

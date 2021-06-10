@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { IoMdSunny } from 'react-icons/io';
 import { FaMoon } from 'react-icons/fa';
 import classNames from 'classnames';
@@ -24,4 +24,4 @@ const ToggleTheme = (): JSX.Element => {
   );
 };
 
-export default ToggleTheme;
+export default memo(ToggleTheme);

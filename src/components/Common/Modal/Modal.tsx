@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { memo, ReactNode } from 'react';
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -53,4 +53,4 @@ const Modal = ({
   );
 }
 
-export default Modal;
+export default memo(Modal);

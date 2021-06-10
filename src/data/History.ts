@@ -21,7 +21,7 @@ export interface IHistory {
 
 const { AWARDS, ACTIVITY, COMPETITION, CONFERENCE } = HistoryEnums;
 
-export const myHistory: IHistory[] = [
+export const myHistories: IHistory[] = [
   {
     type: ACTIVITY,
     name: '대구소프트웨어고등학교 입학',

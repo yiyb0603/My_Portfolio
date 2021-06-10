@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
 import { BsBoxArrowInUp } from 'react-icons/bs';
@@ -21,4 +21,4 @@ const ScrollToTop = (): JSX.Element => {
 	);
 };
 
-export default ScrollToTop;
+export default memo(ScrollToTop);

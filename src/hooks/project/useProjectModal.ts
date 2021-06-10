@@ -23,6 +23,10 @@ const useProjectModal = (gallery: string[]) => {
     setIndex(index + 1);
   }, [gallery, index]);
 
+  const handleImageToNewWindow = useCallback((galleryIdx: number): void => {
+    window.open(gallery![galleryIdx], 'image', 'width = 800, heigh= 600, left = 400, top = 400, resizable = yes')
+  }, [gallery]);
+
   const handleDotClick = useCallback((galleryIdx: number): void => {
     if (galleryIdx !== index) {
       setIndex(galleryIdx);
@@ -41,6 +45,7 @@ const useProjectModal = (gallery: string[]) => {
     handlePrevClick,
     handleNextClick,
     handleDotClick,
+    handleImageToNewWindow,
     handleSetTopic,
   };
 };

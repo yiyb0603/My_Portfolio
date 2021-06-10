@@ -1,5 +1,5 @@
-import { IHistory, myHistory } from 'data/History';
 import { useState, useCallback, useMemo, MouseEvent } from 'react';
+import { IHistory, myHistories } from 'data/History';
 
 const useHistoryControl = () => {
   const [selectButton, setSelectButton] = useState<number>(-1);
@@ -13,8 +13,8 @@ const useHistoryControl = () => {
   }, [selectButton]);
 
   const filterHistory: IHistory[] = useMemo(() => {
-    return myHistory.filter((history: IHistory) => {
-      return selectButton === -1 ? history : history.type === selectButton;
+    return myHistories.filter((myHistory: IHistory) => {
+      return selectButton === -1 ? myHistory : myHistory.type === selectButton;
     });
   }, [selectButton]);
 

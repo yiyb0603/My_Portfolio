@@ -36,6 +36,7 @@ const ProjectModal = ({
     handlePrevClick,
     handleNextClick,
     handleDotClick,
+    handleImageToNewWindow,
     handleSetTopic,
   } = useProjectModal(gallery!);
   
@@ -77,7 +78,7 @@ const ProjectModal = ({
         <div className={cx('ProjectModal-DotWrapper')}>{imageDots}</div>  
         <LazyLoadImage
           className={cx('ProjectModal-Image')}
-          onClick={() => window.open(gallery![index], 'image', 'width = 800, heigh= 600, left = 400, top = 400, resizable = yes')}
+          onClick={() => handleImageToNewWindow(index)}
           src={gallery![index]}
           effect='blur'
           alt='gallerys'

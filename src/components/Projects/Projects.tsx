@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { memo, useMemo } from 'react';
 import FadeIn from 'react-fade-in';
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
@@ -61,7 +61,9 @@ const Projects = (): JSX.Element => {
                       key={idx}
                       className={cx({
                       'Projects-Top-Contents-Topics-Current': topic === idx
-                    })} onClick={() => onChangeTopic(idx)}>{top}</div>
+                    })} onClick={() => onChangeTopic(idx)}>
+                      {top}
+                    </div>
                   );
                 })
               }
@@ -83,4 +85,4 @@ const Projects = (): JSX.Element => {
   );
 }
 
-export default Projects;
+export default memo(Projects);

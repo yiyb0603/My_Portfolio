@@ -6,6 +6,9 @@ class Constants {
   
   public static readonly PHONE_NUMBER = '010-8852-5110' as const;
   public static readonly EMAIL_ADDRESS = 'yiyb0603@gmail.com' as const;
+
+  public static readonly PORTFOLIO_PDF_LINK = 'https://vo.la/nGxCt' as const;
+  public static readonly RESUME_PDF_LINK = 'https://vo.la/zC6p8' as const;
 };
 
 export default Constants;

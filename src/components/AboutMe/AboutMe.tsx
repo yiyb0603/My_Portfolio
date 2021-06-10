@@ -10,6 +10,7 @@ import Contact from './Contact';
 import Certificate from './Certificate';
 import Education from './Education';
 import FileDownload from './FileDownload';
+import Constants from 'util/Constants';
 
 const style = require('./AboutMe.scss');
 const cx: ClassNamesFn = classNames.bind(style);
@@ -47,14 +48,14 @@ const AboutMe = (): JSX.Element => {
               <FileDownload
                 tooltipTitle='PDF 포트폴리오 다운로드'
                 downloadTitle='PDF 포트폴리오'
-                fileLink='../../assets/files/portfolio.pdf'
+                fileLink={Constants.PORTFOLIO_PDF_LINK}
                 backgroundColor={palette.red}
               />
 
               <FileDownload
                 tooltipTitle='PDF 이력서 다운로드'
                 downloadTitle='PDF 이력서'
-                fileLink='../../assets/files/resume.pdf'
+                fileLink={Constants.RESUME_PDF_LINK}
                 backgroundColor={palette.blue}
               />
             </div>

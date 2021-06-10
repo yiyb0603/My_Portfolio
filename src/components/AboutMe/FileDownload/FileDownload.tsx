@@ -35,7 +35,6 @@ const FileDownload = ({
         href={fileLink}
         className={cx('FileDownload')}
         style={downloadButtonStyle}
-        download={downloadTitle}
       >
         <FaFilePdf className={cx('FileDownload-Icon')} />
         <div>{downloadTitle}</div>

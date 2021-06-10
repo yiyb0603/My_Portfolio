@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 4rem;
 
     @media screen and (max-width: 930px) {
       display: flex;
@@ -16,8 +17,8 @@
     }
 
     &-Image {
-      height: 360px;
-      max-height: 360px;
+      height: 400px;
+      max-height: 400px;
     }
 
     &-SubTitle {
@@ -50,6 +51,7 @@
         display: flex;
         display: -webkit-flex;
         align-items: center;
+        margin-bottom: 6px;
 
         &-Icon {
           color: var(--orange);
@@ -61,6 +63,13 @@
           font-size: 1.05rem;
           font-weight: bold;
         }
+      }
+
+      &-DownloadWrapper {
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        margin-bottom: 6px;
       }
     }
   }

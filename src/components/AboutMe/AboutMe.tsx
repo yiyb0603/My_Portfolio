@@ -1,21 +1,23 @@
 import React from 'react';
 import classNames from 'classnames';
 import { ClassNamesFn } from 'classnames/types';
-import Stacks from './Stacks';
-import HomeImage from 'assets/images/Home.svg';
 import FadeIn from 'react-fade-in';
+import { FiAlertOctagon } from 'react-icons/fi';
+import HomeImage from 'assets/images/Home.svg';
+import palette from 'styles/palette';
+import Stacks from './Stacks';
 import Contact from './Contact';
 import Certificate from './Certificate';
 import Education from './Education';
-import { FiAlertOctagon } from 'react-icons/fi';
+import FileDownload from './FileDownload';
 
-const style = require("./AboutMe.scss");
+const style = require('./AboutMe.scss');
 const cx: ClassNamesFn = classNames.bind(style);
 
 const AboutMe = (): JSX.Element => {
   return (
     <FadeIn>
-      <div className ={cx("AboutMe")}>
+      <div className ={cx('AboutMe')}>
         <div className={cx('AboutMe-Wrapper')}>
           <div className={cx('AboutMe-Wrapper-ContentsWrapper')}>
             <div className={cx('AboutMe-Wrapper-ContentsWrapper-Contents')}>
@@ -40,9 +42,29 @@ const AboutMe = (): JSX.Element => {
                 2021년 7월 19일부터 현장실습이 가능합니다.
               </div>
             </div>
+
+            <div className={cx('AboutMe-Wrapper-ContentsWrapper-DownloadWrapper')}>
+              <FileDownload
+                tooltipTitle='PDF 포트폴리오 다운로드'
+                downloadTitle='PDF 포트폴리오'
+                fileLink='../../assets/files/portfolio.pdf'
+                backgroundColor={palette.red}
+              />
+
+              <FileDownload
+                tooltipTitle='PDF 이력서 다운로드'
+                downloadTitle='PDF 이력서'
+                fileLink='../../assets/files/resume.pdf'
+                backgroundColor={palette.blue}
+              />
+            </div>
           </div>
 
-          <img src={HomeImage} alt ="homeimage" className={cx('AboutMe-Wrapper-Image')} />
+          <img
+            src={HomeImage}
+            alt ='homeimage'
+            className={cx('AboutMe-Wrapper-Image')}
+          />
         </div>
 
         <Contact />
